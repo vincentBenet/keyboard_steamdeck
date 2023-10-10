@@ -1,0 +1,2330 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="E">
+  <design>
+    <source>C:\Users\Bob\Desktop\keyboard_steamdeck\keyboard_steamdeck.kicad_sch</source>
+    <date>10/10/2023 22:34:44</date>
+    <tool>Eeschema 7.0.8</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>keyboard_steamdeck.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="B1">
+      <value>MX_SW_solder - DNI</value>
+      <footprint>footprints:SW_Cherry_MX_1.00u_PCB</footprint>
+      <libsource lib="PCM_marbastlib-mx" part="MX_SW_solder" description="Push button switch, normally open, two pins, 45° tilted"/>
+      <property name="Manufacturer" value=""/>
+      <property name="SKU" value=""/>
+      <property name="Vendor" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="keyboard_steamdeck.kicad_sch"/>
+      <property name="ki_description" value="Push button switch, normally open, two pins, 45° tilted"/>
+      <property name="ki_keywords" value="switch normally-open pushbutton push-button"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>227c7a1f-0faf-44aa-81e2-8712ada6a726</tstamps>
+    </comp>
+    <comp ref="B2">
+      <value>MX_SW_solder - DNI</value>
+      <footprint>footprints:SW_Cherry_MX_1.00u_PCB</footprint>
+      <libsource lib="PCM_marbastlib-mx" part="MX_SW_solder" description="Push button switch, normally open, two pins, 45° tilted"/>
+      <property name="Manufacturer" value=""/>
+      <property name="SKU" value=""/>
+      <property name="Vendor" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="keyboard_steamdeck.kicad_sch"/>
+      <property name="ki_description" value="Push button switch, normally open, two pins, 45° tilted"/>
+      <property name="ki_keywords" value="switch normally-open pushbutton push-button"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>59e97ebe-2af6-471c-a034-cb0aec1ea8a0</tstamps>
+    </comp>
+    <comp ref="B3">
+      <value>MX_SW_solder - DNI</value>
+      <footprint>footprints:SW_Cherry_MX_1.00u_PCB</footprint>
+      <libsource lib="PCM_marbastlib-mx" part="MX_SW_solder" description="Push button switch, normally open, two pins, 45° tilted"/>
+      <property name="Manufacturer" value=""/>
+      <property name="SKU" value=""/>
+      <property name="Vendor" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="keyboard_steamdeck.kicad_sch"/>
+      <property name="ki_description" value="Push button switch, normally open, two pins, 45° tilted"/>
+      <property name="ki_keywords" value="switch normally-open pushbutton push-button"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c95d0005-7ff5-4732-98be-de3e8fbe858e</tstamps>
+    </comp>
+    <comp ref="B4">
+      <value>MX_SW_solder - DNI</value>
+      <footprint>footprints:SW_Cherry_MX_1.00u_PCB</footprint>
+      <libsource lib="PCM_marbastlib-mx" part="MX_SW_solder" description="Push button switch, normally open, two pins, 45° tilted"/>
+      <property name="Manufacturer" value=""/>
+      <property name="SKU" value=""/>
+      <property name="Vendor" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="keyboard_steamdeck.kicad_sch"/>
+      <property name="ki_description" value="Push button switch, normally open, two pins, 45° tilted"/>
+      <property name="ki_keywords" value="switch normally-open pushbutton push-button"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f44d4d8a-f587-4f97-9b3e-6c6325d12f6d</tstamps>
+    </comp>
+    <comp ref="B5">
+      <value>MX_SW_solder - DNI</value>
+      <footprint>footprints:SW_Cherry_MX_1.00u_PCB</footprint>
+      <libsource lib="PCM_marbastlib-mx" part="MX_SW_solder" description="Push button switch, normally open, two pins, 45° tilted"/>
+      <property name="Manufacturer" value=""/>
+      <property name="SKU" value=""/>
+      <property name="Vendor" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="keyboard_steamdeck.kicad_sch"/>
+      <property name="ki_description" value="Push button switch, normally open, two pins, 45° tilted"/>
+      <property name="ki_keywords" value="switch normally-open pushbutton push-button"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>cb1c70d1-b0ed-4803-950a-8cf654b0e0ba</tstamps>
+    </comp>
+    <comp ref="B6">
+      <value>MX_SW_solder - DNI</value>
+      <footprint>footprints:SW_Cherry_MX_1.00u_PCB</footprint>
+      <libsource lib="PCM_marbastlib-mx" part="MX_SW_solder" description="Push button switch, normally open, two pins, 45° tilted"/>
+      <property name="Manufacturer" value=""/>
+      <property name="SKU" value=""/>
+      <property name="Vendor" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="keyboard_steamdeck.kicad_sch"/>
+      <property name="ki_description" value="Push button switch, normally open, two pins, 45° tilted"/>
+      <property name="ki_keywords" value="switch normally-open pushbutton push-button"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c7ad35c6-39e2-4a14-af3e-b8a677d68695</tstamps>
+    </comp>
+    <comp ref="B7">
+      <value>MX_SW_solder - DNI</value>
+      <footprint>footprints:SW_Cherry_MX_1.00u_PCB</footprint>
+      <libsource lib="PCM_marbastlib-mx" part="MX_SW_solder" description="Push button switch, normally open, two pins, 45° tilted"/>
+      <property name="Manufacturer" value=""/>
+      <property name="SKU" value=""/>
+      <property name="Vendor" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="keyboard_steamdeck.kicad_sch"/>
+      <property name="ki_description" value="Push button switch, normally open, two pins, 45° tilted"/>
+      <property name="ki_keywords" value="switch normally-open pushbutton push-button"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e0ff6bb9-78dc-48da-a087-e3495958b2e7</tstamps>
+    </comp>
+    <comp ref="B8">
+      <value>MX_SW_solder - DNI</value>
+      <footprint>footprints:SW_Cherry_MX_1.00u_PCB</footprint>
+      <libsource lib="PCM_marbastlib-mx" part="MX_SW_solder" description="Push button switch, normally open, two pins, 45° tilted"/>
+      <property name="Manufacturer" value=""/>
+      <property name="SKU" value=""/>
+      <property name="Vendor" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="keyboard_steamdeck.kicad_sch"/>
+      <property name="ki_description" value="Push button switch, normally open, two pins, 45° tilted"/>
+      <property name="ki_keywords" value="switch normally-open pushbutton push-button"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>2e857aaa-fb9b-4ae6-ab8d-3884e513249d</tstamps>
+    </comp>
+    <comp ref="B9">
+      <value>MX_SW_solder - DNI</value>
+      <footprint>footprints:SW_Cherry_MX_1.00u_PCB</footprint>
+      <libsource lib="PCM_marbastlib-mx" part="MX_SW_solder" description="Push button switch, normally open, two pins, 45° tilted"/>
+      <property name="Manufacturer" value=""/>
+      <property name="SKU" value=""/>
+      <property name="Vendor" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="keyboard_steamdeck.kicad_sch"/>
+      <property name="ki_description" value="Push button switch, normally open, two pins, 45° tilted"/>
+      <property name="ki_keywords" value="switch normally-open pushbutton push-button"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>4b373f28-2a18-427a-bf9e-d395e746f9eb</tstamps>
+    </comp>
+    <comp ref="B10">
+      <value>MX_SW_solder - DNI</value>
+      <footprint>footprints:SW_Cherry_MX_1.00u_PCB</footprint>
+      <libsource lib="PCM_marbastlib-mx" part="MX_SW_solder" description="Push button switch, normally open, two pins, 45° tilted"/>
+      <property name="Manufacturer" value=""/>
+      <property name="SKU" value=""/>
+      <property name="Vendor" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="keyboard_steamdeck.kicad_sch"/>
+      <property name="ki_description" value="Push button switch, normally open, two pins, 45° tilted"/>
+      <property name="ki_keywords" value="switch normally-open pushbutton push-button"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>d8e9b1ce-8090-45f0-a56e-10ff0c7cedf1</tstamps>
+    </comp>
+    <comp ref="B11">
+      <value>MX_SW_solder - DNI</value>
+      <footprint>footprints:SW_Cherry_MX_1.00u_PCB</footprint>
+      <libsource lib="PCM_marbastlib-mx" part="MX_SW_solder" description="Push button switch, normally open, two pins, 45° tilted"/>
+      <property name="Manufacturer" value=""/>
+      <property name="SKU" value=""/>
+      <property name="Vendor" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="keyboard_steamdeck.kicad_sch"/>
+      <property name="ki_description" value="Push button switch, normally open, two pins, 45° tilted"/>
+      <property name="ki_keywords" value="switch normally-open pushbutton push-button"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>810da0f3-a8e7-447c-8259-1b0ec83e5192</tstamps>
+    </comp>
+    <comp ref="B12">
+      <value>MX_SW_solder - DNI</value>
+      <footprint>footprints:SW_Cherry_MX_1.00u_PCB</footprint>
+      <libsource lib="PCM_marbastlib-mx" part="MX_SW_solder" description="Push button switch, normally open, two pins, 45° tilted"/>
+      <property name="Manufacturer" value=""/>
+      <property name="SKU" value=""/>
+      <property name="Vendor" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="keyboard_steamdeck.kicad_sch"/>
+      <property name="ki_description" value="Push button switch, normally open, two pins, 45° tilted"/>
+      <property name="ki_keywords" value="switch normally-open pushbutton push-button"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>4ca60f79-786b-453b-a9b2-290709220510</tstamps>
+    </comp>
+    <comp ref="B13">
+      <value>MX_SW_solder - DNI</value>
+      <footprint>footprints:SW_Cherry_MX_1.00u_PCB</footprint>
+      <libsource lib="PCM_marbastlib-mx" part="MX_SW_solder" description="Push button switch, normally open, two pins, 45° tilted"/>
+      <property name="Manufacturer" value=""/>
+      <property name="SKU" value=""/>
+      <property name="Vendor" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="keyboard_steamdeck.kicad_sch"/>
+      <property name="ki_description" value="Push button switch, normally open, two pins, 45° tilted"/>
+      <property name="ki_keywords" value="switch normally-open pushbutton push-button"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>df7fc6b6-c334-4233-ac11-4d24d54af64c</tstamps>
+    </comp>
+    <comp ref="B14">
+      <value>MX_SW_solder - DNI</value>
+      <footprint>footprints:SW_Cherry_MX_1.00u_PCB</footprint>
+      <libsource lib="PCM_marbastlib-mx" part="MX_SW_solder" description="Push button switch, normally open, two pins, 45° tilted"/>
+      <property name="Manufacturer" value=""/>
+      <property name="SKU" value=""/>
+      <property name="Vendor" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="keyboard_steamdeck.kicad_sch"/>
+      <property name="ki_description" value="Push button switch, normally open, two pins, 45° tilted"/>
+      <property name="ki_keywords" value="switch normally-open pushbutton push-button"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f43b87ee-6fed-4294-852f-93db3ec6fcad</tstamps>
+    </comp>
+    <comp ref="B15">
+      <value>MX_SW_solder - DNI</value>
+      <footprint>footprints:SW_Cherry_MX_1.00u_PCB</footprint>
+      <libsource lib="PCM_marbastlib-mx" part="MX_SW_solder" description="Push button switch, normally open, two pins, 45° tilted"/>
+      <property name="Manufacturer" value=""/>
+      <property name="SKU" value=""/>
+      <property name="Vendor" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="keyboard_steamdeck.kicad_sch"/>
+      <property name="ki_description" value="Push button switch, normally open, two pins, 45° tilted"/>
+      <property name="ki_keywords" value="switch normally-open pushbutton push-button"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c43e2b80-3eed-471a-8d54-bdb113914bfc</tstamps>
+    </comp>
+    <comp ref="B16">
+      <value>MX_SW_solder - DNI</value>
+      <footprint>footprints:SW_Cherry_MX_1.00u_PCB</footprint>
+      <libsource lib="PCM_marbastlib-mx" part="MX_SW_solder" description="Push button switch, normally open, two pins, 45° tilted"/>
+      <property name="Manufacturer" value=""/>
+      <property name="SKU" value=""/>
+      <property name="Vendor" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="keyboard_steamdeck.kicad_sch"/>
+      <property name="ki_description" value="Push button switch, normally open, two pins, 45° tilted"/>
+      <property name="ki_keywords" value="switch normally-open pushbutton push-button"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>3d5190bc-4c93-43d7-a23a-98d888fbd848</tstamps>
+    </comp>
+    <comp ref="B17">
+      <value>MX_SW_solder - DNI</value>
+      <footprint>footprints:SW_Cherry_MX_1.00u_PCB</footprint>
+      <libsource lib="PCM_marbastlib-mx" part="MX_SW_solder" description="Push button switch, normally open, two pins, 45° tilted"/>
+      <property name="Manufacturer" value=""/>
+      <property name="SKU" value=""/>
+      <property name="Vendor" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="keyboard_steamdeck.kicad_sch"/>
+      <property name="ki_description" value="Push button switch, normally open, two pins, 45° tilted"/>
+      <property name="ki_keywords" value="switch normally-open pushbutton push-button"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e37ad7ef-b5a2-4726-aaa6-bd8a80baa5fb</tstamps>
+    </comp>
+    <comp ref="B18">
+      <value>MX_SW_solder - DNI</value>
+      <footprint>footprints:SW_Cherry_MX_1.00u_PCB</footprint>
+      <libsource lib="PCM_marbastlib-mx" part="MX_SW_solder" description="Push button switch, normally open, two pins, 45° tilted"/>
+      <property name="Manufacturer" value=""/>
+      <property name="SKU" value=""/>
+      <property name="Vendor" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="keyboard_steamdeck.kicad_sch"/>
+      <property name="ki_description" value="Push button switch, normally open, two pins, 45° tilted"/>
+      <property name="ki_keywords" value="switch normally-open pushbutton push-button"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>2cd56e91-f901-42d6-a7d9-869a9a771f97</tstamps>
+    </comp>
+    <comp ref="B19">
+      <value>MX_SW_solder - DNI</value>
+      <footprint>footprints:SW_Cherry_MX_1.00u_PCB</footprint>
+      <libsource lib="PCM_marbastlib-mx" part="MX_SW_solder" description="Push button switch, normally open, two pins, 45° tilted"/>
+      <property name="Manufacturer" value=""/>
+      <property name="SKU" value=""/>
+      <property name="Vendor" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="keyboard_steamdeck.kicad_sch"/>
+      <property name="ki_description" value="Push button switch, normally open, two pins, 45° tilted"/>
+      <property name="ki_keywords" value="switch normally-open pushbutton push-button"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>caa65a64-536a-41b6-97a5-3240c293f344</tstamps>
+    </comp>
+    <comp ref="B20">
+      <value>MX_SW_solder - DNI</value>
+      <footprint>footprints:SW_Cherry_MX_1.00u_PCB</footprint>
+      <libsource lib="PCM_marbastlib-mx" part="MX_SW_solder" description="Push button switch, normally open, two pins, 45° tilted"/>
+      <property name="Manufacturer" value=""/>
+      <property name="SKU" value=""/>
+      <property name="Vendor" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="keyboard_steamdeck.kicad_sch"/>
+      <property name="ki_description" value="Push button switch, normally open, two pins, 45° tilted"/>
+      <property name="ki_keywords" value="switch normally-open pushbutton push-button"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b4975c4f-09e6-4a5f-abd4-9b4eed756a4a</tstamps>
+    </comp>
+    <comp ref="B21">
+      <value>MX_SW_solder - DNI</value>
+      <footprint>footprints:SW_Cherry_MX_1.00u_PCB</footprint>
+      <libsource lib="PCM_marbastlib-mx" part="MX_SW_solder" description="Push button switch, normally open, two pins, 45° tilted"/>
+      <property name="Manufacturer" value=""/>
+      <property name="SKU" value=""/>
+      <property name="Vendor" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="keyboard_steamdeck.kicad_sch"/>
+      <property name="ki_description" value="Push button switch, normally open, two pins, 45° tilted"/>
+      <property name="ki_keywords" value="switch normally-open pushbutton push-button"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>0fccc964-1b83-4f79-b769-7d689a819eff</tstamps>
+    </comp>
+    <comp ref="B22">
+      <value>MX_SW_solder - DNI</value>
+      <footprint>footprints:SW_Cherry_MX_1.00u_PCB</footprint>
+      <libsource lib="PCM_marbastlib-mx" part="MX_SW_solder" description="Push button switch, normally open, two pins, 45° tilted"/>
+      <property name="Manufacturer" value=""/>
+      <property name="SKU" value=""/>
+      <property name="Vendor" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="keyboard_steamdeck.kicad_sch"/>
+      <property name="ki_description" value="Push button switch, normally open, two pins, 45° tilted"/>
+      <property name="ki_keywords" value="switch normally-open pushbutton push-button"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a712b911-19fd-4f8c-85c4-f48fe11456d0</tstamps>
+    </comp>
+    <comp ref="B23">
+      <value>MX_SW_solder - DNI</value>
+      <footprint>footprints:SW_Cherry_MX_1.00u_PCB</footprint>
+      <libsource lib="PCM_marbastlib-mx" part="MX_SW_solder" description="Push button switch, normally open, two pins, 45° tilted"/>
+      <property name="Manufacturer" value=""/>
+      <property name="SKU" value=""/>
+      <property name="Vendor" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="keyboard_steamdeck.kicad_sch"/>
+      <property name="ki_description" value="Push button switch, normally open, two pins, 45° tilted"/>
+      <property name="ki_keywords" value="switch normally-open pushbutton push-button"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>9ec51afe-abb3-4e6b-a1d5-1dd0022a0e35</tstamps>
+    </comp>
+    <comp ref="B24">
+      <value>MX_SW_solder - DNI</value>
+      <footprint>footprints:SW_Cherry_MX_1.00u_PCB</footprint>
+      <libsource lib="PCM_marbastlib-mx" part="MX_SW_solder" description="Push button switch, normally open, two pins, 45° tilted"/>
+      <property name="Manufacturer" value=""/>
+      <property name="SKU" value=""/>
+      <property name="Vendor" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="keyboard_steamdeck.kicad_sch"/>
+      <property name="ki_description" value="Push button switch, normally open, two pins, 45° tilted"/>
+      <property name="ki_keywords" value="switch normally-open pushbutton push-button"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>31b08118-38f9-46ab-892a-ddb33d69068c</tstamps>
+    </comp>
+    <comp ref="B25">
+      <value>MX_SW_solder - DNI</value>
+      <footprint>footprints:SW_Cherry_MX_1.00u_PCB</footprint>
+      <libsource lib="PCM_marbastlib-mx" part="MX_SW_solder" description="Push button switch, normally open, two pins, 45° tilted"/>
+      <property name="Manufacturer" value=""/>
+      <property name="SKU" value=""/>
+      <property name="Vendor" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="keyboard_steamdeck.kicad_sch"/>
+      <property name="ki_description" value="Push button switch, normally open, two pins, 45° tilted"/>
+      <property name="ki_keywords" value="switch normally-open pushbutton push-button"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>72a0cd1f-2e95-4d5e-8bde-0237feccad11</tstamps>
+    </comp>
+    <comp ref="B26">
+      <value>MX_SW_solder - DNI</value>
+      <footprint>footprints:SW_Cherry_MX_1.00u_PCB</footprint>
+      <libsource lib="PCM_marbastlib-mx" part="MX_SW_solder" description="Push button switch, normally open, two pins, 45° tilted"/>
+      <property name="Manufacturer" value=""/>
+      <property name="SKU" value=""/>
+      <property name="Vendor" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="keyboard_steamdeck.kicad_sch"/>
+      <property name="ki_description" value="Push button switch, normally open, two pins, 45° tilted"/>
+      <property name="ki_keywords" value="switch normally-open pushbutton push-button"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a23ccc7e-10db-4ae9-878e-4859a36ce239</tstamps>
+    </comp>
+    <comp ref="B27">
+      <value>MX_SW_solder - DNI</value>
+      <footprint>footprints:SW_Cherry_MX_1.00u_PCB</footprint>
+      <libsource lib="PCM_marbastlib-mx" part="MX_SW_solder" description="Push button switch, normally open, two pins, 45° tilted"/>
+      <property name="Manufacturer" value=""/>
+      <property name="SKU" value=""/>
+      <property name="Vendor" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="keyboard_steamdeck.kicad_sch"/>
+      <property name="ki_description" value="Push button switch, normally open, two pins, 45° tilted"/>
+      <property name="ki_keywords" value="switch normally-open pushbutton push-button"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>1c8bffe5-5bec-44ef-8ce5-c9a4ab90e007</tstamps>
+    </comp>
+    <comp ref="B28">
+      <value>MX_SW_solder - DNI</value>
+      <footprint>footprints:SW_Cherry_MX_1.00u_PCB</footprint>
+      <libsource lib="PCM_marbastlib-mx" part="MX_SW_solder" description="Push button switch, normally open, two pins, 45° tilted"/>
+      <property name="Manufacturer" value=""/>
+      <property name="SKU" value=""/>
+      <property name="Vendor" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="keyboard_steamdeck.kicad_sch"/>
+      <property name="ki_description" value="Push button switch, normally open, two pins, 45° tilted"/>
+      <property name="ki_keywords" value="switch normally-open pushbutton push-button"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e2eacac3-c09f-403f-bc06-9c7ccef8c380</tstamps>
+    </comp>
+    <comp ref="B29">
+      <value>MX_SW_solder - DNI</value>
+      <footprint>footprints:SW_Cherry_MX_1.00u_PCB</footprint>
+      <libsource lib="PCM_marbastlib-mx" part="MX_SW_solder" description="Push button switch, normally open, two pins, 45° tilted"/>
+      <property name="Manufacturer" value=""/>
+      <property name="SKU" value=""/>
+      <property name="Vendor" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="keyboard_steamdeck.kicad_sch"/>
+      <property name="ki_description" value="Push button switch, normally open, two pins, 45° tilted"/>
+      <property name="ki_keywords" value="switch normally-open pushbutton push-button"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b982c103-093c-4115-b0ea-6891d98a23bc</tstamps>
+    </comp>
+    <comp ref="B30">
+      <value>MX_SW_solder - DNI</value>
+      <footprint>footprints:SW_Cherry_MX_1.00u_PCB</footprint>
+      <libsource lib="PCM_marbastlib-mx" part="MX_SW_solder" description="Push button switch, normally open, two pins, 45° tilted"/>
+      <property name="Manufacturer" value=""/>
+      <property name="SKU" value=""/>
+      <property name="Vendor" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="keyboard_steamdeck.kicad_sch"/>
+      <property name="ki_description" value="Push button switch, normally open, two pins, 45° tilted"/>
+      <property name="ki_keywords" value="switch normally-open pushbutton push-button"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>8cc688d0-95d7-4342-9b80-fe17c9bad4d9</tstamps>
+    </comp>
+    <comp ref="B31">
+      <value>MX_SW_solder - DNI</value>
+      <footprint>footprints:SW_Cherry_MX_1.00u_PCB</footprint>
+      <libsource lib="PCM_marbastlib-mx" part="MX_SW_solder" description="Push button switch, normally open, two pins, 45° tilted"/>
+      <property name="Manufacturer" value=""/>
+      <property name="SKU" value=""/>
+      <property name="Vendor" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="keyboard_steamdeck.kicad_sch"/>
+      <property name="ki_description" value="Push button switch, normally open, two pins, 45° tilted"/>
+      <property name="ki_keywords" value="switch normally-open pushbutton push-button"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>bf74a690-37c8-4a1d-afe0-01aa7204ba55</tstamps>
+    </comp>
+    <comp ref="B32">
+      <value>MX_SW_solder - DNI</value>
+      <footprint>footprints:SW_Cherry_MX_1.00u_PCB</footprint>
+      <libsource lib="PCM_marbastlib-mx" part="MX_SW_solder" description="Push button switch, normally open, two pins, 45° tilted"/>
+      <property name="Manufacturer" value=""/>
+      <property name="SKU" value=""/>
+      <property name="Vendor" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="keyboard_steamdeck.kicad_sch"/>
+      <property name="ki_description" value="Push button switch, normally open, two pins, 45° tilted"/>
+      <property name="ki_keywords" value="switch normally-open pushbutton push-button"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>0be04e01-4687-4925-bb0b-de4c0d69e191</tstamps>
+    </comp>
+    <comp ref="B33">
+      <value>MX_SW_solder - DNI</value>
+      <footprint>footprints:SW_Cherry_MX_1.00u_PCB</footprint>
+      <libsource lib="PCM_marbastlib-mx" part="MX_SW_solder" description="Push button switch, normally open, two pins, 45° tilted"/>
+      <property name="Manufacturer" value=""/>
+      <property name="SKU" value=""/>
+      <property name="Vendor" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="keyboard_steamdeck.kicad_sch"/>
+      <property name="ki_description" value="Push button switch, normally open, two pins, 45° tilted"/>
+      <property name="ki_keywords" value="switch normally-open pushbutton push-button"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c1f25e07-43b2-4aeb-a5eb-a2dc5659383e</tstamps>
+    </comp>
+    <comp ref="B34">
+      <value>MX_SW_solder - DNI</value>
+      <footprint>footprints:SW_Cherry_MX_1.00u_PCB</footprint>
+      <libsource lib="PCM_marbastlib-mx" part="MX_SW_solder" description="Push button switch, normally open, two pins, 45° tilted"/>
+      <property name="Manufacturer" value=""/>
+      <property name="SKU" value=""/>
+      <property name="Vendor" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="keyboard_steamdeck.kicad_sch"/>
+      <property name="ki_description" value="Push button switch, normally open, two pins, 45° tilted"/>
+      <property name="ki_keywords" value="switch normally-open pushbutton push-button"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>cdc4b4d1-d1aa-4fcd-939b-eaacda26bec5</tstamps>
+    </comp>
+    <comp ref="B35">
+      <value>MX_SW_solder - DNI</value>
+      <footprint>footprints:SW_Cherry_MX_1.00u_PCB</footprint>
+      <libsource lib="PCM_marbastlib-mx" part="MX_SW_solder" description="Push button switch, normally open, two pins, 45° tilted"/>
+      <property name="Manufacturer" value=""/>
+      <property name="SKU" value=""/>
+      <property name="Vendor" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="keyboard_steamdeck.kicad_sch"/>
+      <property name="ki_description" value="Push button switch, normally open, two pins, 45° tilted"/>
+      <property name="ki_keywords" value="switch normally-open pushbutton push-button"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>bed8f24b-e646-47a3-88a7-18a86ed2b52e</tstamps>
+    </comp>
+    <comp ref="B36">
+      <value>MX_SW_solder - DNI</value>
+      <footprint>footprints:SW_Cherry_MX_1.00u_PCB</footprint>
+      <libsource lib="PCM_marbastlib-mx" part="MX_SW_solder" description="Push button switch, normally open, two pins, 45° tilted"/>
+      <property name="Manufacturer" value=""/>
+      <property name="SKU" value=""/>
+      <property name="Vendor" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="keyboard_steamdeck.kicad_sch"/>
+      <property name="ki_description" value="Push button switch, normally open, two pins, 45° tilted"/>
+      <property name="ki_keywords" value="switch normally-open pushbutton push-button"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a393c444-569e-4df6-94b3-6197dc36e6c5</tstamps>
+    </comp>
+    <comp ref="B37">
+      <value>MX_SW_solder - DNI</value>
+      <footprint>footprints:SW_Cherry_MX_1.00u_PCB</footprint>
+      <libsource lib="PCM_marbastlib-mx" part="MX_SW_solder" description="Push button switch, normally open, two pins, 45° tilted"/>
+      <property name="Manufacturer" value=""/>
+      <property name="SKU" value=""/>
+      <property name="Vendor" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="keyboard_steamdeck.kicad_sch"/>
+      <property name="ki_description" value="Push button switch, normally open, two pins, 45° tilted"/>
+      <property name="ki_keywords" value="switch normally-open pushbutton push-button"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b1d0ad95-600f-4e8f-833a-2427d89921cc</tstamps>
+    </comp>
+    <comp ref="B38">
+      <value>MX_SW_solder - DNI</value>
+      <footprint>footprints:SW_Cherry_MX_1.00u_PCB</footprint>
+      <libsource lib="PCM_marbastlib-mx" part="MX_SW_solder" description="Push button switch, normally open, two pins, 45° tilted"/>
+      <property name="Manufacturer" value=""/>
+      <property name="SKU" value=""/>
+      <property name="Vendor" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="keyboard_steamdeck.kicad_sch"/>
+      <property name="ki_description" value="Push button switch, normally open, two pins, 45° tilted"/>
+      <property name="ki_keywords" value="switch normally-open pushbutton push-button"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>ecdef15c-652c-45c3-ae98-433ec7b8bb01</tstamps>
+    </comp>
+    <comp ref="B39">
+      <value>MX_SW_solder - DNI</value>
+      <footprint>footprints:SW_Cherry_MX_1.00u_PCB</footprint>
+      <libsource lib="PCM_marbastlib-mx" part="MX_SW_solder" description="Push button switch, normally open, two pins, 45° tilted"/>
+      <property name="Manufacturer" value=""/>
+      <property name="SKU" value=""/>
+      <property name="Vendor" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="keyboard_steamdeck.kicad_sch"/>
+      <property name="ki_description" value="Push button switch, normally open, two pins, 45° tilted"/>
+      <property name="ki_keywords" value="switch normally-open pushbutton push-button"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>6c39f568-7a82-4fa7-92c3-7634b2aa9f4e</tstamps>
+    </comp>
+    <comp ref="B40">
+      <value>MX_SW_solder - DNI</value>
+      <footprint>footprints:SW_Cherry_MX_1.00u_PCB</footprint>
+      <libsource lib="PCM_marbastlib-mx" part="MX_SW_solder" description="Push button switch, normally open, two pins, 45° tilted"/>
+      <property name="Manufacturer" value=""/>
+      <property name="SKU" value=""/>
+      <property name="Vendor" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="keyboard_steamdeck.kicad_sch"/>
+      <property name="ki_description" value="Push button switch, normally open, two pins, 45° tilted"/>
+      <property name="ki_keywords" value="switch normally-open pushbutton push-button"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>eea0730e-15db-4c4c-baef-1a646a31ce2c</tstamps>
+    </comp>
+    <comp ref="B41">
+      <value>MX_SW_solder - DNI</value>
+      <footprint>footprints:SW_Cherry_MX_1.00u_PCB</footprint>
+      <libsource lib="PCM_marbastlib-mx" part="MX_SW_solder" description="Push button switch, normally open, two pins, 45° tilted"/>
+      <property name="Manufacturer" value=""/>
+      <property name="SKU" value=""/>
+      <property name="Vendor" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="keyboard_steamdeck.kicad_sch"/>
+      <property name="ki_description" value="Push button switch, normally open, two pins, 45° tilted"/>
+      <property name="ki_keywords" value="switch normally-open pushbutton push-button"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>6ff9c048-53f6-49b3-95c5-0326d7077376</tstamps>
+    </comp>
+    <comp ref="B42">
+      <value>MX_SW_solder - DNI</value>
+      <footprint>footprints:SW_Cherry_MX_1.00u_PCB</footprint>
+      <libsource lib="PCM_marbastlib-mx" part="MX_SW_solder" description="Push button switch, normally open, two pins, 45° tilted"/>
+      <property name="Manufacturer" value=""/>
+      <property name="SKU" value=""/>
+      <property name="Vendor" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="keyboard_steamdeck.kicad_sch"/>
+      <property name="ki_description" value="Push button switch, normally open, two pins, 45° tilted"/>
+      <property name="ki_keywords" value="switch normally-open pushbutton push-button"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>4328417c-8411-48ed-a59b-ff3f460dfa0d</tstamps>
+    </comp>
+    <comp ref="B43">
+      <value>MX_SW_solder - DNI</value>
+      <footprint>footprints:SW_Cherry_MX_1.00u_PCB</footprint>
+      <libsource lib="PCM_marbastlib-mx" part="MX_SW_solder" description="Push button switch, normally open, two pins, 45° tilted"/>
+      <property name="Manufacturer" value=""/>
+      <property name="SKU" value=""/>
+      <property name="Vendor" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="keyboard_steamdeck.kicad_sch"/>
+      <property name="ki_description" value="Push button switch, normally open, two pins, 45° tilted"/>
+      <property name="ki_keywords" value="switch normally-open pushbutton push-button"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>0cd74120-ad88-427b-8e0d-8e22e8ea6182</tstamps>
+    </comp>
+    <comp ref="B44">
+      <value>MX_SW_solder - DNI</value>
+      <footprint>footprints:SW_Cherry_MX_1.00u_PCB</footprint>
+      <libsource lib="PCM_marbastlib-mx" part="MX_SW_solder" description="Push button switch, normally open, two pins, 45° tilted"/>
+      <property name="Manufacturer" value=""/>
+      <property name="SKU" value=""/>
+      <property name="Vendor" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="keyboard_steamdeck.kicad_sch"/>
+      <property name="ki_description" value="Push button switch, normally open, two pins, 45° tilted"/>
+      <property name="ki_keywords" value="switch normally-open pushbutton push-button"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>3d42f927-e464-4f1a-b6d2-55c23a2cd952</tstamps>
+    </comp>
+    <comp ref="C1">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value=""/>
+      <property name="SKU" value=""/>
+      <property name="Vendor" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="keyboard_steamdeck.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>67566110-e11c-4775-826c-0f66e496bc5c</tstamps>
+    </comp>
+    <comp ref="C2">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value=""/>
+      <property name="SKU" value=""/>
+      <property name="Vendor" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="keyboard_steamdeck.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>10c89b7c-cb73-4b7d-86a7-941d92e2f1bd</tstamps>
+    </comp>
+    <comp ref="C3">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value=""/>
+      <property name="SKU" value=""/>
+      <property name="Vendor" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="keyboard_steamdeck.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>8a9d5420-f0a6-45af-9578-c5cf070ca2ff</tstamps>
+    </comp>
+    <comp ref="C4">
+      <value>10µF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value=""/>
+      <property name="SKU" value=""/>
+      <property name="Vendor" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="keyboard_steamdeck.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>9365ed01-2734-4808-9b80-fe457eac1b0b</tstamps>
+    </comp>
+    <comp ref="C5">
+      <value>10µF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value=""/>
+      <property name="SKU" value=""/>
+      <property name="Vendor" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="keyboard_steamdeck.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e3a70532-6708-431f-bfab-d8321b8ce8ee</tstamps>
+    </comp>
+    <comp ref="C6">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value=""/>
+      <property name="SKU" value=""/>
+      <property name="Vendor" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="keyboard_steamdeck.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>d4c62d3b-e283-4a49-9af9-bb0ac2d8fe2f</tstamps>
+    </comp>
+    <comp ref="C8">
+      <value>10µF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value=""/>
+      <property name="SKU" value=""/>
+      <property name="Vendor" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="keyboard_steamdeck.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>4cc9b8bb-5401-4284-8fe3-b0a83320f843</tstamps>
+    </comp>
+    <comp ref="C9">
+      <value>10µF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value=""/>
+      <property name="SKU" value=""/>
+      <property name="Vendor" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="keyboard_steamdeck.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a5ade645-2675-48e5-be85-bd434f5c502e</tstamps>
+    </comp>
+    <comp ref="C10">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Manufacturer" value=""/>
+      <property name="SKU" value=""/>
+      <property name="Vendor" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="keyboard_steamdeck.kicad_sch"/>
+      <property name="ki_description" value="Unpolarized capacitor"/>
+      <property name="ki_keywords" value="cap capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>ff937cc0-b8c8-47f9-a503-124e6cce4c74</tstamps>
+    </comp>
+    <comp ref="D1">
+      <value>1N4148WX-TP</value>
+      <footprint>Diode_SMD:D_SOD-323_HandSoldering</footprint>
+      <libsource lib="Device" part="D" description="Diode"/>
+      <property name="Manufacturer" value=""/>
+      <property name="SKU" value=""/>
+      <property name="Vendor" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="keyboard_steamdeck.kicad_sch"/>
+      <property name="ki_description" value="Diode"/>
+      <property name="ki_keywords" value="diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b78bfd1a-7974-40d9-8190-cd69d216652e</tstamps>
+    </comp>
+    <comp ref="D2">
+      <value>1N4148WX-TP</value>
+      <footprint>Diode_SMD:D_SOD-323_HandSoldering</footprint>
+      <libsource lib="Device" part="D" description="Diode"/>
+      <property name="Manufacturer" value=""/>
+      <property name="SKU" value=""/>
+      <property name="Vendor" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="keyboard_steamdeck.kicad_sch"/>
+      <property name="ki_description" value="Diode"/>
+      <property name="ki_keywords" value="diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>7f4329a2-6b21-48fa-8d47-3e29f0ad6f96</tstamps>
+    </comp>
+    <comp ref="D3">
+      <value>1N4148WX-TP</value>
+      <footprint>Diode_SMD:D_SOD-323_HandSoldering</footprint>
+      <libsource lib="Device" part="D" description="Diode"/>
+      <property name="Manufacturer" value=""/>
+      <property name="SKU" value=""/>
+      <property name="Vendor" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="keyboard_steamdeck.kicad_sch"/>
+      <property name="ki_description" value="Diode"/>
+      <property name="ki_keywords" value="diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>131d0456-d906-4c4e-9c1d-976ea2a75f31</tstamps>
+    </comp>
+    <comp ref="D4">
+      <value>1N4148WX-TP</value>
+      <footprint>Diode_SMD:D_SOD-323_HandSoldering</footprint>
+      <libsource lib="Device" part="D" description="Diode"/>
+      <property name="Manufacturer" value=""/>
+      <property name="SKU" value=""/>
+      <property name="Vendor" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="keyboard_steamdeck.kicad_sch"/>
+      <property name="ki_description" value="Diode"/>
+      <property name="ki_keywords" value="diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c5770baf-9940-4079-801f-c04a36d913f4</tstamps>
+    </comp>
+    <comp ref="D5">
+      <value>1N4148WX-TP</value>
+      <footprint>Diode_SMD:D_SOD-323_HandSoldering</footprint>
+      <libsource lib="Device" part="D" description="Diode"/>
+      <property name="Manufacturer" value=""/>
+      <property name="SKU" value=""/>
+      <property name="Vendor" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="keyboard_steamdeck.kicad_sch"/>
+      <property name="ki_description" value="Diode"/>
+      <property name="ki_keywords" value="diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>70d28a4b-f7fd-4d2a-b06a-075df096249b</tstamps>
+    </comp>
+    <comp ref="D6">
+      <value>1N4148WX-TP</value>
+      <footprint>Diode_SMD:D_SOD-323_HandSoldering</footprint>
+      <libsource lib="Device" part="D" description="Diode"/>
+      <property name="Manufacturer" value=""/>
+      <property name="SKU" value=""/>
+      <property name="Vendor" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="keyboard_steamdeck.kicad_sch"/>
+      <property name="ki_description" value="Diode"/>
+      <property name="ki_keywords" value="diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>4e3d78eb-7486-4642-89b8-417c139ed3d6</tstamps>
+    </comp>
+    <comp ref="D7">
+      <value>1N4148WX-TP</value>
+      <footprint>Diode_SMD:D_SOD-323_HandSoldering</footprint>
+      <libsource lib="Device" part="D" description="Diode"/>
+      <property name="Manufacturer" value=""/>
+      <property name="SKU" value=""/>
+      <property name="Vendor" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="keyboard_steamdeck.kicad_sch"/>
+      <property name="ki_description" value="Diode"/>
+      <property name="ki_keywords" value="diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f322e05f-39c6-4c75-9f0a-4bb1d68bcd19</tstamps>
+    </comp>
+    <comp ref="D8">
+      <value>1N4148WX-TP</value>
+      <footprint>Diode_SMD:D_SOD-323_HandSoldering</footprint>
+      <libsource lib="Device" part="D" description="Diode"/>
+      <property name="Manufacturer" value=""/>
+      <property name="SKU" value=""/>
+      <property name="Vendor" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="keyboard_steamdeck.kicad_sch"/>
+      <property name="ki_description" value="Diode"/>
+      <property name="ki_keywords" value="diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>3a8cab16-381c-47bc-b79e-d058093acd20</tstamps>
+    </comp>
+    <comp ref="D9">
+      <value>1N4148WX-TP</value>
+      <footprint>Diode_SMD:D_SOD-323_HandSoldering</footprint>
+      <libsource lib="Device" part="D" description="Diode"/>
+      <property name="Manufacturer" value=""/>
+      <property name="SKU" value=""/>
+      <property name="Vendor" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="keyboard_steamdeck.kicad_sch"/>
+      <property name="ki_description" value="Diode"/>
+      <property name="ki_keywords" value="diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>5ca95de1-0243-43d4-baa8-2ee272fdf9d4</tstamps>
+    </comp>
+    <comp ref="D10">
+      <value>1N4148WX-TP</value>
+      <footprint>Diode_SMD:D_SOD-323_HandSoldering</footprint>
+      <libsource lib="Device" part="D" description="Diode"/>
+      <property name="Manufacturer" value=""/>
+      <property name="SKU" value=""/>
+      <property name="Vendor" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="keyboard_steamdeck.kicad_sch"/>
+      <property name="ki_description" value="Diode"/>
+      <property name="ki_keywords" value="diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>71417526-e8f4-4b06-88ec-3ee358b93373</tstamps>
+    </comp>
+    <comp ref="D11">
+      <value>1N4148WX-TP</value>
+      <footprint>Diode_SMD:D_SOD-323_HandSoldering</footprint>
+      <libsource lib="Device" part="D" description="Diode"/>
+      <property name="Manufacturer" value=""/>
+      <property name="SKU" value=""/>
+      <property name="Vendor" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="keyboard_steamdeck.kicad_sch"/>
+      <property name="ki_description" value="Diode"/>
+      <property name="ki_keywords" value="diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>ef38a747-e383-4df6-b20e-82272e59be49</tstamps>
+    </comp>
+    <comp ref="D12">
+      <value>1N4148WX-TP</value>
+      <footprint>Diode_SMD:D_SOD-323_HandSoldering</footprint>
+      <libsource lib="Device" part="D" description="Diode"/>
+      <property name="Manufacturer" value=""/>
+      <property name="SKU" value=""/>
+      <property name="Vendor" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="keyboard_steamdeck.kicad_sch"/>
+      <property name="ki_description" value="Diode"/>
+      <property name="ki_keywords" value="diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b069f759-fe31-4f29-832f-8455bfed44d2</tstamps>
+    </comp>
+    <comp ref="D13">
+      <value>1N4148WX-TP</value>
+      <footprint>Diode_SMD:D_SOD-323_HandSoldering</footprint>
+      <libsource lib="Device" part="D" description="Diode"/>
+      <property name="Manufacturer" value=""/>
+      <property name="SKU" value=""/>
+      <property name="Vendor" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="keyboard_steamdeck.kicad_sch"/>
+      <property name="ki_description" value="Diode"/>
+      <property name="ki_keywords" value="diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>21e799c6-1eb9-4b4c-9941-78f6ffc959c6</tstamps>
+    </comp>
+    <comp ref="D14">
+      <value>1N4148WX-TP</value>
+      <footprint>Diode_SMD:D_SOD-323_HandSoldering</footprint>
+      <libsource lib="Device" part="D" description="Diode"/>
+      <property name="Manufacturer" value=""/>
+      <property name="SKU" value=""/>
+      <property name="Vendor" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="keyboard_steamdeck.kicad_sch"/>
+      <property name="ki_description" value="Diode"/>
+      <property name="ki_keywords" value="diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>231f3b2c-adc2-4967-aadc-f8ec7d523dfe</tstamps>
+    </comp>
+    <comp ref="D15">
+      <value>1N4148WX-TP</value>
+      <footprint>Diode_SMD:D_SOD-323_HandSoldering</footprint>
+      <libsource lib="Device" part="D" description="Diode"/>
+      <property name="Manufacturer" value=""/>
+      <property name="SKU" value=""/>
+      <property name="Vendor" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="keyboard_steamdeck.kicad_sch"/>
+      <property name="ki_description" value="Diode"/>
+      <property name="ki_keywords" value="diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>75c3a3d2-81d6-4572-afbf-0033f6e05610</tstamps>
+    </comp>
+    <comp ref="D16">
+      <value>1N4148WX-TP</value>
+      <footprint>Diode_SMD:D_SOD-323_HandSoldering</footprint>
+      <libsource lib="Device" part="D" description="Diode"/>
+      <property name="Manufacturer" value=""/>
+      <property name="SKU" value=""/>
+      <property name="Vendor" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="keyboard_steamdeck.kicad_sch"/>
+      <property name="ki_description" value="Diode"/>
+      <property name="ki_keywords" value="diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c2f77a92-78f2-4034-af9c-bc17230cb2b5</tstamps>
+    </comp>
+    <comp ref="D17">
+      <value>1N4148WX-TP</value>
+      <footprint>Diode_SMD:D_SOD-323_HandSoldering</footprint>
+      <libsource lib="Device" part="D" description="Diode"/>
+      <property name="Manufacturer" value=""/>
+      <property name="SKU" value=""/>
+      <property name="Vendor" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="keyboard_steamdeck.kicad_sch"/>
+      <property name="ki_description" value="Diode"/>
+      <property name="ki_keywords" value="diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>96ab908f-55d9-4c59-a719-cc2381b8fba9</tstamps>
+    </comp>
+    <comp ref="D18">
+      <value>1N4148WX-TP</value>
+      <footprint>Diode_SMD:D_SOD-323_HandSoldering</footprint>
+      <libsource lib="Device" part="D" description="Diode"/>
+      <property name="Manufacturer" value=""/>
+      <property name="SKU" value=""/>
+      <property name="Vendor" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="keyboard_steamdeck.kicad_sch"/>
+      <property name="ki_description" value="Diode"/>
+      <property name="ki_keywords" value="diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>29b89227-7588-403b-801c-a5ab86747dbf</tstamps>
+    </comp>
+    <comp ref="D19">
+      <value>1N4148WX-TP</value>
+      <footprint>Diode_SMD:D_SOD-323_HandSoldering</footprint>
+      <libsource lib="Device" part="D" description="Diode"/>
+      <property name="Manufacturer" value=""/>
+      <property name="SKU" value=""/>
+      <property name="Vendor" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="keyboard_steamdeck.kicad_sch"/>
+      <property name="ki_description" value="Diode"/>
+      <property name="ki_keywords" value="diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a0e7b64d-c332-43f2-a2a7-004e6813304b</tstamps>
+    </comp>
+    <comp ref="D20">
+      <value>1N4148WX-TP</value>
+      <footprint>Diode_SMD:D_SOD-323_HandSoldering</footprint>
+      <libsource lib="Device" part="D" description="Diode"/>
+      <property name="Manufacturer" value=""/>
+      <property name="SKU" value=""/>
+      <property name="Vendor" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="keyboard_steamdeck.kicad_sch"/>
+      <property name="ki_description" value="Diode"/>
+      <property name="ki_keywords" value="diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>7be390c0-617e-40aa-ae76-1d56a9401b99</tstamps>
+    </comp>
+    <comp ref="D21">
+      <value>1N4148WX-TP</value>
+      <footprint>Diode_SMD:D_SOD-323_HandSoldering</footprint>
+      <libsource lib="Device" part="D" description="Diode"/>
+      <property name="Manufacturer" value=""/>
+      <property name="SKU" value=""/>
+      <property name="Vendor" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="keyboard_steamdeck.kicad_sch"/>
+      <property name="ki_description" value="Diode"/>
+      <property name="ki_keywords" value="diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>af2a2edd-7d2f-4cd0-be5b-f1520dda6821</tstamps>
+    </comp>
+    <comp ref="D22">
+      <value>1N4148WX-TP</value>
+      <footprint>Diode_SMD:D_SOD-323_HandSoldering</footprint>
+      <libsource lib="Device" part="D" description="Diode"/>
+      <property name="Manufacturer" value=""/>
+      <property name="SKU" value=""/>
+      <property name="Vendor" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="keyboard_steamdeck.kicad_sch"/>
+      <property name="ki_description" value="Diode"/>
+      <property name="ki_keywords" value="diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>9d15c113-4189-4506-9f5b-9873b258541a</tstamps>
+    </comp>
+    <comp ref="D23">
+      <value>1N4148WX-TP</value>
+      <footprint>Diode_SMD:D_SOD-323_HandSoldering</footprint>
+      <libsource lib="Device" part="D" description="Diode"/>
+      <property name="Manufacturer" value=""/>
+      <property name="SKU" value=""/>
+      <property name="Vendor" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="keyboard_steamdeck.kicad_sch"/>
+      <property name="ki_description" value="Diode"/>
+      <property name="ki_keywords" value="diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>79111518-2ea8-4718-a622-78c6e88ca6b1</tstamps>
+    </comp>
+    <comp ref="D24">
+      <value>1N4148WX-TP</value>
+      <footprint>Diode_SMD:D_SOD-323_HandSoldering</footprint>
+      <libsource lib="Device" part="D" description="Diode"/>
+      <property name="Manufacturer" value=""/>
+      <property name="SKU" value=""/>
+      <property name="Vendor" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="keyboard_steamdeck.kicad_sch"/>
+      <property name="ki_description" value="Diode"/>
+      <property name="ki_keywords" value="diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>4e2bddac-0adc-4f65-b5ae-b39554a64f61</tstamps>
+    </comp>
+    <comp ref="D25">
+      <value>1N4148WX-TP</value>
+      <footprint>Diode_SMD:D_SOD-323_HandSoldering</footprint>
+      <libsource lib="Device" part="D" description="Diode"/>
+      <property name="Manufacturer" value=""/>
+      <property name="SKU" value=""/>
+      <property name="Vendor" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="keyboard_steamdeck.kicad_sch"/>
+      <property name="ki_description" value="Diode"/>
+      <property name="ki_keywords" value="diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c39003fd-d059-4678-bd8e-5266f9e964fa</tstamps>
+    </comp>
+    <comp ref="D26">
+      <value>1N4148WX-TP</value>
+      <footprint>Diode_SMD:D_SOD-323_HandSoldering</footprint>
+      <libsource lib="Device" part="D" description="Diode"/>
+      <property name="Manufacturer" value=""/>
+      <property name="SKU" value=""/>
+      <property name="Vendor" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="keyboard_steamdeck.kicad_sch"/>
+      <property name="ki_description" value="Diode"/>
+      <property name="ki_keywords" value="diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>0eae7491-ab0d-4997-be8f-c614324581f7</tstamps>
+    </comp>
+    <comp ref="D27">
+      <value>1N4148WX-TP</value>
+      <footprint>Diode_SMD:D_SOD-323_HandSoldering</footprint>
+      <libsource lib="Device" part="D" description="Diode"/>
+      <property name="Manufacturer" value=""/>
+      <property name="SKU" value=""/>
+      <property name="Vendor" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="keyboard_steamdeck.kicad_sch"/>
+      <property name="ki_description" value="Diode"/>
+      <property name="ki_keywords" value="diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>71912b46-7a7f-4cfe-b2a5-a7ca8f2eb59e</tstamps>
+    </comp>
+    <comp ref="D28">
+      <value>1N4148WX-TP</value>
+      <footprint>Diode_SMD:D_SOD-323_HandSoldering</footprint>
+      <libsource lib="Device" part="D" description="Diode"/>
+      <property name="Manufacturer" value=""/>
+      <property name="SKU" value=""/>
+      <property name="Vendor" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="keyboard_steamdeck.kicad_sch"/>
+      <property name="ki_description" value="Diode"/>
+      <property name="ki_keywords" value="diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>52b93a2f-57d0-46fe-b445-b3da3da6ad81</tstamps>
+    </comp>
+    <comp ref="D29">
+      <value>1N4148WX-TP</value>
+      <footprint>Diode_SMD:D_SOD-323_HandSoldering</footprint>
+      <libsource lib="Device" part="D" description="Diode"/>
+      <property name="Manufacturer" value=""/>
+      <property name="SKU" value=""/>
+      <property name="Vendor" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="keyboard_steamdeck.kicad_sch"/>
+      <property name="ki_description" value="Diode"/>
+      <property name="ki_keywords" value="diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e6a22a11-fad9-418b-bf5a-7959114000d6</tstamps>
+    </comp>
+    <comp ref="D30">
+      <value>1N4148WX-TP</value>
+      <footprint>Diode_SMD:D_SOD-323_HandSoldering</footprint>
+      <libsource lib="Device" part="D" description="Diode"/>
+      <property name="Manufacturer" value=""/>
+      <property name="SKU" value=""/>
+      <property name="Vendor" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="keyboard_steamdeck.kicad_sch"/>
+      <property name="ki_description" value="Diode"/>
+      <property name="ki_keywords" value="diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>8bddb811-c1be-4203-911e-dbf235c982da</tstamps>
+    </comp>
+    <comp ref="D31">
+      <value>1N4148WX-TP</value>
+      <footprint>Diode_SMD:D_SOD-323_HandSoldering</footprint>
+      <libsource lib="Device" part="D" description="Diode"/>
+      <property name="Manufacturer" value=""/>
+      <property name="SKU" value=""/>
+      <property name="Vendor" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="keyboard_steamdeck.kicad_sch"/>
+      <property name="ki_description" value="Diode"/>
+      <property name="ki_keywords" value="diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b8a6f897-fa3f-49d2-a45d-74f5b49cb4cc</tstamps>
+    </comp>
+    <comp ref="D32">
+      <value>1N4148WX-TP</value>
+      <footprint>Diode_SMD:D_SOD-323_HandSoldering</footprint>
+      <libsource lib="Device" part="D" description="Diode"/>
+      <property name="Manufacturer" value=""/>
+      <property name="SKU" value=""/>
+      <property name="Vendor" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="keyboard_steamdeck.kicad_sch"/>
+      <property name="ki_description" value="Diode"/>
+      <property name="ki_keywords" value="diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>dd8e0764-106b-4805-a8a9-327d08728f5a</tstamps>
+    </comp>
+    <comp ref="D33">
+      <value>1N4148WX-TP</value>
+      <footprint>Diode_SMD:D_SOD-323_HandSoldering</footprint>
+      <libsource lib="Device" part="D" description="Diode"/>
+      <property name="Manufacturer" value=""/>
+      <property name="SKU" value=""/>
+      <property name="Vendor" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="keyboard_steamdeck.kicad_sch"/>
+      <property name="ki_description" value="Diode"/>
+      <property name="ki_keywords" value="diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>fee7a294-b7e8-417e-b7cf-5e01fc10ec69</tstamps>
+    </comp>
+    <comp ref="D34">
+      <value>1N4148WX-TP</value>
+      <footprint>Diode_SMD:D_SOD-323_HandSoldering</footprint>
+      <libsource lib="Device" part="D" description="Diode"/>
+      <property name="Manufacturer" value=""/>
+      <property name="SKU" value=""/>
+      <property name="Vendor" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="keyboard_steamdeck.kicad_sch"/>
+      <property name="ki_description" value="Diode"/>
+      <property name="ki_keywords" value="diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>27b7394f-593c-40c8-9bd5-b813411c1949</tstamps>
+    </comp>
+    <comp ref="D35">
+      <value>1N4148WX-TP</value>
+      <footprint>Diode_SMD:D_SOD-323_HandSoldering</footprint>
+      <libsource lib="Device" part="D" description="Diode"/>
+      <property name="Manufacturer" value=""/>
+      <property name="SKU" value=""/>
+      <property name="Vendor" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="keyboard_steamdeck.kicad_sch"/>
+      <property name="ki_description" value="Diode"/>
+      <property name="ki_keywords" value="diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>10b29f7d-8884-4970-aee3-b3c4abaf526a</tstamps>
+    </comp>
+    <comp ref="D36">
+      <value>1N4148WX-TP</value>
+      <footprint>Diode_SMD:D_SOD-323_HandSoldering</footprint>
+      <libsource lib="Device" part="D" description="Diode"/>
+      <property name="Manufacturer" value=""/>
+      <property name="SKU" value=""/>
+      <property name="Vendor" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="keyboard_steamdeck.kicad_sch"/>
+      <property name="ki_description" value="Diode"/>
+      <property name="ki_keywords" value="diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>025aba6c-698b-498b-979d-dcc689099abc</tstamps>
+    </comp>
+    <comp ref="D37">
+      <value>1N4148WX-TP</value>
+      <footprint>Diode_SMD:D_SOD-323_HandSoldering</footprint>
+      <libsource lib="Device" part="D" description="Diode"/>
+      <property name="Manufacturer" value=""/>
+      <property name="SKU" value=""/>
+      <property name="Vendor" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="keyboard_steamdeck.kicad_sch"/>
+      <property name="ki_description" value="Diode"/>
+      <property name="ki_keywords" value="diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>0bb1a37b-4e93-4bba-812c-1c11460f2ea3</tstamps>
+    </comp>
+    <comp ref="D38">
+      <value>1N4148WX-TP</value>
+      <footprint>Diode_SMD:D_SOD-323_HandSoldering</footprint>
+      <libsource lib="Device" part="D" description="Diode"/>
+      <property name="Manufacturer" value=""/>
+      <property name="SKU" value=""/>
+      <property name="Vendor" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="keyboard_steamdeck.kicad_sch"/>
+      <property name="ki_description" value="Diode"/>
+      <property name="ki_keywords" value="diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>7cadbd5c-f282-4a7f-918c-80431a4697ca</tstamps>
+    </comp>
+    <comp ref="D39">
+      <value>1N4148WX-TP</value>
+      <footprint>Diode_SMD:D_SOD-323_HandSoldering</footprint>
+      <libsource lib="Device" part="D" description="Diode"/>
+      <property name="Manufacturer" value=""/>
+      <property name="SKU" value=""/>
+      <property name="Vendor" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="keyboard_steamdeck.kicad_sch"/>
+      <property name="ki_description" value="Diode"/>
+      <property name="ki_keywords" value="diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>db734370-25e6-4eea-9196-dd2bf130c1e6</tstamps>
+    </comp>
+    <comp ref="D40">
+      <value>1N4148WX-TP</value>
+      <footprint>Diode_SMD:D_SOD-323_HandSoldering</footprint>
+      <libsource lib="Device" part="D" description="Diode"/>
+      <property name="Manufacturer" value=""/>
+      <property name="SKU" value=""/>
+      <property name="Vendor" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="keyboard_steamdeck.kicad_sch"/>
+      <property name="ki_description" value="Diode"/>
+      <property name="ki_keywords" value="diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>fe569140-0430-4052-952a-2220d85bd6d0</tstamps>
+    </comp>
+    <comp ref="D41">
+      <value>1N4148WX-TP</value>
+      <footprint>Diode_SMD:D_SOD-323_HandSoldering</footprint>
+      <libsource lib="Device" part="D" description="Diode"/>
+      <property name="Manufacturer" value=""/>
+      <property name="SKU" value=""/>
+      <property name="Vendor" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="keyboard_steamdeck.kicad_sch"/>
+      <property name="ki_description" value="Diode"/>
+      <property name="ki_keywords" value="diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>98727cac-8998-4a2b-a2d5-8a62eb1a4da9</tstamps>
+    </comp>
+    <comp ref="D42">
+      <value>1N4148WX-TP</value>
+      <footprint>Diode_SMD:D_SOD-323_HandSoldering</footprint>
+      <libsource lib="Device" part="D" description="Diode"/>
+      <property name="Manufacturer" value=""/>
+      <property name="SKU" value=""/>
+      <property name="Vendor" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="keyboard_steamdeck.kicad_sch"/>
+      <property name="ki_description" value="Diode"/>
+      <property name="ki_keywords" value="diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>eeec042e-ebd0-4ea1-8c86-9d23c6f6e06e</tstamps>
+    </comp>
+    <comp ref="D43">
+      <value>1N4148WX-TP</value>
+      <footprint>Diode_SMD:D_SOD-323_HandSoldering</footprint>
+      <libsource lib="Device" part="D" description="Diode"/>
+      <property name="Manufacturer" value=""/>
+      <property name="SKU" value=""/>
+      <property name="Vendor" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="keyboard_steamdeck.kicad_sch"/>
+      <property name="ki_description" value="Diode"/>
+      <property name="ki_keywords" value="diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>2d4056bf-00ff-4928-8861-59e3baca9bcb</tstamps>
+    </comp>
+    <comp ref="D44">
+      <value>1N4148WX-TP</value>
+      <footprint>Diode_SMD:D_SOD-323_HandSoldering</footprint>
+      <libsource lib="Device" part="D" description="Diode"/>
+      <property name="Manufacturer" value=""/>
+      <property name="SKU" value=""/>
+      <property name="Vendor" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="keyboard_steamdeck.kicad_sch"/>
+      <property name="ki_description" value="Diode"/>
+      <property name="ki_keywords" value="diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>719e9aa8-5c4e-4c9d-a14b-de0983563018</tstamps>
+    </comp>
+    <comp ref="D46">
+      <value>TVS USB</value>
+      <footprint>Package_TO_SOT_SMD:SOT-353_SC-70-5</footprint>
+      <datasheet>https://www.digikey.fr/fr/products/detail/semtech-corporation/RCLAMP0503F-TCT/5113629</datasheet>
+      <libsource lib="New_Library" part="RCLAMP0503F" description=""/>
+      <property name="Manufacturer" value=""/>
+      <property name="SKU" value=""/>
+      <property name="Vendor" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="keyboard_steamdeck.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>035599c7-20bc-4e3a-b8f6-7b706f745c01</tstamps>
+    </comp>
+    <comp ref="FB1">
+      <value>FerriteBead</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <libsource lib="Device" part="FerriteBead" description="Ferrite bead"/>
+      <property name="Manufacturer" value=""/>
+      <property name="SKU" value=""/>
+      <property name="Vendor" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="keyboard_steamdeck.kicad_sch"/>
+      <property name="ki_description" value="Ferrite bead"/>
+      <property name="ki_keywords" value="L ferrite bead inductor filter"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>3b0cdde3-b0d6-49b6-a6da-9770cc305e48</tstamps>
+    </comp>
+    <comp ref="H1">
+      <value>MountingHole</value>
+      <footprint>MountingHole:MountingHole_3.2mm_M3</footprint>
+      <libsource lib="Mechanical" part="MountingHole" description="Mounting Hole without connection"/>
+      <property name="Manufacturer" value=""/>
+      <property name="SKU" value=""/>
+      <property name="Vendor" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="keyboard_steamdeck.kicad_sch"/>
+      <property name="ki_description" value="Mounting Hole without connection"/>
+      <property name="ki_keywords" value="mounting hole"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>2336a268-0243-4c9d-9405-c89231f7bdff</tstamps>
+    </comp>
+    <comp ref="H2">
+      <value>MountingHole</value>
+      <footprint>MountingHole:MountingHole_3.2mm_M3</footprint>
+      <libsource lib="Mechanical" part="MountingHole" description="Mounting Hole without connection"/>
+      <property name="Manufacturer" value=""/>
+      <property name="SKU" value=""/>
+      <property name="Vendor" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="keyboard_steamdeck.kicad_sch"/>
+      <property name="ki_description" value="Mounting Hole without connection"/>
+      <property name="ki_keywords" value="mounting hole"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>d1b20fc4-e6f3-4f2c-83eb-5b104c45d071</tstamps>
+    </comp>
+    <comp ref="H3">
+      <value>MountingHole</value>
+      <footprint>MountingHole:MountingHole_3.2mm_M3</footprint>
+      <libsource lib="Mechanical" part="MountingHole" description="Mounting Hole without connection"/>
+      <property name="Manufacturer" value=""/>
+      <property name="SKU" value=""/>
+      <property name="Vendor" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="keyboard_steamdeck.kicad_sch"/>
+      <property name="ki_description" value="Mounting Hole without connection"/>
+      <property name="ki_keywords" value="mounting hole"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>15f92485-fea8-4236-a10d-c061a34281e3</tstamps>
+    </comp>
+    <comp ref="H4">
+      <value>MountingHole</value>
+      <footprint>MountingHole:MountingHole_3.2mm_M3</footprint>
+      <libsource lib="Mechanical" part="MountingHole" description="Mounting Hole without connection"/>
+      <property name="Manufacturer" value=""/>
+      <property name="SKU" value=""/>
+      <property name="Vendor" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="keyboard_steamdeck.kicad_sch"/>
+      <property name="ki_description" value="Mounting Hole without connection"/>
+      <property name="ki_keywords" value="mounting hole"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>1b0b5e97-7b53-44db-9aab-ba64722c5d00</tstamps>
+    </comp>
+    <comp ref="IC1">
+      <value>STM32L052K8U6TR</value>
+      <footprint>footprints:UFQFPN32-5x5mm</footprint>
+      <datasheet>https://componentsearchengine.com/Datasheets/2/STM32L052K8U6TR.pdf</datasheet>
+      <fields>
+        <field name="Description">STMICROELECTRONICS - STM32L052K8U6TR - ARM MCU, Ultra Low Power, STM32 Family STM32L0 Series Microcontrollers, ARM Cortex-M0+, 32bit</field>
+        <field name="Manufacturer">StMicroelectronic</field>
+        <field name="SKU">497-18814-1-ND</field>
+        <field name="Vendor">Digikey</field>
+      </fields>
+      <libsource lib="STM32L052K8U6TR" part="STM32L052K8U6TR" description="STMICROELECTRONICS - STM32L052K8U6TR - ARM MCU, Ultra Low Power, STM32 Family STM32L0 Series Microcontrollers, ARM Cortex-M0+, 32bit"/>
+      <property name="Description" value="STMICROELECTRONICS - STM32L052K8U6TR - ARM MCU, Ultra Low Power, STM32 Family STM32L0 Series Microcontrollers, ARM Cortex-M0+, 32bit"/>
+      <property name="Manufacturer" value="StMicroelectronic"/>
+      <property name="SKU" value="497-18814-1-ND"/>
+      <property name="Vendor" value="Digikey"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="keyboard_steamdeck.kicad_sch"/>
+      <property name="ki_description" value="STMICROELECTRONICS - STM32L052K8U6TR - ARM MCU, Ultra Low Power, STM32 Family STM32L0 Series Microcontrollers, ARM Cortex-M0+, 32bit"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b8ff96ce-7359-41f9-a5a5-3c93a569090c</tstamps>
+    </comp>
+    <comp ref="J2">
+      <value>STLINKV2 - DNI</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical</footprint>
+      <libsource lib="Connector" part="Conn_01x04_Pin" description="Generic connector, single row, 01x04, script generated"/>
+      <property name="Manufacturer" value=""/>
+      <property name="SKU" value=""/>
+      <property name="Vendor" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="keyboard_steamdeck.kicad_sch"/>
+      <property name="ki_description" value="Generic connector, single row, 01x04, script generated"/>
+      <property name="ki_keywords" value="connector"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00b99a3f-cc82-4ed6-a53c-e73ab9374e79</tstamps>
+    </comp>
+    <comp ref="J3">
+      <value>USB_C_Receptacle_USB2.0</value>
+      <footprint>Library:USB C 2130830005</footprint>
+      <datasheet>https://www.usb.org/sites/default/files/documents/usb_type-c.zip</datasheet>
+      <fields>
+        <field name="Description"> CONN RCP USB2.0 TYP C 24P SMD RA </field>
+        <field name="MPN">2130830005</field>
+        <field name="Manufacturer">Molex</field>
+        <field name="SKU">900-2130830005CT-ND</field>
+        <field name="Vendor">Digikey</field>
+      </fields>
+      <libsource lib="Connector" part="USB_C_Receptacle_USB2.0" description="USB 2.0-only Type-C Receptacle connector"/>
+      <property name="MPN" value="2130830005"/>
+      <property name="Manufacturer" value="Molex"/>
+      <property name="SKU" value="900-2130830005CT-ND"/>
+      <property name="Vendor" value="Digikey"/>
+      <property name="Description" value=" CONN RCP USB2.0 TYP C 24P SMD RA "/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="keyboard_steamdeck.kicad_sch"/>
+      <property name="ki_description" value="USB 2.0-only Type-C Receptacle connector"/>
+      <property name="ki_keywords" value="usb universal serial bus type-C USB2.0"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e687fd7d-447d-4297-89e9-6f7c7482c386</tstamps>
+    </comp>
+    <comp ref="L2">
+      <value>3µH3</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <fields>
+        <field name="MPN">MLZ2012N3R3LT000</field>
+      </fields>
+      <libsource lib="Device" part="L" description="Inductor"/>
+      <property name="MPN" value="MLZ2012N3R3LT000"/>
+      <property name="Manufacturer" value=""/>
+      <property name="SKU" value=""/>
+      <property name="Vendor" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="keyboard_steamdeck.kicad_sch"/>
+      <property name="ki_description" value="Inductor"/>
+      <property name="ki_keywords" value="inductor choke coil reactor magnetic"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>24a646b7-f22a-43ee-a6b3-2003f3b36ca5</tstamps>
+    </comp>
+    <comp ref="R1">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value=""/>
+      <property name="SKU" value=""/>
+      <property name="Vendor" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="keyboard_steamdeck.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b1f15541-e87f-4055-9ec2-61b6ef5323db</tstamps>
+    </comp>
+    <comp ref="R2">
+      <value>10k</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value=""/>
+      <property name="SKU" value=""/>
+      <property name="Vendor" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="keyboard_steamdeck.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>7de2a033-1048-4489-8a4f-ddc2a39d9d4c</tstamps>
+    </comp>
+    <comp ref="R3">
+      <value>5K1</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value=""/>
+      <property name="SKU" value=""/>
+      <property name="Vendor" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="keyboard_steamdeck.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>962c0723-2885-488a-893e-019588f98bca</tstamps>
+    </comp>
+    <comp ref="R6">
+      <value>5K1</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value=""/>
+      <property name="SKU" value=""/>
+      <property name="Vendor" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="keyboard_steamdeck.kicad_sch"/>
+      <property name="ki_description" value="Resistor"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>222fb7ec-5dd8-476d-a8eb-fd5c8c458fba</tstamps>
+    </comp>
+    <comp ref="U2">
+      <value>AP63203WU</value>
+      <footprint>Package_TO_SOT_SMD:TSOT-23-6</footprint>
+      <datasheet>https://www.diodes.com/assets/Datasheets/AP63200-AP63201-AP63203-AP63205.pdf</datasheet>
+      <libsource lib="Regulator_Switching" part="AP63203WU" description="2A, 1.1MHz Buck DC/DC Converter, fixed 3.3V output voltage, TSOT-23-6"/>
+      <property name="Manufacturer" value=""/>
+      <property name="SKU" value=""/>
+      <property name="Vendor" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="keyboard_steamdeck.kicad_sch"/>
+      <property name="ki_description" value="2A, 1.1MHz Buck DC/DC Converter, fixed 3.3V output voltage, TSOT-23-6"/>
+      <property name="ki_keywords" value="2A Buck DC/DC"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>4af51025-12c9-49c6-a7f8-2242f45f4118</tstamps>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="Connector" part="Conn_01x04_Pin">
+      <description>Generic connector, single row, 01x04, script generated</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x04_Pin</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector" part="USB_C_Receptacle_USB2.0">
+      <description>USB 2.0-only Type-C Receptacle connector</description>
+      <docs>https://www.usb.org/sites/default/files/documents/usb_type-c.zip</docs>
+      <footprints>
+        <fp>USB*C*Receptacle*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">USB_C_Receptacle_USB2.0</field>
+        <field name="Datasheet">https://www.usb.org/sites/default/files/documents/usb_type-c.zip</field>
+      </fields>
+      <pins>
+        <pin num="A1" name="GND" type="passive"/>
+        <pin num="A4" name="VBUS" type="passive"/>
+        <pin num="A5" name="CC1" type="bidirectional"/>
+        <pin num="A6" name="D+" type="bidirectional"/>
+        <pin num="A7" name="D-" type="bidirectional"/>
+        <pin num="A8" name="SBU1" type="bidirectional"/>
+        <pin num="A9" name="VBUS" type="passive"/>
+        <pin num="A12" name="GND" type="passive"/>
+        <pin num="B1" name="GND" type="passive"/>
+        <pin num="B4" name="VBUS" type="passive"/>
+        <pin num="B5" name="CC2" type="bidirectional"/>
+        <pin num="B6" name="D+" type="bidirectional"/>
+        <pin num="B7" name="D-" type="bidirectional"/>
+        <pin num="B8" name="SBU2" type="bidirectional"/>
+        <pin num="B9" name="VBUS" type="passive"/>
+        <pin num="B12" name="GND" type="passive"/>
+        <pin num="S1" name="SHIELD" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="C">
+      <description>Unpolarized capacitor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="D">
+      <description>Diode</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>TO-???*</fp>
+        <fp>*_Diode_*</fp>
+        <fp>*SingleDiode*</fp>
+        <fp>D_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">D</field>
+        <field name="Datasheet">~</field>
+        <field name="Sim.Device">D</field>
+        <field name="Sim.Pins">1=K 2=A</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="FerriteBead">
+      <description>Ferrite bead</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Inductor_*</fp>
+        <fp>L_*</fp>
+        <fp>*Ferrite*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">FB</field>
+        <field name="Value">FerriteBead</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="L">
+      <description>Inductor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Choke_*</fp>
+        <fp>*Coil*</fp>
+        <fp>Inductor_*</fp>
+        <fp>L_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">L</field>
+        <field name="Value">L</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="R">
+      <description>Resistor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Mechanical" part="MountingHole">
+      <description>Mounting Hole without connection</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>MountingHole*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">H</field>
+        <field name="Value">MountingHole</field>
+        <field name="Datasheet">~</field>
+      </fields>
+    </libpart>
+    <libpart lib="New_Library" part="RCLAMP0503F">
+      <docs>https://www.digikey.fr/fr/products/detail/semtech-corporation/RCLAMP0503F-TCT/5113629</docs>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">TVS USB</field>
+        <field name="Footprint">Package_TO_SOT_SMD:SOT-353_SC-70-5</field>
+        <field name="Datasheet">https://www.digikey.fr/fr/products/detail/semtech-corporation/RCLAMP0503F-TCT/5113629</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K1" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+        <pin num="3" name="K2" type="passive"/>
+        <pin num="4" name="K3" type="passive"/>
+        <pin num="5" name="K4" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="PCM_marbastlib-mx" part="MX_SW_solder">
+      <description>Push button switch, normally open, two pins, 45° tilted</description>
+      <docs>~</docs>
+      <fields>
+        <field name="Reference">MX</field>
+        <field name="Value">MX_SW_solder</field>
+        <field name="Footprint">PCM_marbastlib-mx:SW_MX_1u</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Regulator_Switching" part="AP63203WU">
+      <description>2A, 1.1MHz Buck DC/DC Converter, fixed 3.3V output voltage, TSOT-23-6</description>
+      <docs>https://www.diodes.com/assets/Datasheets/AP63200-AP63201-AP63203-AP63205.pdf</docs>
+      <footprints>
+        <fp>TSOT?23*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">AP63203WU</field>
+        <field name="Footprint">Package_TO_SOT_SMD:TSOT-23-6</field>
+        <field name="Datasheet">https://www.diodes.com/assets/Datasheets/AP63200-AP63201-AP63203-AP63205.pdf</field>
+      </fields>
+      <pins>
+        <pin num="1" name="FB" type="input"/>
+        <pin num="2" name="EN" type="input"/>
+        <pin num="3" name="IN" type="power_in"/>
+        <pin num="4" name="GND" type="power_in"/>
+        <pin num="5" name="SW" type="output"/>
+        <pin num="6" name="BST" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="STM32L052K8U6TR" part="STM32L052K8U6TR">
+      <description>STMICROELECTRONICS - STM32L052K8U6TR - ARM MCU, Ultra Low Power, STM32 Family STM32L0 Series Microcontrollers, ARM Cortex-M0+, 32bit</description>
+      <docs>https://componentsearchengine.com/Datasheets/2/STM32L052K8U6TR.pdf</docs>
+      <fields>
+        <field name="Reference">IC</field>
+        <field name="Value">STM32L052K8U6TR</field>
+        <field name="Footprint">QFN50P500X500X60-33N-D</field>
+        <field name="Datasheet">https://componentsearchengine.com/Datasheets/2/STM32L052K8U6TR.pdf</field>
+        <field name="Description">STMICROELECTRONICS - STM32L052K8U6TR - ARM MCU, Ultra Low Power, STM32 Family STM32L0 Series Microcontrollers, ARM Cortex-M0+, 32bit</field>
+        <field name="Height">0.6</field>
+        <field name="Mouser Part Number">511-STM32L052K8U6TR</field>
+        <field name="Mouser Price/Stock">https://www.mouser.co.uk/ProductDetail/STMicroelectronics/STM32L052K8U6TR?qs=9MuLHSklicr7rj%2FUXJwKbA%3D%3D</field>
+        <field name="Manufacturer_Name">STMicroelectronics</field>
+        <field name="Manufacturer_Part_Number">STM32L052K8U6TR</field>
+      </fields>
+      <pins>
+        <pin num="1" name="VDD_1" type="passive"/>
+        <pin num="2" name="PC14-OSC32_IN" type="passive"/>
+        <pin num="3" name="PC15-OSC32_OUT" type="passive"/>
+        <pin num="4" name="NRST" type="passive"/>
+        <pin num="5" name="VDDA" type="passive"/>
+        <pin num="6" name="PA0" type="passive"/>
+        <pin num="7" name="PA1" type="passive"/>
+        <pin num="8" name="PA2" type="passive"/>
+        <pin num="9" name="PA3" type="passive"/>
+        <pin num="10" name="PA4" type="passive"/>
+        <pin num="11" name="PA5" type="passive"/>
+        <pin num="12" name="PA6" type="passive"/>
+        <pin num="13" name="PA7" type="passive"/>
+        <pin num="14" name="PB0" type="passive"/>
+        <pin num="15" name="PB1" type="passive"/>
+        <pin num="16" name="PB2" type="passive"/>
+        <pin num="17" name="VDD_2" type="passive"/>
+        <pin num="18" name="PA8" type="passive"/>
+        <pin num="19" name="PA9" type="passive"/>
+        <pin num="20" name="PA10" type="passive"/>
+        <pin num="21" name="PA11" type="passive"/>
+        <pin num="22" name="PA12" type="passive"/>
+        <pin num="23" name="PA13" type="passive"/>
+        <pin num="24" name="PA14" type="passive"/>
+        <pin num="25" name="PA15" type="passive"/>
+        <pin num="26" name="PB3" type="passive"/>
+        <pin num="27" name="PB4" type="passive"/>
+        <pin num="28" name="PB5" type="passive"/>
+        <pin num="29" name="PB6" type="passive"/>
+        <pin num="30" name="PB7" type="passive"/>
+        <pin num="31" name="BOOT0" type="passive"/>
+        <pin num="32" name="PB8" type="passive"/>
+        <pin num="33" name="VSS" type="passive"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="Connector">
+      <uri>C:\Program Files\KiCad\7.0\share\kicad\symbols\/Connector.kicad_sym</uri>
+    </library>
+    <library logical="Device">
+      <uri>C:\Program Files\KiCad\7.0\share\kicad\symbols\/Device.kicad_sym</uri>
+    </library>
+    <library logical="Mechanical">
+      <uri>C:\Program Files\KiCad\7.0\share\kicad\symbols\/Mechanical.kicad_sym</uri>
+    </library>
+    <library logical="New_Library">
+      <uri>D:/Synology/Projets/keyboard_steamdeck/New_Library.kicad_sym</uri>
+    </library>
+    <library logical="Regulator_Switching">
+      <uri>C:\Program Files\KiCad\7.0\share\kicad\symbols\/Regulator_Switching.kicad_sym</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="+3.3V">
+      <node ref="C1" pin="2" pintype="passive"/>
+      <node ref="C2" pin="2" pintype="passive"/>
+      <node ref="C3" pin="2" pintype="passive"/>
+      <node ref="C4" pin="2" pintype="passive"/>
+      <node ref="C5" pin="2" pintype="passive"/>
+      <node ref="FB1" pin="2" pintype="passive"/>
+      <node ref="IC1" pin="1" pinfunction="VDD_1" pintype="passive"/>
+      <node ref="IC1" pin="17" pinfunction="VDD_2" pintype="passive"/>
+      <node ref="IC1" pin="5" pinfunction="VDDA" pintype="passive"/>
+      <node ref="J2" pin="4" pinfunction="Pin_4" pintype="passive"/>
+      <node ref="R1" pin="2" pintype="passive"/>
+    </net>
+    <net code="2" name="3V3N">
+      <node ref="C9" pin="1" pintype="passive"/>
+      <node ref="FB1" pin="1" pintype="passive"/>
+      <node ref="L2" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="U2" pin="1" pinfunction="FB" pintype="input"/>
+    </net>
+    <net code="3" name="BOOT0">
+      <node ref="IC1" pin="31" pinfunction="BOOT0" pintype="passive"/>
+      <node ref="R2" pin="2" pintype="passive"/>
+    </net>
+    <net code="4" name="C1">
+      <node ref="B1" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="B2" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="B6" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="B7" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="IC1" pin="20" pinfunction="PA10" pintype="passive"/>
+    </net>
+    <net code="5" name="C2">
+      <node ref="B10" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="B3" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="B8" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="B9" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="IC1" pin="19" pinfunction="PA9" pintype="passive"/>
+    </net>
+    <net code="6" name="C3">
+      <node ref="B11" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="B12" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="B13" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="B4" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="IC1" pin="18" pinfunction="PA8" pintype="passive"/>
+    </net>
+    <net code="7" name="C4">
+      <node ref="B14" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="B15" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="B16" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="B5" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="IC1" pin="14" pinfunction="PB0" pintype="passive"/>
+    </net>
+    <net code="8" name="C5">
+      <node ref="B17" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="B18" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="B19" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="B20" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="IC1" pin="13" pinfunction="PA7" pintype="passive"/>
+    </net>
+    <net code="9" name="C6">
+      <node ref="B21" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="B22" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="B23" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="B24" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="IC1" pin="12" pinfunction="PA6" pintype="passive"/>
+    </net>
+    <net code="10" name="C7">
+      <node ref="B25" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="B26" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="B27" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="B28" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="IC1" pin="11" pinfunction="PA5" pintype="passive"/>
+    </net>
+    <net code="11" name="C8">
+      <node ref="B29" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="B30" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="B31" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="B32" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="IC1" pin="10" pinfunction="PA4" pintype="passive"/>
+    </net>
+    <net code="12" name="C9">
+      <node ref="B33" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="B34" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="B35" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="B36" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="IC1" pin="9" pinfunction="PA3" pintype="passive"/>
+    </net>
+    <net code="13" name="C10">
+      <node ref="B37" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="B38" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="B39" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="B40" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="IC1" pin="8" pinfunction="PA2" pintype="passive"/>
+    </net>
+    <net code="14" name="C11">
+      <node ref="B41" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="B42" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="B43" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="B44" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="IC1" pin="28" pinfunction="PB5" pintype="passive"/>
+    </net>
+    <net code="15" name="D+">
+      <node ref="D46" pin="3" pinfunction="K2" pintype="passive"/>
+      <node ref="IC1" pin="22" pinfunction="PA12" pintype="passive"/>
+      <node ref="J3" pin="A6" pinfunction="D+" pintype="bidirectional"/>
+      <node ref="J3" pin="B6" pinfunction="D+" pintype="bidirectional"/>
+    </net>
+    <net code="16" name="D-">
+      <node ref="D46" pin="1" pinfunction="K1" pintype="passive"/>
+      <node ref="IC1" pin="21" pinfunction="PA11" pintype="passive"/>
+      <node ref="J3" pin="A7" pinfunction="D-" pintype="bidirectional"/>
+      <node ref="J3" pin="B7" pinfunction="D-" pintype="bidirectional"/>
+    </net>
+    <net code="17" name="GND">
+      <node ref="C1" pin="1" pintype="passive"/>
+      <node ref="C2" pin="1" pintype="passive"/>
+      <node ref="C3" pin="1" pintype="passive"/>
+      <node ref="C4" pin="1" pintype="passive"/>
+      <node ref="C5" pin="1" pintype="passive"/>
+      <node ref="C6" pin="1" pintype="passive"/>
+      <node ref="C8" pin="2" pintype="passive"/>
+      <node ref="C9" pin="2" pintype="passive"/>
+      <node ref="D46" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="IC1" pin="33" pinfunction="VSS" pintype="passive"/>
+      <node ref="J2" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="J3" pin="A1" pinfunction="GND" pintype="passive"/>
+      <node ref="J3" pin="A12" pinfunction="GND" pintype="passive"/>
+      <node ref="J3" pin="B1" pinfunction="GND" pintype="passive"/>
+      <node ref="J3" pin="B12" pinfunction="GND" pintype="passive"/>
+      <node ref="J3" pin="S1" pinfunction="SHIELD" pintype="passive"/>
+      <node ref="R2" pin="1" pintype="passive"/>
+      <node ref="R3" pin="1" pintype="passive"/>
+      <node ref="R6" pin="1" pintype="passive"/>
+      <node ref="U2" pin="4" pinfunction="GND" pintype="power_in"/>
+    </net>
+    <net code="18" name="L1">
+      <node ref="D11" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="D12" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="D13" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="D14" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="D15" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="D16" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="D17" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="D18" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="D19" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="D20" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="D41" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="IC1" pin="16" pinfunction="PB2" pintype="passive"/>
+    </net>
+    <net code="19" name="L2">
+      <node ref="D1" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="D10" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="D2" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="D3" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="D4" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="D42" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="D5" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="D6" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="D7" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="D8" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="D9" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="IC1" pin="15" pinfunction="PB1" pintype="passive"/>
+    </net>
+    <net code="20" name="L3">
+      <node ref="D21" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="D23" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="D25" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="D27" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="D29" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="D31" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="D33" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="D35" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="D37" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="D39" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="D43" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="IC1" pin="30" pinfunction="PB7" pintype="passive"/>
+    </net>
+    <net code="21" name="L4">
+      <node ref="D22" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="D24" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="D26" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="D28" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="D30" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="D32" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="D34" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="D36" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="D38" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="D40" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="D44" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="IC1" pin="29" pinfunction="PB6" pintype="passive"/>
+    </net>
+    <net code="22" name="NRST">
+      <node ref="C6" pin="2" pintype="passive"/>
+      <node ref="IC1" pin="4" pinfunction="NRST" pintype="passive"/>
+      <node ref="R1" pin="1" pintype="passive"/>
+    </net>
+    <net code="23" name="Net-(D1-A)">
+      <node ref="B22" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="D1" pin="2" pinfunction="A" pintype="passive"/>
+    </net>
+    <net code="24" name="Net-(D2-A)">
+      <node ref="B26" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="D2" pin="2" pinfunction="A" pintype="passive"/>
+    </net>
+    <net code="25" name="Net-(D3-A)">
+      <node ref="B30" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="D3" pin="2" pinfunction="A" pintype="passive"/>
+    </net>
+    <net code="26" name="Net-(D4-A)">
+      <node ref="B34" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="D4" pin="2" pinfunction="A" pintype="passive"/>
+    </net>
+    <net code="27" name="Net-(D5-A)">
+      <node ref="B38" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="D5" pin="2" pinfunction="A" pintype="passive"/>
+    </net>
+    <net code="28" name="Net-(D6-A)">
+      <node ref="B1" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="D6" pin="2" pinfunction="A" pintype="passive"/>
+    </net>
+    <net code="29" name="Net-(D7-A)">
+      <node ref="B8" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="D7" pin="2" pinfunction="A" pintype="passive"/>
+    </net>
+    <net code="30" name="Net-(D8-A)">
+      <node ref="B11" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="D8" pin="2" pinfunction="A" pintype="passive"/>
+    </net>
+    <net code="31" name="Net-(D9-A)">
+      <node ref="B14" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="D9" pin="2" pinfunction="A" pintype="passive"/>
+    </net>
+    <net code="32" name="Net-(D10-A)">
+      <node ref="B18" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="D10" pin="2" pinfunction="A" pintype="passive"/>
+    </net>
+    <net code="33" name="Net-(D11-A)">
+      <node ref="B2" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="D11" pin="2" pinfunction="A" pintype="passive"/>
+    </net>
+    <net code="34" name="Net-(D12-A)">
+      <node ref="B3" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="D12" pin="2" pinfunction="A" pintype="passive"/>
+    </net>
+    <net code="35" name="Net-(D13-A)">
+      <node ref="B4" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="D13" pin="2" pinfunction="A" pintype="passive"/>
+    </net>
+    <net code="36" name="Net-(D14-A)">
+      <node ref="B5" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="D14" pin="2" pinfunction="A" pintype="passive"/>
+    </net>
+    <net code="37" name="Net-(D15-A)">
+      <node ref="B17" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="D15" pin="2" pinfunction="A" pintype="passive"/>
+    </net>
+    <net code="38" name="Net-(D16-A)">
+      <node ref="B21" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="D16" pin="2" pinfunction="A" pintype="passive"/>
+    </net>
+    <net code="39" name="Net-(D17-A)">
+      <node ref="B25" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="D17" pin="2" pinfunction="A" pintype="passive"/>
+    </net>
+    <net code="40" name="Net-(D18-A)">
+      <node ref="B29" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="D18" pin="2" pinfunction="A" pintype="passive"/>
+    </net>
+    <net code="41" name="Net-(D19-A)">
+      <node ref="B33" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="D19" pin="2" pinfunction="A" pintype="passive"/>
+    </net>
+    <net code="42" name="Net-(D20-A)">
+      <node ref="B37" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="D20" pin="2" pinfunction="A" pintype="passive"/>
+    </net>
+    <net code="43" name="Net-(D21-A)">
+      <node ref="B6" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="D21" pin="2" pinfunction="A" pintype="passive"/>
+    </net>
+    <net code="44" name="Net-(D22-A)">
+      <node ref="B7" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="D22" pin="2" pinfunction="A" pintype="passive"/>
+    </net>
+    <net code="45" name="Net-(D23-A)">
+      <node ref="B9" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="D23" pin="2" pinfunction="A" pintype="passive"/>
+    </net>
+    <net code="46" name="Net-(D24-A)">
+      <node ref="B10" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="D24" pin="2" pinfunction="A" pintype="passive"/>
+    </net>
+    <net code="47" name="Net-(D25-A)">
+      <node ref="B12" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="D25" pin="2" pinfunction="A" pintype="passive"/>
+    </net>
+    <net code="48" name="Net-(D26-A)">
+      <node ref="B13" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="D26" pin="2" pinfunction="A" pintype="passive"/>
+    </net>
+    <net code="49" name="Net-(D27-A)">
+      <node ref="B15" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="D27" pin="2" pinfunction="A" pintype="passive"/>
+    </net>
+    <net code="50" name="Net-(D28-A)">
+      <node ref="B16" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="D28" pin="2" pinfunction="A" pintype="passive"/>
+    </net>
+    <net code="51" name="Net-(D29-A)">
+      <node ref="B19" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="D29" pin="2" pinfunction="A" pintype="passive"/>
+    </net>
+    <net code="52" name="Net-(D30-A)">
+      <node ref="B20" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="D30" pin="2" pinfunction="A" pintype="passive"/>
+    </net>
+    <net code="53" name="Net-(D31-A)">
+      <node ref="B23" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="D31" pin="2" pinfunction="A" pintype="passive"/>
+    </net>
+    <net code="54" name="Net-(D32-A)">
+      <node ref="B24" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="D32" pin="2" pinfunction="A" pintype="passive"/>
+    </net>
+    <net code="55" name="Net-(D33-A)">
+      <node ref="B27" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="D33" pin="2" pinfunction="A" pintype="passive"/>
+    </net>
+    <net code="56" name="Net-(D34-A)">
+      <node ref="B28" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="D34" pin="2" pinfunction="A" pintype="passive"/>
+    </net>
+    <net code="57" name="Net-(D35-A)">
+      <node ref="B31" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="D35" pin="2" pinfunction="A" pintype="passive"/>
+    </net>
+    <net code="58" name="Net-(D36-A)">
+      <node ref="B32" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="D36" pin="2" pinfunction="A" pintype="passive"/>
+    </net>
+    <net code="59" name="Net-(D37-A)">
+      <node ref="B35" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="D37" pin="2" pinfunction="A" pintype="passive"/>
+    </net>
+    <net code="60" name="Net-(D38-A)">
+      <node ref="B36" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="D38" pin="2" pinfunction="A" pintype="passive"/>
+    </net>
+    <net code="61" name="Net-(D39-A)">
+      <node ref="B39" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="D39" pin="2" pinfunction="A" pintype="passive"/>
+    </net>
+    <net code="62" name="Net-(D40-A)">
+      <node ref="B40" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="D40" pin="2" pinfunction="A" pintype="passive"/>
+    </net>
+    <net code="63" name="Net-(D41-A)">
+      <node ref="B41" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="D41" pin="2" pinfunction="A" pintype="passive"/>
+    </net>
+    <net code="64" name="Net-(D42-A)">
+      <node ref="B42" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="D42" pin="2" pinfunction="A" pintype="passive"/>
+    </net>
+    <net code="65" name="Net-(D43-A)">
+      <node ref="B43" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="D43" pin="2" pinfunction="A" pintype="passive"/>
+    </net>
+    <net code="66" name="Net-(D44-A)">
+      <node ref="B44" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="D44" pin="2" pinfunction="A" pintype="passive"/>
+    </net>
+    <net code="67" name="Net-(J3-CC1)">
+      <node ref="J3" pin="A5" pinfunction="CC1" pintype="bidirectional"/>
+      <node ref="R3" pin="2" pintype="passive"/>
+    </net>
+    <net code="68" name="Net-(J3-CC2)">
+      <node ref="J3" pin="B5" pinfunction="CC2" pintype="bidirectional"/>
+      <node ref="R6" pin="2" pintype="passive"/>
+    </net>
+    <net code="69" name="Net-(U2-BST)">
+      <node ref="C10" pin="2" pintype="passive"/>
+      <node ref="U2" pin="6" pinfunction="BST" pintype="passive"/>
+    </net>
+    <net code="70" name="Net-(U2-SW)">
+      <node ref="C10" pin="1" pintype="passive"/>
+      <node ref="L2" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="U2" pin="5" pinfunction="SW" pintype="output"/>
+    </net>
+    <net code="71" name="SWCLK">
+      <node ref="IC1" pin="24" pinfunction="PA14" pintype="passive"/>
+      <node ref="J2" pin="3" pinfunction="Pin_3" pintype="passive"/>
+    </net>
+    <net code="72" name="SWDIO">
+      <node ref="IC1" pin="23" pinfunction="PA13" pintype="passive"/>
+      <node ref="J2" pin="2" pinfunction="Pin_2" pintype="passive"/>
+    </net>
+    <net code="73" name="VBUS">
+      <node ref="C8" pin="1" pintype="passive"/>
+      <node ref="D46" pin="5" pinfunction="K4" pintype="passive"/>
+      <node ref="J3" pin="A4" pinfunction="VBUS" pintype="passive"/>
+      <node ref="J3" pin="A9" pinfunction="VBUS" pintype="passive"/>
+      <node ref="J3" pin="B4" pinfunction="VBUS" pintype="passive"/>
+      <node ref="J3" pin="B9" pinfunction="VBUS" pintype="passive"/>
+      <node ref="U2" pin="2" pinfunction="EN" pintype="input"/>
+      <node ref="U2" pin="3" pinfunction="IN" pintype="power_in"/>
+    </net>
+    <net code="74" name="unconnected-(D46-K3-Pad4)">
+      <node ref="D46" pin="4" pinfunction="K3" pintype="passive+no_connect"/>
+    </net>
+    <net code="75" name="unconnected-(IC1-PA0-Pad6)">
+      <node ref="IC1" pin="6" pinfunction="PA0" pintype="passive+no_connect"/>
+    </net>
+    <net code="76" name="unconnected-(IC1-PA1-Pad7)">
+      <node ref="IC1" pin="7" pinfunction="PA1" pintype="passive+no_connect"/>
+    </net>
+    <net code="77" name="unconnected-(IC1-PA15-Pad25)">
+      <node ref="IC1" pin="25" pinfunction="PA15" pintype="passive+no_connect"/>
+    </net>
+    <net code="78" name="unconnected-(IC1-PB3-Pad26)">
+      <node ref="IC1" pin="26" pinfunction="PB3" pintype="passive+no_connect"/>
+    </net>
+    <net code="79" name="unconnected-(IC1-PB4-Pad27)">
+      <node ref="IC1" pin="27" pinfunction="PB4" pintype="passive+no_connect"/>
+    </net>
+    <net code="80" name="unconnected-(IC1-PB8-Pad32)">
+      <node ref="IC1" pin="32" pinfunction="PB8" pintype="passive+no_connect"/>
+    </net>
+    <net code="81" name="unconnected-(IC1-PC14-OSC32_IN-Pad2)">
+      <node ref="IC1" pin="2" pinfunction="PC14-OSC32_IN" pintype="passive+no_connect"/>
+    </net>
+    <net code="82" name="unconnected-(IC1-PC15-OSC32_OUT-Pad3)">
+      <node ref="IC1" pin="3" pinfunction="PC15-OSC32_OUT" pintype="passive+no_connect"/>
+    </net>
+    <net code="83" name="unconnected-(J3-SBU1-PadA8)">
+      <node ref="J3" pin="A8" pinfunction="SBU1" pintype="bidirectional+no_connect"/>
+    </net>
+    <net code="84" name="unconnected-(J3-SBU2-PadB8)">
+      <node ref="J3" pin="B8" pinfunction="SBU2" pintype="bidirectional+no_connect"/>
+    </net>
+  </nets>
+</export>
