@@ -22,10 +22,15 @@ The goal is to have no keys restriction compare to a 120% keyboard.
 ![model3d](model3d.png)
 
 ## Features
-
 Bellow a list of features of this keyboard:
-    - Del and suppr keys
-    - Directionnal arrows
-    - AZERTY layout
-    - 4 functions keys
-    - Up to 6 differents keys mapped on one switch (FN1, FN2, FN3, FN4, SHIFT, Simple press)
+    * All keys from 120% keyboards (Directionnal arrows, del, backspace, G keys)
+    * Possibility to switch from AZERTY to QWERTY
+    * 8 programables macro-G-keys
+    * Up to 6 differents keys mapped on one switch (FN1, FN2, FN3, FN4, SHIFT, Simple press)
+    * Reprogramming possibility of firmware
+    * Electro Static Protection using TVS USB
+    * Very low energy consumption using STM32L0 Chip
+    * Case-material versatile (Wood, Aluminium, Inox, plastic, ...) (2mm cutted sheet)
+    
+    
+    
