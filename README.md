@@ -10,6 +10,7 @@ The goal is to have no keys restriction compare to a 120% keyboard.
 
 ## Features
 Bellow a list of features of this keyboard:
+
     - All keys from 120% keyboards (Directionnal arrows, del, backspace, G keys)
     
     - Possibility to switch from AZERTY to QWERTY
