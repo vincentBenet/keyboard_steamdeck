@@ -1,3 +1,13 @@
 # keyboard_steamdeck
 
-![render_keycaps](render_keycaps.PNG)
+## schematic
+![schematic](schematic.png)
+
+## routing
+![routing](routing.png)
+
+## layout
+![layout](layout.png)
+
+## Model 3D
+![model3d](model3d.png)
