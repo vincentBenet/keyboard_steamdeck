@@ -64,8 +64,8 @@
       39,
       40
     ],
-    "visible_layers": "8001030_fffffff9",
-    "zone_display_mode": 1
+    "visible_layers": "800d0ff_ffffffff",
+    "zone_display_mode": 0
   },
   "meta": {
     "filename": "keyboard_steamdeck.kicad_prl",
