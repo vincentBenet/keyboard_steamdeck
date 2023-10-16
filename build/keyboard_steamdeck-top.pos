@@ -1,0 +1,50 @@
+### Footprint positions - created on Fri Oct 13 12:14:16 2023 ###
+### Printed by KiCad version 7.0.8
+## Unit = mm, Angle = deg.
+## Side : top
+# Ref     Val                 Package                      PosX       PosY       Rot  Side
+B1        MX_SW_solder_-_DNI  SW_Cherry_MX_1.00u_PCB    84.0740  -112.7760    0.0000  top
+B2        MX_SW_solder_-_DNI  SW_Cherry_MX_1.00u_PCB    84.0740   -93.4720    0.0000  top
+B3        MX_SW_solder_-_DNI  SW_Cherry_MX_1.00u_PCB   103.3780   -93.4720    0.0000  top
+B4        MX_SW_solder_-_DNI  SW_Cherry_MX_1.00u_PCB   122.6820   -93.4720    0.0000  top
+B5        MX_SW_solder_-_DNI  SW_Cherry_MX_1.00u_PCB   141.9860   -93.4720    0.0000  top
+B6        MX_SW_solder_-_DNI  SW_Cherry_MX_1.00u_PCB    84.0740  -132.0800    0.0000  top
+B7        MX_SW_solder_-_DNI  SW_Cherry_MX_1.00u_PCB    84.0740  -151.3840    0.0000  top
+B8        MX_SW_solder_-_DNI  SW_Cherry_MX_1.00u_PCB   103.3780  -112.7760    0.0000  top
+B9        MX_SW_solder_-_DNI  SW_Cherry_MX_1.00u_PCB   103.3780  -132.0800    0.0000  top
+B10       MX_SW_solder_-_DNI  SW_Cherry_MX_1.00u_PCB   103.3780  -151.3840    0.0000  top
+B11       MX_SW_solder_-_DNI  SW_Cherry_MX_1.00u_PCB   122.6820  -112.7760    0.0000  top
+B12       MX_SW_solder_-_DNI  SW_Cherry_MX_1.00u_PCB   122.6820  -132.0800    0.0000  top
+B13       MX_SW_solder_-_DNI  SW_Cherry_MX_1.00u_PCB   122.6820  -151.3840    0.0000  top
+B14       MX_SW_solder_-_DNI  SW_Cherry_MX_1.00u_PCB   141.9860  -112.7760    0.0000  top
+B15       MX_SW_solder_-_DNI  SW_Cherry_MX_1.00u_PCB   141.9860  -132.0800    0.0000  top
+B16       MX_SW_solder_-_DNI  SW_Cherry_MX_1.00u_PCB   141.9860  -151.3840    0.0000  top
+B17       MX_SW_solder_-_DNI  SW_Cherry_MX_1.00u_PCB   161.2900   -93.4720    0.0000  top
+B18       MX_SW_solder_-_DNI  SW_Cherry_MX_1.00u_PCB   161.2900  -112.7760    0.0000  top
+B19       MX_SW_solder_-_DNI  SW_Cherry_MX_1.00u_PCB   161.2900  -132.0800    0.0000  top
+B20       MX_SW_solder_-_DNI  SW_Cherry_MX_1.00u_PCB   161.2900  -151.3840    0.0000  top
+B21       MX_SW_solder_-_DNI  SW_Cherry_MX_1.00u_PCB   180.5940   -93.4720    0.0000  top
+B22       MX_SW_solder_-_DNI  SW_Cherry_MX_1.00u_PCB   180.5940  -112.7760    0.0000  top
+B23       MX_SW_solder_-_DNI  SW_Cherry_MX_1.00u_PCB   180.5940  -132.0800    0.0000  top
+B24       MX_SW_solder_-_DNI  SW_Cherry_MX_1.00u_PCB   180.5940  -151.3840    0.0000  top
+B25       MX_SW_solder_-_DNI  SW_Cherry_MX_1.00u_PCB   199.8980   -93.4720    0.0000  top
+B26       MX_SW_solder_-_DNI  SW_Cherry_MX_1.00u_PCB   199.8980  -112.7760    0.0000  top
+B27       MX_SW_solder_-_DNI  SW_Cherry_MX_1.00u_PCB   199.8980  -132.0800    0.0000  top
+B28       MX_SW_solder_-_DNI  SW_Cherry_MX_1.00u_PCB   199.8980  -151.3840    0.0000  top
+B29       MX_SW_solder_-_DNI  SW_Cherry_MX_1.00u_PCB   219.2020   -93.4720    0.0000  top
+B30       MX_SW_solder_-_DNI  SW_Cherry_MX_1.00u_PCB   219.2020  -112.7760    0.0000  top
+B31       MX_SW_solder_-_DNI  SW_Cherry_MX_1.00u_PCB   219.2020  -132.0800    0.0000  top
+B32       MX_SW_solder_-_DNI  SW_Cherry_MX_1.00u_PCB   219.2020  -151.3840    0.0000  top
+B33       MX_SW_solder_-_DNI  SW_Cherry_MX_1.00u_PCB   238.5060   -93.4720    0.0000  top
+B34       MX_SW_solder_-_DNI  SW_Cherry_MX_1.00u_PCB   238.5060  -112.7760    0.0000  top
+B35       MX_SW_solder_-_DNI  SW_Cherry_MX_1.00u_PCB   238.5060  -132.0800    0.0000  top
+B36       MX_SW_solder_-_DNI  SW_Cherry_MX_1.00u_PCB   238.5060  -151.3840    0.0000  top
+B37       MX_SW_solder_-_DNI  SW_Cherry_MX_1.00u_PCB   257.8100   -93.4720    0.0000  top
+B38       MX_SW_solder_-_DNI  SW_Cherry_MX_1.00u_PCB   257.8100  -112.7760    0.0000  top
+B39       MX_SW_solder_-_DNI  SW_Cherry_MX_1.00u_PCB   257.8100  -132.0800    0.0000  top
+B40       MX_SW_solder_-_DNI  SW_Cherry_MX_1.00u_PCB   257.8100  -151.3840    0.0000  top
+B41       MX_SW_solder_-_DNI  SW_Cherry_MX_1.00u_PCB   277.1140   -93.4720    0.0000  top
+B42       MX_SW_solder_-_DNI  SW_Cherry_MX_1.00u_PCB   277.1140  -112.7760    0.0000  top
+B43       MX_SW_solder_-_DNI  SW_Cherry_MX_1.00u_PCB   277.1140  -132.0800    0.0000  top
+B44       MX_SW_solder_-_DNI  SW_Cherry_MX_1.00u_PCB   277.1140  -151.3840    0.0000  top
+## End
