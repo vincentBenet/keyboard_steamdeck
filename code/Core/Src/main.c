@@ -6,7 +6,7 @@
   ******************************************************************************
   * @attention
   *
-  * Copyright (c) 2023 STMicroelectronics.
+  * Copyright (c) 2024 STMicroelectronics.
   * All rights reserved.
   *
   * This software is licensed under terms that can be found in the LICENSE file
@@ -18,10 +18,12 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+#include "usb_device.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "usb_device.h"
+#include "stdio.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -40,16 +42,25 @@
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
-PCD_HandleTypeDef hpcd_USB_FS;
 
 /* USER CODE BEGIN PV */
-
+extern USBD_HandleTypeDef hUsbDeviceFS;
+typedef struct {
+	uint8_t MODIFIER;
+	uint8_t RESERVED;
+	uint8_t KEYCODE1;
+	uint8_t KEYCODE2;
+	uint8_t KEYCODE3;
+	uint8_t KEYCODE4;
+	uint8_t KEYCODE5;
+	uint8_t KEYCODE6;
+}subKeyBoard;
+subKeyBoard keyBoardHIDsub = {0,0,0,0,0,0,0,0};
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
-static void MX_USB_PCD_Init(void);
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
@@ -66,6 +77,7 @@ static void MX_USB_PCD_Init(void);
 int main(void)
 {
   /* USER CODE BEGIN 1 */
+  printf("Initialisation begin");
 
   /* USER CODE END 1 */
 
@@ -87,8 +99,10 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
-  MX_USB_PCD_Init();
+  MX_USB_DEVICE_Init();
   /* USER CODE BEGIN 2 */
+  printf("Initialisation finish");
+  printf("Infinite loop begin");
 
   /* USER CODE END 2 */
 
@@ -99,6 +113,355 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
+	  printf("Cycle begin");
+	  HAL_GPIO_WritePin(C1_GPIO_Port, C1_Pin, GPIO_PIN_SET);
+	  HAL_GPIO_WritePin(C2_GPIO_Port, C2_Pin, GPIO_PIN_SET);
+	  HAL_GPIO_WritePin(C3_GPIO_Port, C3_Pin, GPIO_PIN_SET);
+	  HAL_GPIO_WritePin(C4_GPIO_Port, C4_Pin, GPIO_PIN_SET);
+	  HAL_GPIO_WritePin(C5_GPIO_Port, C5_Pin, GPIO_PIN_SET);
+	  HAL_GPIO_WritePin(C6_GPIO_Port, C6_Pin, GPIO_PIN_SET);
+	  HAL_GPIO_WritePin(C7_GPIO_Port, C7_Pin, GPIO_PIN_SET);
+	  HAL_GPIO_WritePin(C8_GPIO_Port, C8_Pin, GPIO_PIN_SET);
+	  HAL_GPIO_WritePin(C9_GPIO_Port, C9_Pin, GPIO_PIN_SET);
+	  HAL_GPIO_WritePin(C10_GPIO_Port, C10_Pin, GPIO_PIN_SET);
+	  HAL_GPIO_WritePin(C11_GPIO_Port, C11_Pin, GPIO_PIN_SET);
+
+	  if(HAL_GPIO_ReadPin (L1_GPIO_Port, L1_Pin)){
+		  HAL_GPIO_WritePin(C1_GPIO_Port, C1_Pin, GPIO_PIN_RESET);
+		  HAL_GPIO_WritePin(C2_GPIO_Port, C2_Pin, GPIO_PIN_RESET);
+		  HAL_GPIO_WritePin(C3_GPIO_Port, C3_Pin, GPIO_PIN_RESET);
+		  HAL_GPIO_WritePin(C4_GPIO_Port, C4_Pin, GPIO_PIN_RESET);
+		  HAL_GPIO_WritePin(C5_GPIO_Port, C5_Pin, GPIO_PIN_RESET);
+		  HAL_GPIO_WritePin(C6_GPIO_Port, C6_Pin, GPIO_PIN_RESET);
+		  HAL_GPIO_WritePin(C7_GPIO_Port, C7_Pin, GPIO_PIN_RESET);
+		  HAL_GPIO_WritePin(C8_GPIO_Port, C8_Pin, GPIO_PIN_RESET);
+		  HAL_GPIO_WritePin(C9_GPIO_Port, C9_Pin, GPIO_PIN_RESET);
+		  HAL_GPIO_WritePin(C10_GPIO_Port, C10_Pin, GPIO_PIN_RESET);
+		  HAL_GPIO_WritePin(C11_GPIO_Port, C11_Pin, GPIO_PIN_RESET);
+
+		  HAL_GPIO_WritePin(C1_GPIO_Port, C1_Pin, GPIO_PIN_SET);
+		  if(HAL_GPIO_ReadPin (L1_GPIO_Port, L1_Pin)){
+			  printf("L1xC1");
+		  };
+		  HAL_GPIO_WritePin(C1_GPIO_Port, C1_Pin, GPIO_PIN_RESET);
+
+		  HAL_GPIO_WritePin(C2_GPIO_Port, C2_Pin, GPIO_PIN_SET);
+		  if(HAL_GPIO_ReadPin (L1_GPIO_Port, L1_Pin)){
+			  printf("L1xC2");
+		  };
+		  HAL_GPIO_WritePin(C2_GPIO_Port, C2_Pin, GPIO_PIN_RESET);
+
+		  HAL_GPIO_WritePin(C3_GPIO_Port, C3_Pin, GPIO_PIN_SET);
+		  if(HAL_GPIO_ReadPin (L1_GPIO_Port, L1_Pin)){
+			  printf("L1xC3");
+		  };
+		  HAL_GPIO_WritePin(C3_GPIO_Port, C3_Pin, GPIO_PIN_RESET);
+
+		  HAL_GPIO_WritePin(C4_GPIO_Port, C4_Pin, GPIO_PIN_SET);
+		  if(HAL_GPIO_ReadPin (L1_GPIO_Port, L1_Pin)){
+			  printf("L1xC4");
+		  };
+		  HAL_GPIO_WritePin(C4_GPIO_Port, C4_Pin, GPIO_PIN_RESET);
+
+		  HAL_GPIO_WritePin(C5_GPIO_Port, C5_Pin, GPIO_PIN_SET);
+		  if(HAL_GPIO_ReadPin (L1_GPIO_Port, L1_Pin)){
+			  printf("L1xC5");
+		  };
+		  HAL_GPIO_WritePin(C5_GPIO_Port, C5_Pin, GPIO_PIN_RESET);
+
+		  HAL_GPIO_WritePin(C6_GPIO_Port, C6_Pin, GPIO_PIN_SET);
+		  if(HAL_GPIO_ReadPin (L1_GPIO_Port, L1_Pin)){
+			  printf("L1xC6");
+		  };
+		  HAL_GPIO_WritePin(C6_GPIO_Port, C6_Pin, GPIO_PIN_RESET);
+
+		  HAL_GPIO_WritePin(C7_GPIO_Port, C7_Pin, GPIO_PIN_SET);
+		  if(HAL_GPIO_ReadPin (L1_GPIO_Port, L1_Pin)){
+			  printf("L1xC7");
+		  };
+		  HAL_GPIO_WritePin(C7_GPIO_Port, C7_Pin, GPIO_PIN_RESET);
+
+		  HAL_GPIO_WritePin(C8_GPIO_Port, C8_Pin, GPIO_PIN_SET);
+		  if(HAL_GPIO_ReadPin (L1_GPIO_Port, L1_Pin)){
+			  printf("L1xC8");
+		  };
+		  HAL_GPIO_WritePin(C8_GPIO_Port, C8_Pin, GPIO_PIN_RESET);
+
+		  HAL_GPIO_WritePin(C9_GPIO_Port, C9_Pin, GPIO_PIN_SET);
+		  if(HAL_GPIO_ReadPin (L1_GPIO_Port, L1_Pin)){
+			  printf("L1xC9");
+		  };
+		  HAL_GPIO_WritePin(C9_GPIO_Port, C9_Pin, GPIO_PIN_RESET);
+
+		  HAL_GPIO_WritePin(C10_GPIO_Port, C10_Pin, GPIO_PIN_SET);
+		  if(HAL_GPIO_ReadPin (L1_GPIO_Port, L1_Pin)){
+			  printf("L1xC10");
+		  };
+		  HAL_GPIO_WritePin(C10_GPIO_Port, C10_Pin, GPIO_PIN_RESET);
+
+		  HAL_GPIO_WritePin(C11_GPIO_Port, C11_Pin, GPIO_PIN_SET);
+		  if(HAL_GPIO_ReadPin (L1_GPIO_Port, L1_Pin)){
+			  printf("L1xC11");
+		  };
+		  HAL_GPIO_WritePin(C11_GPIO_Port, C11_Pin, GPIO_PIN_RESET);
+	  }
+
+	  if(HAL_GPIO_ReadPin (L2_GPIO_Port, L2_Pin)){
+		  HAL_GPIO_WritePin(C1_GPIO_Port, C1_Pin, GPIO_PIN_RESET);
+		  HAL_GPIO_WritePin(C2_GPIO_Port, C2_Pin, GPIO_PIN_RESET);
+		  HAL_GPIO_WritePin(C3_GPIO_Port, C3_Pin, GPIO_PIN_RESET);
+		  HAL_GPIO_WritePin(C4_GPIO_Port, C4_Pin, GPIO_PIN_RESET);
+		  HAL_GPIO_WritePin(C5_GPIO_Port, C5_Pin, GPIO_PIN_RESET);
+		  HAL_GPIO_WritePin(C6_GPIO_Port, C6_Pin, GPIO_PIN_RESET);
+		  HAL_GPIO_WritePin(C7_GPIO_Port, C7_Pin, GPIO_PIN_RESET);
+		  HAL_GPIO_WritePin(C8_GPIO_Port, C8_Pin, GPIO_PIN_RESET);
+		  HAL_GPIO_WritePin(C9_GPIO_Port, C9_Pin, GPIO_PIN_RESET);
+		  HAL_GPIO_WritePin(C10_GPIO_Port, C10_Pin, GPIO_PIN_RESET);
+		  HAL_GPIO_WritePin(C11_GPIO_Port, C11_Pin, GPIO_PIN_RESET);
+
+		  HAL_GPIO_WritePin(C1_GPIO_Port, C1_Pin, GPIO_PIN_SET);
+		  if(HAL_GPIO_ReadPin (L2_GPIO_Port, L2_Pin)){
+			  printf("L2xC1");
+		  };
+		  HAL_GPIO_WritePin(C1_GPIO_Port, C1_Pin, GPIO_PIN_RESET);
+
+		  HAL_GPIO_WritePin(C2_GPIO_Port, C2_Pin, GPIO_PIN_SET);
+		  if(HAL_GPIO_ReadPin (L2_GPIO_Port, L2_Pin)){
+			  printf("L2xC2");
+		  };
+		  HAL_GPIO_WritePin(C2_GPIO_Port, C2_Pin, GPIO_PIN_RESET);
+
+		  HAL_GPIO_WritePin(C3_GPIO_Port, C3_Pin, GPIO_PIN_SET);
+		  if(HAL_GPIO_ReadPin (L2_GPIO_Port, L2_Pin)){
+			  printf("L2xC3");
+		  };
+		  HAL_GPIO_WritePin(C3_GPIO_Port, C3_Pin, GPIO_PIN_RESET);
+
+		  HAL_GPIO_WritePin(C4_GPIO_Port, C4_Pin, GPIO_PIN_SET);
+		  if(HAL_GPIO_ReadPin (L2_GPIO_Port, L2_Pin)){
+			  printf("L2xC4");
+		  };
+		  HAL_GPIO_WritePin(C4_GPIO_Port, C4_Pin, GPIO_PIN_RESET);
+
+		  HAL_GPIO_WritePin(C5_GPIO_Port, C5_Pin, GPIO_PIN_SET);
+		  if(HAL_GPIO_ReadPin (L2_GPIO_Port, L2_Pin)){
+			  printf("L2xC5");
+		  };
+		  HAL_GPIO_WritePin(C5_GPIO_Port, C5_Pin, GPIO_PIN_RESET);
+
+		  HAL_GPIO_WritePin(C6_GPIO_Port, C6_Pin, GPIO_PIN_SET);
+		  if(HAL_GPIO_ReadPin (L2_GPIO_Port, L2_Pin)){
+			  printf("L2xC6");
+		  };
+		  HAL_GPIO_WritePin(C6_GPIO_Port, C6_Pin, GPIO_PIN_RESET);
+
+		  HAL_GPIO_WritePin(C7_GPIO_Port, C7_Pin, GPIO_PIN_SET);
+		  if(HAL_GPIO_ReadPin (L2_GPIO_Port, L2_Pin)){
+			  printf("L2xC7");
+		  };
+		  HAL_GPIO_WritePin(C7_GPIO_Port, C7_Pin, GPIO_PIN_RESET);
+
+		  HAL_GPIO_WritePin(C8_GPIO_Port, C8_Pin, GPIO_PIN_SET);
+		  if(HAL_GPIO_ReadPin (L2_GPIO_Port, L2_Pin)){
+			  printf("L2xC8");
+		  };
+		  HAL_GPIO_WritePin(C8_GPIO_Port, C8_Pin, GPIO_PIN_RESET);
+
+		  HAL_GPIO_WritePin(C9_GPIO_Port, C9_Pin, GPIO_PIN_SET);
+		  if(HAL_GPIO_ReadPin (L2_GPIO_Port, L2_Pin)){
+			  printf("L2xC9");
+		  };
+		  HAL_GPIO_WritePin(C9_GPIO_Port, C9_Pin, GPIO_PIN_RESET);
+
+		  HAL_GPIO_WritePin(C10_GPIO_Port, C10_Pin, GPIO_PIN_SET);
+		  if(HAL_GPIO_ReadPin (L2_GPIO_Port, L2_Pin)){
+			  printf("L2xC10");
+		  };
+		  HAL_GPIO_WritePin(C10_GPIO_Port, C10_Pin, GPIO_PIN_RESET);
+
+		  HAL_GPIO_WritePin(C11_GPIO_Port, C11_Pin, GPIO_PIN_SET);
+		  if(HAL_GPIO_ReadPin (L2_GPIO_Port, L2_Pin)){
+			  printf("L2xC11");
+		  };
+		  HAL_GPIO_WritePin(C11_GPIO_Port, C11_Pin, GPIO_PIN_RESET);
+	  }
+
+	  if(HAL_GPIO_ReadPin (L3_GPIO_Port, L3_Pin)){
+		  HAL_GPIO_WritePin(C1_GPIO_Port, C1_Pin, GPIO_PIN_RESET);
+		  HAL_GPIO_WritePin(C2_GPIO_Port, C2_Pin, GPIO_PIN_RESET);
+		  HAL_GPIO_WritePin(C3_GPIO_Port, C3_Pin, GPIO_PIN_RESET);
+		  HAL_GPIO_WritePin(C4_GPIO_Port, C4_Pin, GPIO_PIN_RESET);
+		  HAL_GPIO_WritePin(C5_GPIO_Port, C5_Pin, GPIO_PIN_RESET);
+		  HAL_GPIO_WritePin(C6_GPIO_Port, C6_Pin, GPIO_PIN_RESET);
+		  HAL_GPIO_WritePin(C7_GPIO_Port, C7_Pin, GPIO_PIN_RESET);
+		  HAL_GPIO_WritePin(C8_GPIO_Port, C8_Pin, GPIO_PIN_RESET);
+		  HAL_GPIO_WritePin(C9_GPIO_Port, C9_Pin, GPIO_PIN_RESET);
+		  HAL_GPIO_WritePin(C10_GPIO_Port, C10_Pin, GPIO_PIN_RESET);
+		  HAL_GPIO_WritePin(C11_GPIO_Port, C11_Pin, GPIO_PIN_RESET);
+
+		  HAL_GPIO_WritePin(C1_GPIO_Port, C1_Pin, GPIO_PIN_SET);
+		  if(HAL_GPIO_ReadPin (L3_GPIO_Port, L3_Pin)){
+			  printf("L3xC1");
+		  };
+		  HAL_GPIO_WritePin(C1_GPIO_Port, C1_Pin, GPIO_PIN_RESET);
+
+		  HAL_GPIO_WritePin(C2_GPIO_Port, C2_Pin, GPIO_PIN_SET);
+		  if(HAL_GPIO_ReadPin (L3_GPIO_Port, L3_Pin)){
+			  printf("L3xC2");
+		  };
+		  HAL_GPIO_WritePin(C2_GPIO_Port, C2_Pin, GPIO_PIN_RESET);
+
+		  HAL_GPIO_WritePin(C3_GPIO_Port, C3_Pin, GPIO_PIN_SET);
+		  if(HAL_GPIO_ReadPin (L3_GPIO_Port, L3_Pin)){
+			  printf("L3xC3");
+		  };
+		  HAL_GPIO_WritePin(C3_GPIO_Port, C3_Pin, GPIO_PIN_RESET);
+
+		  HAL_GPIO_WritePin(C4_GPIO_Port, C4_Pin, GPIO_PIN_SET);
+		  if(HAL_GPIO_ReadPin (L3_GPIO_Port, L3_Pin)){
+			  printf("L3xC4");
+		  };
+		  HAL_GPIO_WritePin(C4_GPIO_Port, C4_Pin, GPIO_PIN_RESET);
+
+		  HAL_GPIO_WritePin(C5_GPIO_Port, C5_Pin, GPIO_PIN_SET);
+		  if(HAL_GPIO_ReadPin (L3_GPIO_Port, L3_Pin)){
+			  printf("L3xC5");
+		  };
+		  HAL_GPIO_WritePin(C5_GPIO_Port, C5_Pin, GPIO_PIN_RESET);
+
+		  HAL_GPIO_WritePin(C6_GPIO_Port, C6_Pin, GPIO_PIN_SET);
+		  if(HAL_GPIO_ReadPin (L3_GPIO_Port, L3_Pin)){
+			  printf("L3xC6");
+		  };
+		  HAL_GPIO_WritePin(C6_GPIO_Port, C6_Pin, GPIO_PIN_RESET);
+
+		  HAL_GPIO_WritePin(C7_GPIO_Port, C7_Pin, GPIO_PIN_SET);
+		  if(HAL_GPIO_ReadPin (L3_GPIO_Port, L3_Pin)){
+			  printf("L3xC7");
+		  };
+		  HAL_GPIO_WritePin(C7_GPIO_Port, C7_Pin, GPIO_PIN_RESET);
+
+		  HAL_GPIO_WritePin(C8_GPIO_Port, C8_Pin, GPIO_PIN_SET);
+		  if(HAL_GPIO_ReadPin (L3_GPIO_Port, L3_Pin)){
+			  printf("L3xC8");
+		  };
+		  HAL_GPIO_WritePin(C8_GPIO_Port, C8_Pin, GPIO_PIN_RESET);
+
+		  HAL_GPIO_WritePin(C9_GPIO_Port, C9_Pin, GPIO_PIN_SET);
+		  if(HAL_GPIO_ReadPin (L3_GPIO_Port, L3_Pin)){
+			  printf("L3xC9");
+		  };
+		  HAL_GPIO_WritePin(C9_GPIO_Port, C9_Pin, GPIO_PIN_RESET);
+
+		  HAL_GPIO_WritePin(C10_GPIO_Port, C10_Pin, GPIO_PIN_SET);
+		  if(HAL_GPIO_ReadPin (L3_GPIO_Port, L3_Pin)){
+			  printf("L3xC10");
+		  };
+		  HAL_GPIO_WritePin(C10_GPIO_Port, C10_Pin, GPIO_PIN_RESET);
+
+		  HAL_GPIO_WritePin(C11_GPIO_Port, C11_Pin, GPIO_PIN_SET);
+		  if(HAL_GPIO_ReadPin (L3_GPIO_Port, L3_Pin)){
+			  printf("L3xC11");
+		  };
+		  HAL_GPIO_WritePin(C11_GPIO_Port, C11_Pin, GPIO_PIN_RESET);
+	  }
+
+	  if(HAL_GPIO_ReadPin (L4_GPIO_Port, L4_Pin)){
+		  HAL_GPIO_WritePin(C1_GPIO_Port, C1_Pin, GPIO_PIN_RESET);
+		  HAL_GPIO_WritePin(C2_GPIO_Port, C2_Pin, GPIO_PIN_RESET);
+		  HAL_GPIO_WritePin(C3_GPIO_Port, C3_Pin, GPIO_PIN_RESET);
+		  HAL_GPIO_WritePin(C4_GPIO_Port, C4_Pin, GPIO_PIN_RESET);
+		  HAL_GPIO_WritePin(C5_GPIO_Port, C5_Pin, GPIO_PIN_RESET);
+		  HAL_GPIO_WritePin(C6_GPIO_Port, C6_Pin, GPIO_PIN_RESET);
+		  HAL_GPIO_WritePin(C7_GPIO_Port, C7_Pin, GPIO_PIN_RESET);
+		  HAL_GPIO_WritePin(C8_GPIO_Port, C8_Pin, GPIO_PIN_RESET);
+		  HAL_GPIO_WritePin(C9_GPIO_Port, C9_Pin, GPIO_PIN_RESET);
+		  HAL_GPIO_WritePin(C10_GPIO_Port, C10_Pin, GPIO_PIN_RESET);
+		  HAL_GPIO_WritePin(C11_GPIO_Port, C11_Pin, GPIO_PIN_RESET);
+
+		  HAL_GPIO_WritePin(C1_GPIO_Port, C1_Pin, GPIO_PIN_SET);
+		  if(HAL_GPIO_ReadPin (L4_GPIO_Port, L4_Pin)){
+			  printf("L4xC1");
+		  };
+		  HAL_GPIO_WritePin(C1_GPIO_Port, C1_Pin, GPIO_PIN_RESET);
+
+		  HAL_GPIO_WritePin(C2_GPIO_Port, C2_Pin, GPIO_PIN_SET);
+		  if(HAL_GPIO_ReadPin (L4_GPIO_Port, L4_Pin)){
+			  printf("L4xC2");
+		  };
+		  HAL_GPIO_WritePin(C2_GPIO_Port, C2_Pin, GPIO_PIN_RESET);
+
+		  HAL_GPIO_WritePin(C3_GPIO_Port, C3_Pin, GPIO_PIN_SET);
+		  if(HAL_GPIO_ReadPin (L4_GPIO_Port, L4_Pin)){
+			  printf("L4xC3");
+		  };
+		  HAL_GPIO_WritePin(C3_GPIO_Port, C3_Pin, GPIO_PIN_RESET);
+
+		  HAL_GPIO_WritePin(C4_GPIO_Port, C4_Pin, GPIO_PIN_SET);
+		  if(HAL_GPIO_ReadPin (L4_GPIO_Port, L4_Pin)){
+			  printf("L4xC4");
+		  };
+		  HAL_GPIO_WritePin(C4_GPIO_Port, C4_Pin, GPIO_PIN_RESET);
+
+		  HAL_GPIO_WritePin(C5_GPIO_Port, C5_Pin, GPIO_PIN_SET);
+		  if(HAL_GPIO_ReadPin (L4_GPIO_Port, L4_Pin)){
+			  printf("L4xC5");
+		  };
+		  HAL_GPIO_WritePin(C5_GPIO_Port, C5_Pin, GPIO_PIN_RESET);
+
+		  HAL_GPIO_WritePin(C6_GPIO_Port, C6_Pin, GPIO_PIN_SET);
+		  if(HAL_GPIO_ReadPin (L4_GPIO_Port, L4_Pin)){
+			  printf("L4xC6");
+		  };
+		  HAL_GPIO_WritePin(C6_GPIO_Port, C6_Pin, GPIO_PIN_RESET);
+
+		  HAL_GPIO_WritePin(C7_GPIO_Port, C7_Pin, GPIO_PIN_SET);
+		  if(HAL_GPIO_ReadPin (L4_GPIO_Port, L4_Pin)){
+			  printf("L4xC7");
+		  };
+		  HAL_GPIO_WritePin(C7_GPIO_Port, C7_Pin, GPIO_PIN_RESET);
+
+		  HAL_GPIO_WritePin(C8_GPIO_Port, C8_Pin, GPIO_PIN_SET);
+		  if(HAL_GPIO_ReadPin (L4_GPIO_Port, L4_Pin)){
+			  printf("L4xC8");
+		  };
+		  HAL_GPIO_WritePin(C8_GPIO_Port, C8_Pin, GPIO_PIN_RESET);
+
+		  HAL_GPIO_WritePin(C9_GPIO_Port, C9_Pin, GPIO_PIN_SET);
+		  if(HAL_GPIO_ReadPin (L4_GPIO_Port, L4_Pin)){
+			  printf("L4xC9");
+		  };
+		  HAL_GPIO_WritePin(C9_GPIO_Port, C9_Pin, GPIO_PIN_RESET);
+
+		  HAL_GPIO_WritePin(C10_GPIO_Port, C10_Pin, GPIO_PIN_SET);
+		  if(HAL_GPIO_ReadPin (L4_GPIO_Port, L4_Pin)){
+			  printf("L4xC10");
+		  };
+		  HAL_GPIO_WritePin(C10_GPIO_Port, C10_Pin, GPIO_PIN_RESET);
+
+		  HAL_GPIO_WritePin(C11_GPIO_Port, C11_Pin, GPIO_PIN_SET);
+		  if(HAL_GPIO_ReadPin (L4_GPIO_Port, L4_Pin)){
+			  printf("L4xC11");
+		  };
+		  HAL_GPIO_WritePin(C11_GPIO_Port, C11_Pin, GPIO_PIN_RESET);
+	  }
+
+	  /*
+	  HAL_Delay(1000);
+	  keyBoardHIDsub.MODIFIER=0x02;  // To press shift key
+	  keyBoardHIDsub.KEYCODE1=0x04;  // Press A key
+	  keyBoardHIDsub.KEYCODE2=0x05;  // Press B key
+	  keyBoardHIDsub.KEYCODE3=0x06;  // Press C key
+	  USBD_HID_SendReport(&hUsbDeviceFS,&keyBoardHIDsub,sizeof(keyBoardHIDsub));
+	  HAL_Delay(50); 		       // Press all key for 50 milliseconds
+	  keyBoardHIDsub.MODIFIER=0x00;  // To release shift key
+	  keyBoardHIDsub.KEYCODE1=0x00;  // Release A key
+	  keyBoardHIDsub.KEYCODE2=0x00;  // Release B key
+	  keyBoardHIDsub.KEYCODE3=0x00;  // Release C key
+	  USBD_HID_SendReport(&hUsbDeviceFS,&keyBoardHIDsub,sizeof(keyBoardHIDsub));
+	  */
+
+	  printf("Cycle finish");
   }
   /* USER CODE END 3 */
 }
@@ -124,7 +487,10 @@ void SystemClock_Config(void)
   RCC_OscInitStruct.HSIState = RCC_HSI_ON;
   RCC_OscInitStruct.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
   RCC_OscInitStruct.HSI48State = RCC_HSI48_ON;
-  RCC_OscInitStruct.PLL.PLLState = RCC_PLL_NONE;
+  RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
+  RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSI;
+  RCC_OscInitStruct.PLL.PLLMUL = RCC_PLLMUL_6;
+  RCC_OscInitStruct.PLL.PLLDIV = RCC_PLLDIV_4;
   if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
   {
     Error_Handler();
@@ -134,12 +500,12 @@ void SystemClock_Config(void)
   */
   RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
                               |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
-  RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_HSI;
+  RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
   RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV1;
   RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
 
-  if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_0) != HAL_OK)
+  if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_1) != HAL_OK)
   {
     Error_Handler();
   }
@@ -149,38 +515,6 @@ void SystemClock_Config(void)
   {
     Error_Handler();
   }
-}
-
-/**
-  * @brief USB Initialization Function
-  * @param None
-  * @retval None
-  */
-static void MX_USB_PCD_Init(void)
-{
-
-  /* USER CODE BEGIN USB_Init 0 */
-
-  /* USER CODE END USB_Init 0 */
-
-  /* USER CODE BEGIN USB_Init 1 */
-
-  /* USER CODE END USB_Init 1 */
-  hpcd_USB_FS.Instance = USB;
-  hpcd_USB_FS.Init.dev_endpoints = 8;
-  hpcd_USB_FS.Init.speed = PCD_SPEED_FULL;
-  hpcd_USB_FS.Init.phy_itface = PCD_PHY_EMBEDDED;
-  hpcd_USB_FS.Init.low_power_enable = DISABLE;
-  hpcd_USB_FS.Init.lpm_enable = DISABLE;
-  hpcd_USB_FS.Init.battery_charging_enable = DISABLE;
-  if (HAL_PCD_Init(&hpcd_USB_FS) != HAL_OK)
-  {
-    Error_Handler();
-  }
-  /* USER CODE BEGIN USB_Init 2 */
-
-  /* USER CODE END USB_Init 2 */
-
 }
 
 /**
@@ -198,22 +532,36 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOA_CLK_ENABLE();
   __HAL_RCC_GPIOB_CLK_ENABLE();
 
-  /*Configure GPIO pins : PA2 PA3 PA4 PA5
-                           PA6 PA7 PA8 PA9
-                           PA10 */
-  GPIO_InitStruct.Pin = GPIO_PIN_2|GPIO_PIN_3|GPIO_PIN_4|GPIO_PIN_5
-                          |GPIO_PIN_6|GPIO_PIN_7|GPIO_PIN_8|GPIO_PIN_9
-                          |GPIO_PIN_10;
-  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+  /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(GPIOA, C10_Pin|C9_Pin|C8_Pin|C7_Pin
+                          |C6_Pin|C5_Pin|C3_Pin|C2_Pin
+                          |C1_Pin, GPIO_PIN_RESET);
+
+  /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(GPIOB, C4_Pin|C11_Pin, GPIO_PIN_RESET);
+
+  /*Configure GPIO pins : C10_Pin C9_Pin C8_Pin C7_Pin
+                           C6_Pin C5_Pin C3_Pin C2_Pin
+                           C1_Pin */
+  GPIO_InitStruct.Pin = C10_Pin|C9_Pin|C8_Pin|C7_Pin
+                          |C6_Pin|C5_Pin|C3_Pin|C2_Pin
+                          |C1_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : PB0 PB1 PB2 PB5
-                           PB6 PB7 */
-  GPIO_InitStruct.Pin = GPIO_PIN_0|GPIO_PIN_1|GPIO_PIN_2|GPIO_PIN_5
-                          |GPIO_PIN_6|GPIO_PIN_7;
-  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+  /*Configure GPIO pins : C4_Pin C11_Pin */
+  GPIO_InitStruct.Pin = C4_Pin|C11_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+
+  /*Configure GPIO pins : L2_Pin L1_Pin L4_Pin L3_Pin */
+  GPIO_InitStruct.Pin = L2_Pin|L1_Pin|L4_Pin|L3_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+  GPIO_InitStruct.Pull = GPIO_PULLDOWN;
   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
 /* USER CODE BEGIN MX_GPIO_Init_2 */
