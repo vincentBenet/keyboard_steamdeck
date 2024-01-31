@@ -38,34 +38,34 @@ $(wildcard ../makefile.init) \
 $(wildcard ../makefile.targets) \
 
 
-BUILD_ARTIFACT_NAME := Keyboard_steamdeck
+BUILD_ARTIFACT_NAME := bla
 BUILD_ARTIFACT_EXTENSION := elf
 BUILD_ARTIFACT_PREFIX :=
 BUILD_ARTIFACT := $(BUILD_ARTIFACT_PREFIX)$(BUILD_ARTIFACT_NAME)$(if $(BUILD_ARTIFACT_EXTENSION),.$(BUILD_ARTIFACT_EXTENSION),)
 
 # Add inputs and outputs from these tool invocations to the build variables 
 EXECUTABLES += \
-Keyboard_steamdeck.elf \
+bla.elf \
 
 MAP_FILES += \
-Keyboard_steamdeck.map \
+bla.map \
 
 SIZE_OUTPUT += \
 default.size.stdout \
 
 OBJDUMP_LIST += \
-Keyboard_steamdeck.list \
+bla.list \
 
 
 # All Target
 all: main-build
 
 # Main-build Target
-main-build: Keyboard_steamdeck.elf secondary-outputs
+main-build: bla.elf secondary-outputs
 
 # Tool invocations
-Keyboard_steamdeck.elf Keyboard_steamdeck.map: $(OBJS) $(USER_OBJS) C:\Users\VincentBenet\Documents\GITHUB_VINCENTBENET\keyboard_steamdeck\code\STM32L052K8UX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "Keyboard_steamdeck.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m0plus -T"C:\Users\VincentBenet\Documents\GITHUB_VINCENTBENET\keyboard_steamdeck\code\STM32L052K8UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Keyboard_steamdeck.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+bla.elf bla.map: $(OBJS) $(USER_OBJS) C:\Users\VincentBenet\STM32CubeIDE\workspace_1.14.0\bla\STM32L052K8UX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "bla.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m0plus -T"C:\Users\VincentBenet\STM32CubeIDE\workspace_1.14.0\bla\STM32L052K8UX_FLASH.ld" --specs=nosys.specs -Wl,-Map="bla.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
@@ -74,14 +74,14 @@ default.size.stdout: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
 	@echo 'Finished building: $@'
 	@echo ' '
 
-Keyboard_steamdeck.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-objdump -h -S $(EXECUTABLES) > "Keyboard_steamdeck.list"
+bla.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-objdump -h -S $(EXECUTABLES) > "bla.list"
 	@echo 'Finished building: $@'
 	@echo ' '
 
 # Other Targets
 clean:
-	-$(RM) Keyboard_steamdeck.elf Keyboard_steamdeck.list Keyboard_steamdeck.map default.size.stdout
+	-$(RM) bla.elf bla.list bla.map default.size.stdout
 	-@echo ' '
 
 secondary-outputs: $(SIZE_OUTPUT) $(OBJDUMP_LIST)
