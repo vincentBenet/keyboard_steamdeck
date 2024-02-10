@@ -1,20 +1,5 @@
 /* USER CODE BEGIN Header */
-/**
-  ******************************************************************************
-  * @file           : main.c
-  * @brief          : Main program body
-  ******************************************************************************
-  * @attention
-  *
-  * Copyright (c) 2024 STMicroelectronics.
-  * All rights reserved.
-  *
-  * This software is licensed under terms that can be found in the LICENSE file
-  * in the root directory of this software component.
-  * If no LICENSE file comes with this software, it is provided AS-IS.
-  *
-  ******************************************************************************
-  */
+
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
@@ -23,6 +8,7 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "usbd_hid.h"
+#include <stdbool.h>
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -32,6 +18,7 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
+
 #define KEY_MOD_LCTRL  0x01
 #define KEY_MOD_LSHIFT 0x02
 #define KEY_MOD_LALT   0x04
@@ -40,6 +27,7 @@
 #define KEY_MOD_RSHIFT 0x20
 #define KEY_MOD_RALT   0x40
 #define KEY_MOD_RMETA  0x80
+
 #define KEY_NONE 0x00 // No key pressed
 #define KEY_ERR_OVF 0x01 //  Keyboard Error Roll Over - used for all slots if too many keys are pressed ("Phantom key")
 // 0x02 //  Keyboard POST Fail
@@ -170,8 +158,8 @@
 #define KEY_MUTE 0x7f // Keyboard Mute
 #define KEY_VOLUMEUP 0x80 // Keyboard Volume Up
 #define KEY_VOLUMEDOWN 0x81 // Keyboard Volume Down
-// 0x82  Keyboard Locking Caps Lock
-// 0x83  Keyboard Locking Num Lock
+#define KEY_CAPLOCK 0x82 //  Keyboard Locking Caps Lock
+#define KEY_NUMLOCK2 0x83 // Keyboard Locking Num Lock
 // 0x84  Keyboard Locking Scroll Lock
 #define KEY_KPCOMMA 0x85 // Keypad Comma
 // 0x86  Keypad Equal Sign
@@ -279,6 +267,10 @@
 #define KEY_MEDIA_COFFEE 0xf9
 #define KEY_MEDIA_REFRESH 0xfa
 #define KEY_MEDIA_CALC 0xfb
+#define KEY_FN1 0xfc
+#define KEY_FN2 0xfd
+#define KEY_FN3 0xfe
+#define KEY_FN4 0xff
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -303,66 +295,60 @@ typedef struct
 	uint8_t KEYCODE6;
 }subKeyBoard;
 
-subKeyBoard keyBoardHIDsub = {0,0,0,0,0,0,0,0};
+subKeyBoard keyBoardHIDsub = {0, 0, 0, 0, 0, 0, 0, 0};
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
 /* USER CODE BEGIN PFP */
+bool MODIFIER_MASK[44] = {  // Mask of modifier keys (have same code than other keys)
+		false, false, false, false, false, false, false, false, false, false, false,  // Line 1
+		false, false, false, false, false, false, false, false, false, false, false,  // Line 2
+		true, false, false, false, false, false, false, false, false, false, false,  // Line 3
+		true, true, true, false, false, false, false, false, false, false, false   // Line 4
+	  };
+uint8_t INPUTKEYS[44] = {
+		KEY_ESC, KEY_A, KEY_Z, KEY_E, KEY_R, KEY_T, KEY_Y, KEY_U, KEY_I, KEY_O, KEY_P,
+		KEY_TAB, KEY_Q, KEY_S, KEY_D, KEY_F, KEY_G, KEY_H, KEY_J, KEY_K, KEY_L, KEY_M,
+		KEY_LEFTSHIFT, KEY_W, KEY_X, KEY_C, KEY_V, KEY_B, KEY_N, KEY_UP, KEY_ENTER, KEY_FN1, KEY_FN2,
+		KEY_LEFTCTRL, KEY_LEFTMETA, KEY_LEFTALT, KEY_SPACE, KEY_BACKSPACE, KEY_DELETE, KEY_LEFT, KEY_DOWN, KEY_RIGHT, KEY_FN3, KEY_FN4
+};
+uint8_t FN1KEYS[44] = {
+		KEY_NONE, KEY_1, KEY_2, KEY_3, KEY_4, KEY_5, KEY_6, KEY_7, KEY_8, KEY_9, KEY_0,
+		KEY_NONE, KEY_KPLEFTPAREN, KEY_NONE, KEY_KPRIGHTPAREN, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE,
+		KEY_LEFTSHIFT, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE,
+		KEY_LEFTCTRL, KEY_LEFTMETA, KEY_LEFTALT, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE
+};
+uint8_t FN2KEYS[44] = {
+		KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE,
+		KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE,
+		KEY_LEFTSHIFT, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE,
+		KEY_LEFTCTRL, KEY_LEFTMETA, KEY_LEFTALT, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE
+};
+uint8_t FN3KEYS[44] = {
+		KEY_NONE, KEY_F1, KEY_F2, KEY_F3, KEY_F4, KEY_F5, KEY_F6, KEY_F7, KEY_F8, KEY_F9, KEY_F10,
+		KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_F11, KEY_F12,
+		KEY_LEFTSHIFT, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE,
+		KEY_LEFTCTRL, KEY_LEFTMETA, KEY_LEFTALT, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE
+};
+uint8_t FN4KEYS[44] = {
+		KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE,
+		KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE,
+		KEY_LEFTSHIFT, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE,
+		KEY_LEFTCTRL, KEY_LEFTMETA, KEY_LEFTALT, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE
+};
+GPIO_TypeDef *GPIOPORTS_C[11] = {GPIOA, GPIOA, GPIOA, GPIOB, GPIOA, GPIOA, GPIOA, GPIOA, GPIOA, GPIOA, GPIOB};
+int PINS_C[11] = {GPIO_PIN_10, GPIO_PIN_9, GPIO_PIN_8, GPIO_PIN_0, GPIO_PIN_7, GPIO_PIN_6, GPIO_PIN_5, GPIO_PIN_4, GPIO_PIN_3, GPIO_PIN_2, GPIO_PIN_5};
+GPIO_TypeDef *GPIOPORTS_L[4] = {GPIOB, GPIOB, GPIOB, GPIOB};
+int PINS_L[4] = {GPIO_PIN_2, GPIO_PIN_1, GPIO_PIN_7, GPIO_PIN_6};
+
 
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-uint8_t INPUTKEYS[44] = {
-		KEY_ESC, KEY_A, KEY_Z, KEY_E, KEY_R, KEY_T, KEY_Y, KEY_U, KEY_I, KEY_O, KEY_P,
-		KEY_ESC, KEY_Q, KEY_A, KEY_A, KEY_A, KEY_A, KEY_A, KEY_A, KEY_A, KEY_A, KEY_A,
-		KEY_ESC, KEY_W, KEY_A, KEY_A, KEY_A, KEY_A, KEY_A, KEY_A, KEY_A, KEY_A, KEY_A,
-		KEY_ESC, KEY_A, KEY_A, KEY_A, KEY_A, KEY_A, KEY_A, KEY_A, KEY_A, KEY_A, KEY_A
-};
 
-GPIO_TypeDef *GPIOPORTS_C[11] = {GPIOA, GPIOA, GPIOA, GPIOB, GPIOA, GPIOA, GPIOA, GPIOA, GPIOA, GPIOA, GPIOB};
-int PINS_C[11] = {GPIO_PIN_10, GPIO_PIN_9, GPIO_PIN_8, GPIO_PIN_0, GPIO_PIN_7, GPIO_PIN_6, GPIO_PIN_5, GPIO_PIN_4, GPIO_PIN_3, GPIO_PIN_2, GPIO_PIN_5};
-
-GPIO_TypeDef *GPIOPORTS_L[4] = {GPIOB, GPIOB, GPIOB, GPIOB};
-int PINS_L[4] = {GPIO_PIN_2, GPIO_PIN_1, GPIO_PIN_7, GPIO_PIN_6};
-
-void readLine(int line, GPIO_TypeDef *inputPort, int inputPin, subKeyBoard *keyBoardHIDsub)
-{
-	  if(HAL_GPIO_ReadPin (inputPort, inputPin))
-	  {
-		  for (int c=0; c<11; c++)
-		  {
-			  HAL_GPIO_WritePin(GPIOPORTS_C[c], PINS_C[c], GPIO_PIN_RESET);
-		  }
-
-		  for (int c=0; c<11; c++)
-		  {
-			  HAL_GPIO_WritePin(GPIOPORTS_C[c], PINS_C[c], GPIO_PIN_SET);
-			  if(HAL_GPIO_ReadPin (inputPort, inputPin)){  // L1xC1
-				  int index = line * 11 + c;
-				  keyBoardHIDsub->KEYCODE2=(uint8_t)INPUTKEYS[index];
-			  };
-			  HAL_GPIO_WritePin(GPIOPORTS_C[c], PINS_C[c], GPIO_PIN_RESET);
-		  }
-
-	  }
-}
-
-void send_keys(subKeyBoard *keyBoardHIDsub) {
-	USBD_HID_SendReport(&hUsbDeviceFS, keyBoardHIDsub,sizeof(*keyBoardHIDsub));
-	HAL_Delay(50);
-	keyBoardHIDsub->MODIFIER=0x00;
-	keyBoardHIDsub->KEYCODE1=0x00;
-	keyBoardHIDsub->KEYCODE2=0x00;
-	keyBoardHIDsub->KEYCODE3=0x00;
-	keyBoardHIDsub->KEYCODE4=0x00;
-	keyBoardHIDsub->KEYCODE5=0x00;
-	keyBoardHIDsub->KEYCODE6=0x00;
-	USBD_HID_SendReport(&hUsbDeviceFS, keyBoardHIDsub,sizeof(*keyBoardHIDsub));
-	HAL_Delay(20);
-}
 /* USER CODE END 0 */
 
 /**
@@ -395,24 +381,97 @@ int main(void)
   MX_GPIO_Init();
   MX_USB_DEVICE_Init();
   /* USER CODE BEGIN 2 */
+  bool last_pressed = false;
 
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  while (1)
-  {
+  while (1){
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-	  for (int c=0; c<11; c++) {
-		  HAL_GPIO_WritePin(GPIOPORTS_C[c], PINS_C[c], GPIO_PIN_SET);
+	  bool PRESSED[44] = {  // Initialize physical mask pressed keys
+		false, false, false, false, false, false, false, false, false, false, false,  // Line 1
+		false, false, false, false, false, false, false, false, false, false, false,  // Line 2
+		false, false, false, false, false, false, false, false, false, false, false,  // Line 3
+		false, false, false, false, false, false, false, false, false, false, false   // Line 4
+	  };
+	  bool press = false;  // Initialize pressed any physical key
+	  bool press_fn_bar = false;  // Initialize pressed any physical key
+	  for (int c=0; c<11; c++) HAL_GPIO_WritePin(GPIOPORTS_C[c], PINS_C[c], GPIO_PIN_SET);  // All columns GPIO are turned ON
+	  for (int line=0; line<4; line++) {
+		  if(HAL_GPIO_ReadPin (GPIOPORTS_L[line], PINS_L[line])){  // Lines GPIO are checked
+			  press = true;  // If one or more line GPIO are true: a key has been pressed
+			  for (int c=0; c<11; c++) HAL_GPIO_WritePin(GPIOPORTS_C[c], PINS_C[c], GPIO_PIN_RESET);  // All columns GPIO are turned OFF
+			  for (int c=0; c<11; c++){  // Scan columns one by one to get all keys
+				  HAL_GPIO_WritePin(GPIOPORTS_C[c], PINS_C[c], GPIO_PIN_SET);  // Turn ON GPIO of scanned column
+				  if(HAL_GPIO_ReadPin (GPIOPORTS_L[line], PINS_L[line])){  // Check again line GPIO to test (column x line)
+					  PRESSED[line * 11 + c] = true;  // Index of physical pressed key is turned to true
+					  HAL_GPIO_WritePin(GPIOPORTS_C[c], PINS_C[c], GPIO_PIN_RESET);
+				  }
+			  }
+		  }
 	  }
-	  for (int l=0; l<4; l++) {
-		  readLine(l, GPIOPORTS_L[l], PINS_L[l], &keyBoardHIDsub);
+	  if (press){
+		  bool fn1 = PRESSED[31];  // Check if FN1 is pressed
+		  bool fn2 = PRESSED[32];  // Check if FN2 is pressed
+		  bool fn3 = PRESSED[42];  // Check if FN3 is pressed
+		  bool fn4 = PRESSED[43];  // Check if FN4 is pressed
+		  for (int index=0; index<44; index++) {  // Loop on every physical keys
+			  if (
+				  !PRESSED[index] ||  // Physical key is not pressed
+				  index == 31 ||  // FN1 is not analyzed
+				  index == 32 ||  // FN2 is not analyzed
+				  index == 42 ||  // FN3 is not analyzed
+				  index == 43     // FN4 is not analyzed
+			  ) continue;
+			  press_fn_bar = true;
+			  uint8_t key = (uint8_t)INPUTKEYS[index];
+			  if (fn1) key = (uint8_t)FN1KEYS[index];
+			  else if (fn2) key = (uint8_t)FN2KEYS[index];
+			  else if (fn3) key = (uint8_t)FN3KEYS[index];
+			  else if (fn4) key = (uint8_t)FN4KEYS[index];
+
+			  if (MODIFIER_MASK[index])
+				  keyBoardHIDsub.MODIFIER |= key;
+			  else if (keyBoardHIDsub.KEYCODE1 == 0x00)
+				  keyBoardHIDsub.KEYCODE1 = key;
+			  else if (keyBoardHIDsub.KEYCODE2 == 0x00)
+				  keyBoardHIDsub.KEYCODE2 = key;
+			  else if (keyBoardHIDsub.KEYCODE3 == 0x00)
+				  keyBoardHIDsub.KEYCODE3 = key;
+			  else if (keyBoardHIDsub.KEYCODE4 == 0x00)
+				  keyBoardHIDsub.KEYCODE4 = key;
+			  else if (keyBoardHIDsub.KEYCODE5 == 0x00)
+				  keyBoardHIDsub.KEYCODE5 = key;
+			  else if (keyBoardHIDsub.KEYCODE6 == 0x00)
+				  keyBoardHIDsub.KEYCODE6 = key;
+			  else {  // Too much key pressed
+				  keyBoardHIDsub.MODIFIER = KEY_ERR_OVF;
+				  keyBoardHIDsub.KEYCODE1 = KEY_ERR_OVF;
+				  keyBoardHIDsub.KEYCODE2 = KEY_ERR_OVF;
+				  keyBoardHIDsub.KEYCODE3 = KEY_ERR_OVF;
+				  keyBoardHIDsub.KEYCODE4 = KEY_ERR_OVF;
+				  keyBoardHIDsub.KEYCODE5 = KEY_ERR_OVF;
+				  keyBoardHIDsub.KEYCODE6 = KEY_ERR_OVF;
+			  }
+		  };
+		  USBD_HID_SendReport(&hUsbDeviceFS, &keyBoardHIDsub, sizeof(keyBoardHIDsub));  // Send keys thought USB
+		  HAL_Delay(50);  // Wait of loop iteration in ms
 	  }
 
-	  send_keys(&keyBoardHIDsub);
+	  if (!press_fn_bar && last_pressed) {
+		  keyBoardHIDsub.MODIFIER = KEY_NONE;
+		  keyBoardHIDsub.KEYCODE1 = KEY_NONE;
+		  keyBoardHIDsub.KEYCODE2 = KEY_NONE;
+		  keyBoardHIDsub.KEYCODE3 = KEY_NONE;
+		  keyBoardHIDsub.KEYCODE4 = KEY_NONE;
+		  keyBoardHIDsub.KEYCODE5 = KEY_NONE;
+		  keyBoardHIDsub.KEYCODE6 = KEY_NONE;
+		  USBD_HID_SendReport(&hUsbDeviceFS, &keyBoardHIDsub, sizeof(keyBoardHIDsub));
+	  }
+	  last_pressed = press_fn_bar;
   }
   /* USER CODE END 3 */
 }
@@ -484,22 +543,19 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOB_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_3|GPIO_PIN_4|GPIO_PIN_5|GPIO_PIN_6
-                          |GPIO_PIN_7|GPIO_PIN_8|GPIO_PIN_9|GPIO_PIN_10, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_2|GPIO_PIN_3|GPIO_PIN_4|GPIO_PIN_5
+                          |GPIO_PIN_6|GPIO_PIN_7|GPIO_PIN_8|GPIO_PIN_9
+                          |GPIO_PIN_10, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0|GPIO_PIN_5, GPIO_PIN_RESET);
 
-  /*Configure GPIO pin : PA2 */
-  GPIO_InitStruct.Pin = GPIO_PIN_2;
-  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
-  GPIO_InitStruct.Pull = GPIO_PULLDOWN;
-  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
-
-  /*Configure GPIO pins : PA3 PA4 PA5 PA6
-                           PA7 PA8 PA9 PA10 */
-  GPIO_InitStruct.Pin = GPIO_PIN_3|GPIO_PIN_4|GPIO_PIN_5|GPIO_PIN_6
-                          |GPIO_PIN_7|GPIO_PIN_8|GPIO_PIN_9|GPIO_PIN_10;
+  /*Configure GPIO pins : PA2 PA3 PA4 PA5
+                           PA6 PA7 PA8 PA9
+                           PA10 */
+  GPIO_InitStruct.Pin = GPIO_PIN_2|GPIO_PIN_3|GPIO_PIN_4|GPIO_PIN_5
+                          |GPIO_PIN_6|GPIO_PIN_7|GPIO_PIN_8|GPIO_PIN_9
+                          |GPIO_PIN_10;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;

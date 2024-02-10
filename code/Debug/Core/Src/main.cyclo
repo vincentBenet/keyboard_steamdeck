@@ -1,6 +1,4 @@
-../Core/Src/main.c:331:6:readLine	5
-../Core/Src/main.c:353:6:send_keys	1
-../Core/Src/main.c:372:5:main	3
-../Core/Src/main.c:424:6:SystemClock_Config	4
-../Core/Src/main.c:476:13:MX_GPIO_Init	1
-../Core/Src/main.c:533:6:Error_Handler	1
+../Core/Src/main.c:358:5:main	27
+../Core/Src/main.c:483:6:SystemClock_Config	4
+../Core/Src/main.c:535:13:MX_GPIO_Init	1
+../Core/Src/main.c:589:6:Error_Handler	1
