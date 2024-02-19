@@ -18,259 +18,33 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
+#define KEY_MOD_RCTRL 	0x10
+#define KEY_MOD_RSHIFT 	0x20
+#define KEY_MOD_RALT   	0x40
+#define KEY_NONE 		0x00
+#define KEY_ERR_OVF 	0x01
 
-#define KEY_MOD_LCTRL  0x01
-#define KEY_MOD_LSHIFT 0x02
-#define KEY_MOD_LALT   0x04
-#define KEY_MOD_LMETA  0x08
-#define KEY_MOD_RCTRL  0x10
-#define KEY_MOD_RSHIFT 0x20
-#define KEY_MOD_RALT   0x40
-#define KEY_MOD_RMETA  0x80
+#define INDEX_FN1		31
+#define INDEX_FN2		32
+#define INDEX_FN3		42
+#define INDEX_FN4		43
 
-#define KEY_NONE 0x00 // No key pressed
-#define KEY_ERR_OVF 0x01 //  Keyboard Error Roll Over - used for all slots if too many keys are pressed ("Phantom key")
-// 0x02 //  Keyboard POST Fail
-// 0x03 //  Keyboard Error Undefined
-#define KEY_A 0x04 // Keyboard a and A
-#define KEY_B 0x05 // Keyboard b and B
-#define KEY_C 0x06 // Keyboard c and C
-#define KEY_D 0x07 // Keyboard d and D
-#define KEY_E 0x08 // Keyboard e and E
-#define KEY_F 0x09 // Keyboard f and F
-#define KEY_G 0x0a // Keyboard g and G
-#define KEY_H 0x0b // Keyboard h and H
-#define KEY_I 0x0c // Keyboard i and I
-#define KEY_J 0x0d // Keyboard j and J
-#define KEY_K 0x0e // Keyboard k and K
-#define KEY_L 0x0f // Keyboard l and L
-#define KEY_M 0x10 // Keyboard m and M
-#define KEY_N 0x11 // Keyboard n and N
-#define KEY_O 0x12 // Keyboard o and O
-#define KEY_P 0x13 // Keyboard p and P
-#define KEY_Q 0x14 // Keyboard q and Q
-#define KEY_R 0x15 // Keyboard r and R
-#define KEY_S 0x16 // Keyboard s and S
-#define KEY_T 0x17 // Keyboard t and T
-#define KEY_U 0x18 // Keyboard u and U
-#define KEY_V 0x19 // Keyboard v and V
-#define KEY_W 0x1a // Keyboard w and W
-#define KEY_X 0x1b // Keyboard x and X
-#define KEY_Y 0x1c // Keyboard y and Y
-#define KEY_Z 0x1d // Keyboard z and Z
-#define KEY_1 0x1e // Keyboard 1 and !
-#define KEY_2 0x1f // Keyboard 2 and @
-#define KEY_3 0x20 // Keyboard 3 and #
-#define KEY_4 0x21 // Keyboard 4 and $
-#define KEY_5 0x22 // Keyboard 5 and %
-#define KEY_6 0x23 // Keyboard 6 and ^
-#define KEY_7 0x24 // Keyboard 7 and &
-#define KEY_8 0x25 // Keyboard 8 and *
-#define KEY_9 0x26 // Keyboard 9 and (
-#define KEY_0 0x27 // Keyboard 0 and )
-#define KEY_ENTER 0x28 // Keyboard Return (ENTER)
-#define KEY_ESC 0x29 // Keyboard ESCAPE
-#define KEY_BACKSPACE 0x2a // Keyboard DELETE (Backspace)
-#define KEY_TAB 0x2b // Keyboard Tab
-#define KEY_SPACE 0x2c // Keyboard Spacebar
-#define KEY_MINUS 0x2d // Keyboard - and _
-#define KEY_EQUAL 0x2e // Keyboard = and +
-#define KEY_LEFTBRACE 0x2f // Keyboard [ and {
-#define KEY_RIGHTBRACE 0x30 // Keyboard ] and }
-#define KEY_BACKSLASH 0x31 // Keyboard \ and |
-#define KEY_HASHTILDE 0x32 // Keyboard Non-US # and ~
-#define KEY_SEMICOLON 0x33 // Keyboard ; and :
-#define KEY_APOSTROPHE 0x34 // Keyboard ' and "
-#define KEY_GRAVE 0x35 // Keyboard ` and ~
-#define KEY_COMMA 0x36 // Keyboard , and <
-#define KEY_DOT 0x37 // Keyboard . and >
-#define KEY_SLASH 0x38 // Keyboard / and ?
-#define KEY_CAPSLOCK 0x39 // Keyboard Caps Lock
-#define KEY_F1 0x3a // Keyboard F1
-#define KEY_F2 0x3b // Keyboard F2
-#define KEY_F3 0x3c // Keyboard F3
-#define KEY_F4 0x3d // Keyboard F4
-#define KEY_F5 0x3e // Keyboard F5
-#define KEY_F6 0x3f // Keyboard F6
-#define KEY_F7 0x40 // Keyboard F7
-#define KEY_F8 0x41 // Keyboard F8
-#define KEY_F9 0x42 // Keyboard F9
-#define KEY_F10 0x43 // Keyboard F10
-#define KEY_F11 0x44 // Keyboard F11
-#define KEY_F12 0x45 // Keyboard F12
-#define KEY_SYSRQ 0x46 // Keyboard Print Screen
-#define KEY_SCROLLLOCK 0x47 // Keyboard Scroll Lock
-#define KEY_PAUSE 0x48 // Keyboard Pause
-#define KEY_INSERT 0x49 // Keyboard Insert
-#define KEY_HOME 0x4a // Keyboard Home
-#define KEY_PAGEUP 0x4b // Keyboard Page Up
-#define KEY_DELETE 0x4c // Keyboard Delete Forward
-#define KEY_END 0x4d // Keyboard End
-#define KEY_PAGEDOWN 0x4e // Keyboard Page Down
-#define KEY_RIGHT 0x4f // Keyboard Right Arrow
-#define KEY_LEFT 0x50 // Keyboard Left Arrow
-#define KEY_DOWN 0x51 // Keyboard Down Arrow
-#define KEY_UP 0x52 // Keyboard Up Arrow
-#define KEY_NUMLOCK 0x53 // Keyboard Num Lock and Clear
-#define KEY_KPSLASH 0x54 // Keypad /
-#define KEY_KPASTERISK 0x55 // Keypad *
-#define KEY_KPMINUS 0x56 // Keypad -
-#define KEY_KPPLUS 0x57 // Keypad +
-#define KEY_KPENTER 0x58 // Keypad ENTER
-#define KEY_KP1 0x59 // Keypad 1 and End
-#define KEY_KP2 0x5a // Keypad 2 and Down Arrow
-#define KEY_KP3 0x5b // Keypad 3 and PageDn
-#define KEY_KP4 0x5c // Keypad 4 and Left Arrow
-#define KEY_KP5 0x5d // Keypad 5
-#define KEY_KP6 0x5e // Keypad 6 and Right Arrow
-#define KEY_KP7 0x5f // Keypad 7 and Home
-#define KEY_KP8 0x60 // Keypad 8 and Up Arrow
-#define KEY_KP9 0x61 // Keypad 9 and Page Up
-#define KEY_KP0 0x62 // Keypad 0 and Insert
-#define KEY_KPDOT 0x63 // Keypad . and Delete
-#define KEY_102ND 0x64 // Keyboard Non-US \ and |
-#define KEY_COMPOSE 0x65 // Keyboard Application
-#define KEY_POWER 0x66 // Keyboard Power
-#define KEY_KPEQUAL 0x67 // Keypad =
-#define KEY_F13 0x68 // Keyboard F13
-#define KEY_F14 0x69 // Keyboard F14
-#define KEY_F15 0x6a // Keyboard F15
-#define KEY_F16 0x6b // Keyboard F16
-#define KEY_F17 0x6c // Keyboard F17
-#define KEY_F18 0x6d // Keyboard F18
-#define KEY_F19 0x6e // Keyboard F19
-#define KEY_F20 0x6f // Keyboard F20
-#define KEY_F21 0x70 // Keyboard F21
-#define KEY_F22 0x71 // Keyboard F22
-#define KEY_F23 0x72 // Keyboard F23
-#define KEY_F24 0x73 // Keyboard F24
-#define KEY_OPEN 0x74 // Keyboard Execute
-#define KEY_HELP 0x75 // Keyboard Help
-#define KEY_PROPS 0x76 // Keyboard Menu
-#define KEY_FRONT 0x77 // Keyboard Select
-#define KEY_STOP 0x78 // Keyboard Stop
-#define KEY_AGAIN 0x79 // Keyboard Again
-#define KEY_UNDO 0x7a // Keyboard Undo
-#define KEY_CUT 0x7b // Keyboard Cut
-#define KEY_COPY 0x7c // Keyboard Copy
-#define KEY_PASTE 0x7d // Keyboard Paste
-#define KEY_FIND 0x7e // Keyboard Find
-#define KEY_MUTE 0x7f // Keyboard Mute
-#define KEY_VOLUMEUP 0x80 // Keyboard Volume Up
-#define KEY_VOLUMEDOWN 0x81 // Keyboard Volume Down
-#define KEY_CAPLOCK 0x82 //  Keyboard Locking Caps Lock
-#define KEY_NUMLOCK2 0x83 // Keyboard Locking Num Lock
-// 0x84  Keyboard Locking Scroll Lock
-#define KEY_KPCOMMA 0x85 // Keypad Comma
-// 0x86  Keypad Equal Sign
-#define KEY_RO 0x87 // Keyboard International1
-#define KEY_KATAKANAHIRAGANA 0x88 // Keyboard International2
-#define KEY_YEN 0x89 // Keyboard International3
-#define KEY_HENKAN 0x8a // Keyboard International4
-#define KEY_MUHENKAN 0x8b // Keyboard International5
-#define KEY_KPJPCOMMA 0x8c // Keyboard International6
-// 0x8d  Keyboard International7
-// 0x8e  Keyboard International8
-// 0x8f  Keyboard International9
-#define KEY_HANGEUL 0x90 // Keyboard LANG1
-#define KEY_HANJA 0x91 // Keyboard LANG2
-#define KEY_KATAKANA 0x92 // Keyboard LANG3
-#define KEY_HIRAGANA 0x93 // Keyboard LANG4
-#define KEY_ZENKAKUHANKAKU 0x94 // Keyboard LANG5
-// 0x95  Keyboard LANG6
-// 0x96  Keyboard LANG7
-// 0x97  Keyboard LANG8
-// 0x98  Keyboard LANG9
-// 0x99  Keyboard Alternate Erase
-// 0x9a  Keyboard SysReq/Attention
-// 0x9b  Keyboard Cancel
-// 0x9c  Keyboard Clear
-// 0x9d  Keyboard Prior
-// 0x9e  Keyboard Return
-// 0x9f  Keyboard Separator
-// 0xa0  Keyboard Out
-// 0xa1  Keyboard Oper
-// 0xa2  Keyboard Clear/Again
-// 0xa3  Keyboard CrSel/Props
-// 0xa4  Keyboard ExSel
-// 0xb0  Keypad 00
-// 0xb1  Keypad 000
-// 0xb2  Thousands Separator
-// 0xb3  Decimal Separator
-// 0xb4  Currency Unit
-// 0xb5  Currency Sub-unit
-#define KEY_KPLEFTPAREN 0xb6 // Keypad (
-#define KEY_KPRIGHTPAREN 0xb7 // Keypad )
-// 0xb8  Keypad {
-// 0xb9  Keypad }
-// 0xba  Keypad Tab
-// 0xbb  Keypad Backspace
-// 0xbc  Keypad A
-// 0xbd  Keypad B
-// 0xbe  Keypad C
-// 0xbf  Keypad D
-// 0xc0  Keypad E
-// 0xc1  Keypad F
-// 0xc2  Keypad XOR
-// 0xc3  Keypad ^
-// 0xc4  Keypad %
-// 0xc5  Keypad <
-// 0xc6  Keypad >
-// 0xc7  Keypad &
-// 0xc8  Keypad &&
-// 0xc9  Keypad |
-// 0xca  Keypad ||
-// 0xcb  Keypad :
-// 0xcc  Keypad #
-// 0xcd  Keypad Space
-// 0xce  Keypad @
-// 0xcf  Keypad !
-// 0xd0  Keypad Memory Store
-// 0xd1  Keypad Memory Recall
-// 0xd2  Keypad Memory Clear
-// 0xd3  Keypad Memory Add
-// 0xd4  Keypad Memory Subtract
-// 0xd5  Keypad Memory Multiply
-// 0xd6  Keypad Memory Divide
-// 0xd7  Keypad +/-
-// 0xd8  Keypad Clear
-// 0xd9  Keypad Clear Entry
-// 0xda  Keypad Binary
-// 0xdb  Keypad Octal
-// 0xdc  Keypad Decimal
-// 0xdd  Keypad Hexadecimal
-#define KEY_LEFTCTRL 0xe0 // Keyboard Left Control
-#define KEY_LEFTSHIFT 0xe1 // Keyboard Left Shift
-#define KEY_LEFTALT 0xe2 // Keyboard Left Alt
-#define KEY_LEFTMETA 0xe3 // Keyboard Left GUI
-#define KEY_RIGHTCTRL 0xe4 // Keyboard Right Control
-#define KEY_RIGHTSHIFT 0xe5 // Keyboard Right Shift
-#define KEY_RIGHTALT 0xe6 // Keyboard Right Alt
-#define KEY_RIGHTMETA 0xe7 // Keyboard Right GUI
-#define KEY_MEDIA_PLAYPAUSE 0xe8
-#define KEY_MEDIA_STOPCD 0xe9
-#define KEY_MEDIA_PREVIOUSSONG 0xea
-#define KEY_MEDIA_NEXTSONG 0xeb
-#define KEY_MEDIA_EJECTCD 0xec
-#define KEY_MEDIA_VOLUMEUP 0xed
-#define KEY_MEDIA_VOLUMEDOWN 0xee
-#define KEY_MEDIA_MUTE 0xef
-#define KEY_MEDIA_WWW 0xf0
-#define KEY_MEDIA_BACK 0xf1
-#define KEY_MEDIA_FORWARD 0xf2
-#define KEY_MEDIA_STOP 0xf3
-#define KEY_MEDIA_FIND 0xf4
-#define KEY_MEDIA_SCROLLUP 0xf5
-#define KEY_MEDIA_SCROLLDOWN 0xf6
-#define KEY_MEDIA_EDIT 0xf7
-#define KEY_MEDIA_SLEEP 0xf8
-#define KEY_MEDIA_COFFEE 0xf9
-#define KEY_MEDIA_REFRESH 0xfa
-#define KEY_MEDIA_CALC 0xfb
-#define KEY_FN1 0xfc
-#define KEY_FN2 0xfd
-#define KEY_FN3 0xfe
-#define KEY_FN4 0xff
+
+#define NUM_FN4_CTRL	16384
+#define NUM_FN3_CTRL	8192
+#define NUM_FN2_CTRL	4096
+#define NUM_FN1_CTRL	2048
+#define NUM_KEY_CTRL	1024
+#define NUM_KEY_ALTGR	512
+#define NUM_KEY_SHIFT	256
+#define NUM_FN4_ALTGR	128
+#define NUM_FN4_SHIFT	64
+#define NUM_FN3_ALTGR	32
+#define NUM_FN3_SHIFT	16
+#define NUM_FN2_ALTGR	8
+#define NUM_FN2_SHIFT	4
+#define NUM_FN1_ALTGR	2
+#define NUM_FN1_SHIFT	1
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -282,9 +56,7 @@
 
 /* USER CODE BEGIN PV */
 extern USBD_HandleTypeDef hUsbDeviceFS;
-
-typedef struct
-{
+typedef struct{
 	uint8_t MODIFIER;
 	uint8_t RESERVED;
 	uint8_t KEYCODE1;
@@ -294,7 +66,6 @@ typedef struct
 	uint8_t KEYCODE5;
 	uint8_t KEYCODE6;
 }subKeyBoard;
-
 subKeyBoard keyBoardHIDsub = {0, 0, 0, 0, 0, 0, 0, 0};
 /* USER CODE END PV */
 
@@ -302,48 +73,55 @@ subKeyBoard keyBoardHIDsub = {0, 0, 0, 0, 0, 0, 0, 0};
 void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
 /* USER CODE BEGIN PFP */
-bool MODIFIER_MASK[44] = {  // Mask of modifier keys (have same code than other keys)
-		false, false, false, false, false, false, false, false, false, false, false,  // Line 1
-		false, false, false, false, false, false, false, false, false, false, false,  // Line 2
-		true, false, false, false, false, false, false, false, false, false, false,  // Line 3
-		true, true, true, false, false, false, false, false, false, false, false   // Line 4
-	  };
+bool MODIFIER_MASK[44] = {  // Mask of hardware fixed modifier keys (SHIFT, ALT, SUPER, CTRL)
+		false, 	false, 	false, 	false, 	false, 	false, 	false, 	false, 	false, 	false, 	false,
+		false, 	false, 	false, 	false, 	false, 	false, 	false, 	false, 	false, 	false, 	false,
+		true, 	false, 	false, 	false, 	false, 	false, 	false, 	false, 	false, 	false, 	false,
+		true, 	true, 	true, 	false, 	false, 	false, 	false, 	false, 	false, 	false, 	false
+};
+
+uint16_t TRIGGERS_MODIFIER[44] = {  // Mask for FN1-shift(1)FN1-altgr(2)FN2-shift(4)FN2-altgr(8)FN3-shift(16)FN3-altgr(32)FN4-shift(64)FN4-altgr(128)KEY-shift(256)Key-altgr(512)
+	0,	4,	132,	4,	4,	132,	4,	132,	132,	4,	4,
+	0,	8,	0,	8,	0,	0,	0,	16,	32,	132,	0,
+	0,	33,	16,	16,	0,	0,	16,	4096,	14336,	0,	0,
+	0,	0,	0,	0,	2048,	2048,	0,	0,	0,	0,	0
+};
+
 uint8_t INPUTKEYS[44] = {
-		KEY_ESC, KEY_A, KEY_Z, KEY_E, KEY_R, KEY_T, KEY_Y, KEY_U, KEY_I, KEY_O, KEY_P,
-		KEY_TAB, KEY_Q, KEY_S, KEY_D, KEY_F, KEY_G, KEY_H, KEY_J, KEY_K, KEY_L, KEY_M,
-		KEY_LEFTSHIFT, KEY_W, KEY_X, KEY_C, KEY_V, KEY_B, KEY_N, KEY_UP, KEY_ENTER, KEY_FN1, KEY_FN2,
-		KEY_LEFTCTRL, KEY_LEFTMETA, KEY_LEFTALT, KEY_SPACE, KEY_BACKSPACE, KEY_DELETE, KEY_LEFT, KEY_DOWN, KEY_RIGHT, KEY_FN3, KEY_FN4
+	0x29,	0x14,	0x1A,	0x08,	0x15,	0x17,	0x1C,	0x18,	0x0C,	0x12,	0x13,
+	0x2B,	0x04,	0x16,	0x07,	0x09,	0x0A,	0x0B,	0x0D,	0x0E,	0x0F,	0x33,
+	0x02,	0x1D,	0x1B,	0x06,	0x19,	0x05,	0x11,	0x52,	0x28,	0xFC,	0xFD,
+	0x01,	0x08,	0x04,	0x2C,	0x2A,	0x4C,	0x50,	0x51,	0x4F,	0xFE,	0xFF
 };
 uint8_t FN1KEYS[44] = {
-		KEY_NONE, KEY_1, KEY_2, KEY_3, KEY_4, KEY_5, KEY_6, KEY_7, KEY_8, KEY_9, KEY_0,
-		KEY_NONE, KEY_KPLEFTPAREN, KEY_NONE, KEY_KPRIGHTPAREN, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE,
-		KEY_LEFTSHIFT, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE,
-		KEY_LEFTCTRL, KEY_LEFTMETA, KEY_LEFTALT, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE
+	0xF8,	0x1E,	0x1F,	0x20,	0x21,	0x22,	0x23,	0x24,	0x25,	0x26,	0x27,
+	0x39,	0x22,	0x00,	0x2D,	0x00,	0x00,	0x00,	0x00,	0x00,	0x2D,	0x2E,
+	0x02,	0x10,	0x63,	0x10,	0x36,	0x37,	0x38,	0x4B,	0x06,	0xFC,	0xFD,
+	0x01,	0x08,	0x04,	0x23,	0x1A,	0x1C,	0x4A,	0x4E,	0x4D,	0xFE,	0xFF
 };
 uint8_t FN2KEYS[44] = {
-		KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE,
-		KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE,
-		KEY_LEFTSHIFT, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE,
-		KEY_LEFTCTRL, KEY_LEFTMETA, KEY_LEFTALT, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE
+	0x66,	0x1E,	0x1F,	0x20,	0x21,	0x22,	0x23,	0x24,	0x25,	0x26,	0x27,
+	0x53,	0x22,	0x00,	0x2D,	0x00,	0x00,	0x00,	0x00,	0x00,	0x2D,	0x57,
+	0x02,	0x00,	0x00,	0x00,	0x00,	0x00,	0x00,	0x09,	0x1B,	0xFC,	0xFD,
+	0x01,	0x08,	0x04,	0x00,	0x00,	0x00,	0xEA,	0x15,	0xEB,	0xFE,	0xFF
 };
 uint8_t FN3KEYS[44] = {
-		KEY_NONE, KEY_F1, KEY_F2, KEY_F3, KEY_F4, KEY_F5, KEY_F6, KEY_F7, KEY_F8, KEY_F9, KEY_F10,
-		KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_F11, KEY_F12,
-		KEY_LEFTSHIFT, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE,
-		KEY_LEFTCTRL, KEY_LEFTMETA, KEY_LEFTALT, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE
+	0x00,	0x3A,	0x3B,	0x3C,	0x3D,	0x3E,	0x3F,	0x40,	0x41,	0x42,	0x43,
+	0x49,	0xB8,	0x00,	0xB9,	0x00,	0x00,	0xC4,	0x2F,	0x30,	0x44,	0x45,
+	0x02,	0x08,	0x38,	0x30,	0x30,	0x34,	0x31,	0xE8,	0x19,	0xFC,	0xFD,
+	0x01,	0x08,	0x04,	0xFA,	0x00,	0x00,	0xF1,	0x48,	0xF2,	0xFE,	0xFF
 };
 uint8_t FN4KEYS[44] = {
-		KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE,
-		KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE,
-		KEY_LEFTSHIFT, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE,
-		KEY_LEFTCTRL, KEY_LEFTMETA, KEY_LEFTALT, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE, KEY_NONE
+	0x00,	0x35,	0x1F,	0xCC,	0xB8,	0x22,	0xC9,	0x24,	0x25,	0x2F,	0xCE,
+	0x00,	0xC5,	0x2F,	0xC6,	0x00,	0x00,	0x00,	0xC8,	0xCA,	0x2D,	0xB9,
+	0x02,	0x00,	0x00,	0x00,	0x00,	0x00,	0x00,	0x80,	0x46,	0xFC,	0xFD,
+	0x01,	0x08,	0x04,	0x00,	0x00,	0x00,	0x7F,	0x81,	0x65,	0xFE,	0xFF
 };
-GPIO_TypeDef *GPIOPORTS_C[11] = {GPIOA, GPIOA, GPIOA, GPIOB, GPIOA, GPIOA, GPIOA, GPIOA, GPIOA, GPIOA, GPIOB};
-int PINS_C[11] = {GPIO_PIN_10, GPIO_PIN_9, GPIO_PIN_8, GPIO_PIN_0, GPIO_PIN_7, GPIO_PIN_6, GPIO_PIN_5, GPIO_PIN_4, GPIO_PIN_3, GPIO_PIN_2, GPIO_PIN_5};
-GPIO_TypeDef *GPIOPORTS_L[4] = {GPIOB, GPIOB, GPIOB, GPIOB};
-int PINS_L[4] = {GPIO_PIN_2, GPIO_PIN_1, GPIO_PIN_7, GPIO_PIN_6};
 
-
+GPIO_TypeDef *GPIOPORTS_C[11] = {	GPIOA, 			GPIOA, 			GPIOA, 			GPIOB, 			GPIOA, 			GPIOA, 			GPIOA, 			GPIOA, 			GPIOA, 			GPIOA, 			GPIOB		};
+int PINS_C[11] = {					GPIO_PIN_10, 	GPIO_PIN_9, 	GPIO_PIN_8, 	GPIO_PIN_0, 	GPIO_PIN_7, 	GPIO_PIN_6, 	GPIO_PIN_5, 	GPIO_PIN_4, 	GPIO_PIN_3, 	GPIO_PIN_2, 	GPIO_PIN_5	};
+GPIO_TypeDef *GPIOPORTS_L[4] = {	GPIOB, 			GPIOB, 			GPIOB, 			GPIOB};
+int PINS_L[4] = {					GPIO_PIN_2, 	GPIO_PIN_1, 	GPIO_PIN_7, 	GPIO_PIN_6};
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -381,24 +159,24 @@ int main(void)
   MX_GPIO_Init();
   MX_USB_DEVICE_Init();
   /* USER CODE BEGIN 2 */
-  bool last_pressed = false;
 
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+  bool last_pressed = false;
   while (1){
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-	  bool PRESSED[44] = {  // Initialize physical mask pressed keys
-		false, false, false, false, false, false, false, false, false, false, false,  // Line 1
-		false, false, false, false, false, false, false, false, false, false, false,  // Line 2
-		false, false, false, false, false, false, false, false, false, false, false,  // Line 3
-		false, false, false, false, false, false, false, false, false, false, false   // Line 4
+	  bool PRESSED[44] = {  // Initialize physical mask pressed keys to all false
+		false, 	false, 	false, 	false, 	false, 	false, 	false, 	false, 	false, 	false, 	false,
+		false, 	false, 	false, 	false, 	false, 	false, 	false, 	false, 	false, 	false, 	false,
+		false, 	false, 	false, 	false, 	false, 	false, 	false, 	false, 	false, 	false, 	false,
+		false, 	false, 	false, 	false, 	false, 	false, 	false, 	false, 	false, 	false, 	false
 	  };
-	  bool press = false;  // Initialize pressed any physical key
-	  bool press_fn_bar = false;  // Initialize pressed any physical key
+	  bool press = false;  // Initialize pressed any physical key on keyboard
+	  bool press_fn_bar = false;  // Initialize pressed any physical key that are not FN key
 	  for (int c=0; c<11; c++) HAL_GPIO_WritePin(GPIOPORTS_C[c], PINS_C[c], GPIO_PIN_SET);  // All columns GPIO are turned ON
 	  for (int line=0; line<4; line++) {
 		  if(HAL_GPIO_ReadPin (GPIOPORTS_L[line], PINS_L[line])){  // Lines GPIO are checked
@@ -414,39 +192,91 @@ int main(void)
 		  }
 	  }
 	  if (press){
-		  bool fn1 = PRESSED[31];  // Check if FN1 is pressed
-		  bool fn2 = PRESSED[32];  // Check if FN2 is pressed
-		  bool fn3 = PRESSED[42];  // Check if FN3 is pressed
-		  bool fn4 = PRESSED[43];  // Check if FN4 is pressed
+		  bool fn1 = PRESSED[INDEX_FN1];  // Check if FN1 is pressed
+		  bool fn2 = PRESSED[INDEX_FN2];  // Check if FN2 is pressed
+		  bool fn3 = PRESSED[INDEX_FN3];  // Check if FN3 is pressed
+		  bool fn4 = PRESSED[INDEX_FN4];  // Check if FN4 is pressed
 		  for (int index=0; index<44; index++) {  // Loop on every physical keys
 			  if (
 				  !PRESSED[index] ||  // Physical key is not pressed
-				  index == 31 ||  // FN1 is not analyzed
-				  index == 32 ||  // FN2 is not analyzed
-				  index == 42 ||  // FN3 is not analyzed
-				  index == 43     // FN4 is not analyzed
+				  index == INDEX_FN1 ||  // FN1 is not analyzed
+				  index == INDEX_FN2 ||  // FN2 is not analyzed
+				  index == INDEX_FN3 ||  // FN3 is not analyzed
+				  index == INDEX_FN4     // FN4 is not analyzed
 			  ) continue;
-			  press_fn_bar = true;
-			  uint8_t key = (uint8_t)INPUTKEYS[index];
-			  if (fn1) key = (uint8_t)FN1KEYS[index];
-			  else if (fn2) key = (uint8_t)FN2KEYS[index];
-			  else if (fn3) key = (uint8_t)FN3KEYS[index];
-			  else if (fn4) key = (uint8_t)FN4KEYS[index];
 
-			  if (MODIFIER_MASK[index])
-				  keyBoardHIDsub.MODIFIER |= key;
-			  else if (keyBoardHIDsub.KEYCODE1 == 0x00)
-				  keyBoardHIDsub.KEYCODE1 = key;
-			  else if (keyBoardHIDsub.KEYCODE2 == 0x00)
-				  keyBoardHIDsub.KEYCODE2 = key;
-			  else if (keyBoardHIDsub.KEYCODE3 == 0x00)
-				  keyBoardHIDsub.KEYCODE3 = key;
-			  else if (keyBoardHIDsub.KEYCODE4 == 0x00)
-				  keyBoardHIDsub.KEYCODE4 = key;
-			  else if (keyBoardHIDsub.KEYCODE5 == 0x00)
-				  keyBoardHIDsub.KEYCODE5 = key;
-			  else if (keyBoardHIDsub.KEYCODE6 == 0x00)
-				  keyBoardHIDsub.KEYCODE6 = key;
+			  if (!yt) press_fn_bar = true;  // A key that is not FN has been pressed
+
+			  uint8_t 		  key = (uint8_t)INPUTKEYS[index];  // Affect standard key
+			  if 		(fn1) key = (uint8_t)FN1KEYS[index];  // Affect FN1 key if is pressed
+			  else if 	(fn2) key = (uint8_t)FN2KEYS[index];  // Affect FN2 key if is pressed€
+			  else if 	(fn3) key = (uint8_t)FN3KEYS[index];  // Affect FN3 key if is pressed
+			  else if 	(fn4) key = (uint8_t)FN4KEYS[index];  // Affect FN4 key if is pressed
+
+			  uint16_t trigger_modifier = (uint16_t)TRIGGERS_MODIFIER[index];  // Get Modifier value index
+			  // Affect modifier if specified in table TRIGGERS_MODIFIER
+			  bool fn4_ctrl = trigger_modifier >= NUM_FN4_CTRL;
+			  trigger_modifier -= NUM_FN4_CTRL * fn4_ctrl;
+			  bool fn3_ctrl = trigger_modifier >= NUM_FN3_CTRL;
+			  trigger_modifier -= NUM_FN3_CTRL * fn3_ctrl;
+			  bool fn2_ctrl = trigger_modifier >= NUM_FN2_CTRL;
+			  trigger_modifier -= NUM_FN2_CTRL * fn2_ctrl;€
+			  bool fn1_ctrl = trigger_modifier >= NUM_FN1_CTRL;
+			  trigger_modifier -= NUM_FN1_CTRL * fn1_ctrl;
+			  bool key_ctrl = trigger_modifier >= NUM_KEY_CTRL;
+			  trigger_modifier -= NUM_KEY_CTRL * key_ctrl;
+			  bool key_altgr = trigger_modifier >= NUM_KEY_ALTGR;  // If value in TRIGGERS_MODIFIER is higher than NUM_KEY_ALTGR
+			  trigger_modifier -= NUM_KEY_ALTGR * key_altgr;  // Remove value NUM_KEY€_ALTGR from TRIGGERS_MODIFIER value index of key
+			  bool key_shift = trigger_modifier >= NUM_KEY_SHIFT;  // Repeat for NUM_KEY_SHIFT
+			  trigger_modifier -= NUM_KEY_SHIFT * key_shift;  // Repeat for NUM_KEY_SHIFT
+			  bool fn4_altgr = trigger_modifier >= NUM_FN4_ALTGR;
+			  trigger_modifier -= NUM_FN4_ALTGR * fn4_altgr;
+			  bool fn4_shift = trigger_modifier >= NUM_FN4_SHIFT;
+			  trigger_modifier -= NUM_FN4_SHIFT * fn4_shift;
+			  bool fn3_altgr = trigger_modifier >= NUM_FN3_ALTGR;
+			  trigger_modifier -= NUM_FN3_ALTGR * fn3_altgr;
+			  bool fn3_shift = trigger_modifier >= NUM_FN3_SHIFT;
+			  trigger_modifier -= NUM_FN3_SHIFT * fn3_shift;
+			  bool fn2_altgr = trigger_modifier >= NUM_FN2_ALTGR;
+			  trigger_modifier -= NUM_FN2_ALTGR * fn2_altgr;
+			  bool fn2_shift = trigger_modifier >= NUM_FN2_SHIFT;
+			  trigger_modifier -= NUM_FN2_SHIFT * fn2_shift;
+			  bool fn1_altgr = trigger_modifier >= NUM_FN1_ALTGR;
+			  trigger_modifier -= NUM_FN1_ALTGR * fn1_altgr;
+			  bool fn1_shift = trigger_modifier >= NUM_FN1_SHIFT;
+			  trigger_modifier -= NUM_FN1_SHIFT * fn1_shift;
+
+			  if (
+				  (key_altgr && !(fn1 || fn2 || fn3 || fn4)) ||
+				  (fn4_altgr && fn4) ||
+				  (fn3_altgr && fn3) ||
+				  (fn2_altgr && fn2) ||
+				  (fn1_altgr && fn1)
+			  ) keyBoardHIDsub.MODIFIER |= KEY_MOD_RALT;
+
+			  else if (
+				  (key_shift && !(fn1 || fn2 || fn3 || fn4)) ||
+				  (fn4_shift && fn4)  ||
+				  (fn3_shift && fn3)  ||
+				  (fn2_shift && fn2)  ||
+				  (fn1_shift && fn1)
+			  ) keyBoardHIDsub.MODIFIER |= KEY_MOD_RSHIFT;
+
+			  else if (
+				  (key_ctrl && !(fn1 || fn2 || fn3 || fn4)) ||
+				  (fn4_ctrl && fn4)  ||
+				  (fn3_ctrl && fn3)  ||
+				  (fn2_ctrl && fn2)  ||
+				  (fn1_ctrl && fn1)
+			  ) keyBoardHIDsub.MODIFIER |= KEY_MOD_RCTRL;
+
+			  if 		(MODIFIER_MASK[index]) 				keyBoardHIDsub.MODIFIER |= 	key;
+			  else if 	(keyBoardHIDsub.KEYCODE1 == 0x00) 	keyBoardHIDsub.KEYCODE1 = 	key;
+			  else if 	(keyBoardHIDsub.KEYCODE2 == 0x00) 	keyBoardHIDsub.KEYCODE2 = 	key;
+			  else if 	(keyBoardHIDsub.KEYCODE3 == 0x00) 	keyBoardHIDsub.KEYCODE3 = 	key;
+			  else if 	(keyBoardHIDsub.KEYCODE4 == 0x00) 	keyBoardHIDsub.KEYCODE4 = 	key;
+			  else if 	(keyBoardHIDsub.KEYCODE5 == 0x00) 	keyBoardHIDsub.KEYCODE5 = 	key;
+			  else if 	(keyBoardHIDsub.KEYCODE6 == 0x00) 	keyBoardHIDsub.KEYCODE6 = 	key;
 			  else {  // Too much key pressed
 				  keyBoardHIDsub.MODIFIER = KEY_ERR_OVF;
 				  keyBoardHIDsub.KEYCODE1 = KEY_ERR_OVF;
@@ -457,8 +287,7 @@ int main(void)
 				  keyBoardHIDsub.KEYCODE6 = KEY_ERR_OVF;
 			  }
 		  };
-		  USBD_HID_SendReport(&hUsbDeviceFS, &keyBoardHIDsub, sizeof(keyBoardHIDsub));  // Send keys thought USB
-		  HAL_Delay(50);  // Wait of loop iteration in ms
+		  USBD_HID_SendReport(&hUsbDeviceFS, &keyBoardHIDsub, sizeof(keyBoardHIDsub));  // Send keys report thought USB
 	  }
 
 	  if (!press_fn_bar && last_pressed) {
@@ -472,6 +301,7 @@ int main(void)
 		  USBD_HID_SendReport(&hUsbDeviceFS, &keyBoardHIDsub, sizeof(keyBoardHIDsub));
 	  }
 	  last_pressed = press_fn_bar;
+	  HAL_Delay(50);  // Wait of loop iteration in ms
   }
   /* USER CODE END 3 */
 }
