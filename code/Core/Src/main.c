@@ -179,17 +179,22 @@ int main(void)
 	  for (int line=0; line<4; line++) {
 		  if(HAL_GPIO_ReadPin (GPIOPORTS_L[line], PINS_L[line])){  // Lines GPIO are checked
 			  press = true;  // If one or more line GPIO are true: a key has been pressed
-			  for (int c=0; c<11; c++) HAL_GPIO_WritePin(GPIOPORTS_C[c], PINS_C[c], GPIO_PIN_RESET);  // All columns GPIO are turned OFF
+			  line = 4;
+		   }
+	  }
+
+	  if (press){
+		  for (int c=0; c<11; c++) HAL_GPIO_WritePin(GPIOPORTS_C[c], PINS_C[c], GPIO_PIN_RESET);  // All columns GPIO are turned OFF
+		  for (int line=0; line<4; line++) {
 			  for (int c=0; c<11; c++){  // Scan columns one by one to get all keys
 				  HAL_GPIO_WritePin(GPIOPORTS_C[c], PINS_C[c], GPIO_PIN_SET);  // Turn ON GPIO of scanned column
 				  if(HAL_GPIO_ReadPin (GPIOPORTS_L[line], PINS_L[line])){  // Check again line GPIO to test (column x line)
 					  PRESSED[line * 11 + c] = true;  // Index of physical pressed key is turned to true
-					  HAL_GPIO_WritePin(GPIOPORTS_C[c], PINS_C[c], GPIO_PIN_RESET);
 				  }
+				  HAL_GPIO_WritePin(GPIOPORTS_C[c], PINS_C[c], GPIO_PIN_RESET);  // Turn OFF GPIO of scanned column
 			  }
 		  }
-	  }
-	  if (press){
+
 		  bool fn1 = PRESSED[INDEX_FN1];  // Check if FN1 is pressed
 		  bool fn2 = PRESSED[INDEX_FN2];  // Check if FN2 is pressed
 		  bool fn3 = PRESSED[INDEX_FN3];  // Check if FN3 is pressed
@@ -203,7 +208,7 @@ int main(void)
 		  for (int index=0; index<44; index++) {  // Loop on every physical keys
 			  if (
 				  !PRESSED[index] ||  // Physical key is not pressed
-				  MODIFIER_MASK[index] ||  // Si touche de modifier pressed
+				  MODIFIER_MASK[index] ||  // Si touches de modifier pressed
 				  index == INDEX_FN1 ||  // FN1 is not analyzed
 				  index == INDEX_FN2 ||  // FN2 is not analyzed
 				  index == INDEX_FN3 ||  // FN3 is not analyzed
@@ -296,6 +301,9 @@ int main(void)
 		  if (press_fn_bar){
 			  USBD_HID_SendReport(&hUsbDeviceFS, &keyBoardHIDsub, sizeof(keyBoardHIDsub));  // Send keys report thought USB
 		  }
+		  HAL_Delay(50);  // Wait of loop iteration in ms
+	  } else {
+		  HAL_Delay(100);  // Wait of loop iteration in ms
 	  }
 
 	  if (!press_fn_bar && last_pressed) {
@@ -309,7 +317,6 @@ int main(void)
 		  USBD_HID_SendReport(&hUsbDeviceFS, &keyBoardHIDsub, sizeof(keyBoardHIDsub));
 	  }
 	  last_pressed = press_fn_bar;
-	  HAL_Delay(50);  // Wait of loop iteration in ms
   }
   /* USER CODE END 3 */
 }
