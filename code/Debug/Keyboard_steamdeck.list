@@ -29,23 +29,23 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY
  12 .comment      00000043  00000000  00000000  00020358  2**0
                   CONTENTS, READONLY
- 13 .debug_info   0000ba80  00000000  00000000  0002039b  2**0
+ 13 .debug_info   0000ba62  00000000  00000000  0002039b  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 14 .debug_abbrev 00002858  00000000  00000000  0002be1b  2**0
+ 14 .debug_abbrev 00002858  00000000  00000000  0002bdfd  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 15 .debug_aranges 00000a38  00000000  00000000  0002e678  2**3
+ 15 .debug_aranges 00000a38  00000000  00000000  0002e658  2**3
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 16 .debug_rnglists 0000077b  00000000  00000000  0002f0b0  2**0
+ 16 .debug_rnglists 0000077b  00000000  00000000  0002f090  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 17 .debug_macro  0001512e  00000000  00000000  0002f82b  2**0
+ 17 .debug_macro  0001512e  00000000  00000000  0002f80b  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_line   0000e8c8  00000000  00000000  00044959  2**0
+ 18 .debug_line   0000e8b4  00000000  00000000  00044939  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .debug_str    00075c5a  00000000  00000000  00053221  2**0
+ 19 .debug_str    00075c5a  00000000  00000000  000531ed  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 20 .debug_frame  000022a8  00000000  00000000  000c8e7c  2**2
+ 20 .debug_frame  000022a8  00000000  00000000  000c8e48  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 21 .debug_line_str 00000066  00000000  00000000  000cb124  2**0
+ 21 .debug_line_str 00000066  00000000  00000000  000cb0f0  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 Disassembly of section .text:
@@ -560,7 +560,7 @@ Disassembly of section .text:
 int main(void)
 {
  80004a8:	b5b0      	push	{r4, r5, r7, lr}
- 80004aa:	b09a      	sub	sp, #104	; 0x68
+ 80004aa:	b098      	sub	sp, #96	; 0x60
  80004ac:	af00      	add	r7, sp, #0
   /* USER CODE END 1 */
 
@@ -591,7 +591,7 @@ int main(void)
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   bool last_pressed = false;
- 80004be:	2367      	movs	r3, #103	; 0x67
+ 80004be:	235f      	movs	r3, #95	; 0x5f
  80004c0:	18fb      	adds	r3, r7, r3
  80004c2:	2200      	movs	r2, #0
  80004c4:	701a      	strb	r2, [r3, #0]
@@ -600,7 +600,7 @@ int main(void)
 
     /* USER CODE BEGIN 3 */
 	  bool PRESSED[44] = {  // Initialize physical mask pressed keys to all false
- 80004c6:	1d3b      	adds	r3, r7, #4
+ 80004c6:	003b      	movs	r3, r7
  80004c8:	0018      	movs	r0, r3
  80004ca:	232c      	movs	r3, #44	; 0x2c
  80004cc:	001a      	movs	r2, r3
@@ -612,48 +612,48 @@ int main(void)
 		false, 	false, 	false, 	false, 	false, 	false, 	false, 	false, 	false, 	false, 	false
 	  };
 	  bool press = false;  // Initialize pressed any physical key on keyboard
- 80004d4:	2366      	movs	r3, #102	; 0x66
+ 80004d4:	235e      	movs	r3, #94	; 0x5e
  80004d6:	18fb      	adds	r3, r7, r3
  80004d8:	2200      	movs	r2, #0
  80004da:	701a      	strb	r2, [r3, #0]
 	  bool press_fn_bar = false;  // Initialize pressed any physical key that are not FN key
- 80004dc:	2365      	movs	r3, #101	; 0x65
+ 80004dc:	235d      	movs	r3, #93	; 0x5d
  80004de:	18fb      	adds	r3, r7, r3
  80004e0:	2200      	movs	r2, #0
  80004e2:	701a      	strb	r2, [r3, #0]
 	  for (int c=0; c<11; c++) HAL_GPIO_WritePin(GPIOPORTS_C[c], PINS_C[c], GPIO_PIN_SET);  // All columns GPIO are turned ON
  80004e4:	2300      	movs	r3, #0
- 80004e6:	663b      	str	r3, [r7, #96]	; 0x60
+ 80004e6:	65bb      	str	r3, [r7, #88]	; 0x58
  80004e8:	e00f      	b.n	800050a <main+0x62>
- 80004ea:	4b90      	ldr	r3, [pc, #576]	; (800072c <main+0x284>)
- 80004ec:	6e3a      	ldr	r2, [r7, #96]	; 0x60
+ 80004ea:	4b87      	ldr	r3, [pc, #540]	; (8000708 <main+0x260>)
+ 80004ec:	6dba      	ldr	r2, [r7, #88]	; 0x58
  80004ee:	0092      	lsls	r2, r2, #2
  80004f0:	58d0      	ldr	r0, [r2, r3]
- 80004f2:	4b8f      	ldr	r3, [pc, #572]	; (8000730 <main+0x288>)
- 80004f4:	6e3a      	ldr	r2, [r7, #96]	; 0x60
+ 80004f2:	4b86      	ldr	r3, [pc, #536]	; (800070c <main+0x264>)
+ 80004f4:	6dba      	ldr	r2, [r7, #88]	; 0x58
  80004f6:	0092      	lsls	r2, r2, #2
  80004f8:	58d3      	ldr	r3, [r2, r3]
  80004fa:	b29b      	uxth	r3, r3
  80004fc:	2201      	movs	r2, #1
  80004fe:	0019      	movs	r1, r3
  8000500:	f001 f859 	bl	80015b6 <HAL_GPIO_WritePin>
- 8000504:	6e3b      	ldr	r3, [r7, #96]	; 0x60
+ 8000504:	6dbb      	ldr	r3, [r7, #88]	; 0x58
  8000506:	3301      	adds	r3, #1
- 8000508:	663b      	str	r3, [r7, #96]	; 0x60
- 800050a:	6e3b      	ldr	r3, [r7, #96]	; 0x60
+ 8000508:	65bb      	str	r3, [r7, #88]	; 0x58
+ 800050a:	6dbb      	ldr	r3, [r7, #88]	; 0x58
  800050c:	2b0a      	cmp	r3, #10
  800050e:	ddec      	ble.n	80004ea <main+0x42>
 	  for (int line=0; line<4; line++) {
  8000510:	2300      	movs	r3, #0
- 8000512:	65fb      	str	r3, [r7, #92]	; 0x5c
+ 8000512:	657b      	str	r3, [r7, #84]	; 0x54
  8000514:	e016      	b.n	8000544 <main+0x9c>
 		  if(HAL_GPIO_ReadPin (GPIOPORTS_L[line], PINS_L[line])){  // Lines GPIO are checked
- 8000516:	4b87      	ldr	r3, [pc, #540]	; (8000734 <main+0x28c>)
- 8000518:	6dfa      	ldr	r2, [r7, #92]	; 0x5c
+ 8000516:	4b7e      	ldr	r3, [pc, #504]	; (8000710 <main+0x268>)
+ 8000518:	6d7a      	ldr	r2, [r7, #84]	; 0x54
  800051a:	0092      	lsls	r2, r2, #2
  800051c:	58d0      	ldr	r0, [r2, r3]
- 800051e:	4b86      	ldr	r3, [pc, #536]	; (8000738 <main+0x290>)
- 8000520:	6dfa      	ldr	r2, [r7, #92]	; 0x5c
+ 800051e:	4b7d      	ldr	r3, [pc, #500]	; (8000714 <main+0x26c>)
+ 8000520:	6d7a      	ldr	r2, [r7, #84]	; 0x54
  8000522:	0092      	lsls	r2, r2, #2
  8000524:	58d3      	ldr	r3, [r2, r3]
  8000526:	b29b      	uxth	r3, r3
@@ -662,67 +662,67 @@ int main(void)
  800052e:	1e03      	subs	r3, r0, #0
  8000530:	d005      	beq.n	800053e <main+0x96>
 			  press = true;  // If one or more line GPIO are true: a key has been pressed
- 8000532:	2366      	movs	r3, #102	; 0x66
+ 8000532:	235e      	movs	r3, #94	; 0x5e
  8000534:	18fb      	adds	r3, r7, r3
  8000536:	2201      	movs	r2, #1
  8000538:	701a      	strb	r2, [r3, #0]
 			  line = 4;
  800053a:	2304      	movs	r3, #4
- 800053c:	65fb      	str	r3, [r7, #92]	; 0x5c
+ 800053c:	657b      	str	r3, [r7, #84]	; 0x54
 	  for (int line=0; line<4; line++) {
- 800053e:	6dfb      	ldr	r3, [r7, #92]	; 0x5c
+ 800053e:	6d7b      	ldr	r3, [r7, #84]	; 0x54
  8000540:	3301      	adds	r3, #1
- 8000542:	65fb      	str	r3, [r7, #92]	; 0x5c
- 8000544:	6dfb      	ldr	r3, [r7, #92]	; 0x5c
+ 8000542:	657b      	str	r3, [r7, #84]	; 0x54
+ 8000544:	6d7b      	ldr	r3, [r7, #84]	; 0x54
  8000546:	2b03      	cmp	r3, #3
  8000548:	dde5      	ble.n	8000516 <main+0x6e>
 		   }
 	  }
 
 	  if (press){
- 800054a:	2366      	movs	r3, #102	; 0x66
+ 800054a:	235e      	movs	r3, #94	; 0x5e
  800054c:	18fb      	adds	r3, r7, r3
  800054e:	781b      	ldrb	r3, [r3, #0]
  8000550:	2b00      	cmp	r3, #0
  8000552:	d101      	bne.n	8000558 <main+0xb0>
- 8000554:	f000 fb9e 	bl	8000c94 <main+0x7ec>
+ 8000554:	f000 fb9c 	bl	8000c90 <main+0x7e8>
 		  for (int c=0; c<11; c++) HAL_GPIO_WritePin(GPIOPORTS_C[c], PINS_C[c], GPIO_PIN_RESET);  // All columns GPIO are turned OFF
  8000558:	2300      	movs	r3, #0
- 800055a:	65bb      	str	r3, [r7, #88]	; 0x58
+ 800055a:	653b      	str	r3, [r7, #80]	; 0x50
  800055c:	e00f      	b.n	800057e <main+0xd6>
- 800055e:	4b73      	ldr	r3, [pc, #460]	; (800072c <main+0x284>)
- 8000560:	6dba      	ldr	r2, [r7, #88]	; 0x58
+ 800055e:	4b6a      	ldr	r3, [pc, #424]	; (8000708 <main+0x260>)
+ 8000560:	6d3a      	ldr	r2, [r7, #80]	; 0x50
  8000562:	0092      	lsls	r2, r2, #2
  8000564:	58d0      	ldr	r0, [r2, r3]
- 8000566:	4b72      	ldr	r3, [pc, #456]	; (8000730 <main+0x288>)
- 8000568:	6dba      	ldr	r2, [r7, #88]	; 0x58
+ 8000566:	4b69      	ldr	r3, [pc, #420]	; (800070c <main+0x264>)
+ 8000568:	6d3a      	ldr	r2, [r7, #80]	; 0x50
  800056a:	0092      	lsls	r2, r2, #2
  800056c:	58d3      	ldr	r3, [r2, r3]
  800056e:	b29b      	uxth	r3, r3
  8000570:	2200      	movs	r2, #0
  8000572:	0019      	movs	r1, r3
  8000574:	f001 f81f 	bl	80015b6 <HAL_GPIO_WritePin>
- 8000578:	6dbb      	ldr	r3, [r7, #88]	; 0x58
+ 8000578:	6d3b      	ldr	r3, [r7, #80]	; 0x50
  800057a:	3301      	adds	r3, #1
- 800057c:	65bb      	str	r3, [r7, #88]	; 0x58
- 800057e:	6dbb      	ldr	r3, [r7, #88]	; 0x58
+ 800057c:	653b      	str	r3, [r7, #80]	; 0x50
+ 800057e:	6d3b      	ldr	r3, [r7, #80]	; 0x50
  8000580:	2b0a      	cmp	r3, #10
  8000582:	ddec      	ble.n	800055e <main+0xb6>
 		  for (int line=0; line<4; line++) {
  8000584:	2300      	movs	r3, #0
- 8000586:	657b      	str	r3, [r7, #84]	; 0x54
+ 8000586:	64fb      	str	r3, [r7, #76]	; 0x4c
  8000588:	e03e      	b.n	8000608 <main+0x160>
 			  for (int c=0; c<11; c++){  // Scan columns one by one to get all keys
  800058a:	2300      	movs	r3, #0
- 800058c:	653b      	str	r3, [r7, #80]	; 0x50
+ 800058c:	64bb      	str	r3, [r7, #72]	; 0x48
  800058e:	e035      	b.n	80005fc <main+0x154>
 				  HAL_GPIO_WritePin(GPIOPORTS_C[c], PINS_C[c], GPIO_PIN_SET);  // Turn ON GPIO of scanned column
- 8000590:	4b66      	ldr	r3, [pc, #408]	; (800072c <main+0x284>)
- 8000592:	6d3a      	ldr	r2, [r7, #80]	; 0x50
+ 8000590:	4b5d      	ldr	r3, [pc, #372]	; (8000708 <main+0x260>)
+ 8000592:	6cba      	ldr	r2, [r7, #72]	; 0x48
  8000594:	0092      	lsls	r2, r2, #2
  8000596:	58d0      	ldr	r0, [r2, r3]
- 8000598:	4b65      	ldr	r3, [pc, #404]	; (8000730 <main+0x288>)
- 800059a:	6d3a      	ldr	r2, [r7, #80]	; 0x50
+ 8000598:	4b5c      	ldr	r3, [pc, #368]	; (800070c <main+0x264>)
+ 800059a:	6cba      	ldr	r2, [r7, #72]	; 0x48
  800059c:	0092      	lsls	r2, r2, #2
  800059e:	58d3      	ldr	r3, [r2, r3]
  80005a0:	b29b      	uxth	r3, r3
@@ -730,12 +730,12 @@ int main(void)
  80005a4:	0019      	movs	r1, r3
  80005a6:	f001 f806 	bl	80015b6 <HAL_GPIO_WritePin>
 				  if(HAL_GPIO_ReadPin (GPIOPORTS_L[line], PINS_L[line])){  // Check again line GPIO to test (column x line)
- 80005aa:	4b62      	ldr	r3, [pc, #392]	; (8000734 <main+0x28c>)
- 80005ac:	6d7a      	ldr	r2, [r7, #84]	; 0x54
+ 80005aa:	4b59      	ldr	r3, [pc, #356]	; (8000710 <main+0x268>)
+ 80005ac:	6cfa      	ldr	r2, [r7, #76]	; 0x4c
  80005ae:	0092      	lsls	r2, r2, #2
  80005b0:	58d0      	ldr	r0, [r2, r3]
- 80005b2:	4b61      	ldr	r3, [pc, #388]	; (8000738 <main+0x290>)
- 80005b4:	6d7a      	ldr	r2, [r7, #84]	; 0x54
+ 80005b2:	4b58      	ldr	r3, [pc, #352]	; (8000714 <main+0x26c>)
+ 80005b4:	6cfa      	ldr	r2, [r7, #76]	; 0x4c
  80005b6:	0092      	lsls	r2, r2, #2
  80005b8:	58d3      	ldr	r3, [r2, r3]
  80005ba:	b29b      	uxth	r3, r3
@@ -744,25 +744,25 @@ int main(void)
  80005c2:	1e03      	subs	r3, r0, #0
  80005c4:	d00a      	beq.n	80005dc <main+0x134>
 					  PRESSED[line * 11 + c] = true;  // Index of physical pressed key is turned to true
- 80005c6:	6d7a      	ldr	r2, [r7, #84]	; 0x54
+ 80005c6:	6cfa      	ldr	r2, [r7, #76]	; 0x4c
  80005c8:	0013      	movs	r3, r2
  80005ca:	009b      	lsls	r3, r3, #2
  80005cc:	189b      	adds	r3, r3, r2
  80005ce:	005b      	lsls	r3, r3, #1
  80005d0:	189a      	adds	r2, r3, r2
- 80005d2:	6d3b      	ldr	r3, [r7, #80]	; 0x50
+ 80005d2:	6cbb      	ldr	r3, [r7, #72]	; 0x48
  80005d4:	18d3      	adds	r3, r2, r3
- 80005d6:	1d3a      	adds	r2, r7, #4
+ 80005d6:	003a      	movs	r2, r7
  80005d8:	2101      	movs	r1, #1
  80005da:	54d1      	strb	r1, [r2, r3]
 				  }
 				  HAL_GPIO_WritePin(GPIOPORTS_C[c], PINS_C[c], GPIO_PIN_RESET);  // Turn OFF GPIO of scanned column
- 80005dc:	4b53      	ldr	r3, [pc, #332]	; (800072c <main+0x284>)
- 80005de:	6d3a      	ldr	r2, [r7, #80]	; 0x50
+ 80005dc:	4b4a      	ldr	r3, [pc, #296]	; (8000708 <main+0x260>)
+ 80005de:	6cba      	ldr	r2, [r7, #72]	; 0x48
  80005e0:	0092      	lsls	r2, r2, #2
  80005e2:	58d0      	ldr	r0, [r2, r3]
- 80005e4:	4b52      	ldr	r3, [pc, #328]	; (8000730 <main+0x288>)
- 80005e6:	6d3a      	ldr	r2, [r7, #80]	; 0x50
+ 80005e4:	4b49      	ldr	r3, [pc, #292]	; (800070c <main+0x264>)
+ 80005e6:	6cba      	ldr	r2, [r7, #72]	; 0x48
  80005e8:	0092      	lsls	r2, r2, #2
  80005ea:	58d3      	ldr	r3, [r2, r3]
  80005ec:	b29b      	uxth	r3, r3
@@ -770,1021 +770,1021 @@ int main(void)
  80005f0:	0019      	movs	r1, r3
  80005f2:	f000 ffe0 	bl	80015b6 <HAL_GPIO_WritePin>
 			  for (int c=0; c<11; c++){  // Scan columns one by one to get all keys
- 80005f6:	6d3b      	ldr	r3, [r7, #80]	; 0x50
+ 80005f6:	6cbb      	ldr	r3, [r7, #72]	; 0x48
  80005f8:	3301      	adds	r3, #1
- 80005fa:	653b      	str	r3, [r7, #80]	; 0x50
- 80005fc:	6d3b      	ldr	r3, [r7, #80]	; 0x50
+ 80005fa:	64bb      	str	r3, [r7, #72]	; 0x48
+ 80005fc:	6cbb      	ldr	r3, [r7, #72]	; 0x48
  80005fe:	2b0a      	cmp	r3, #10
  8000600:	ddc6      	ble.n	8000590 <main+0xe8>
 		  for (int line=0; line<4; line++) {
- 8000602:	6d7b      	ldr	r3, [r7, #84]	; 0x54
+ 8000602:	6cfb      	ldr	r3, [r7, #76]	; 0x4c
  8000604:	3301      	adds	r3, #1
- 8000606:	657b      	str	r3, [r7, #84]	; 0x54
- 8000608:	6d7b      	ldr	r3, [r7, #84]	; 0x54
+ 8000606:	64fb      	str	r3, [r7, #76]	; 0x4c
+ 8000608:	6cfb      	ldr	r3, [r7, #76]	; 0x4c
  800060a:	2b03      	cmp	r3, #3
  800060c:	ddbd      	ble.n	800058a <main+0xe2>
 			  }
 		  }
 
 		  bool fn1 = PRESSED[INDEX_FN1];  // Check if FN1 is pressed
- 800060e:	2346      	movs	r3, #70	; 0x46
+ 800060e:	2342      	movs	r3, #66	; 0x42
  8000610:	18fb      	adds	r3, r7, r3
- 8000612:	1d3a      	adds	r2, r7, #4
+ 8000612:	003a      	movs	r2, r7
  8000614:	7fd2      	ldrb	r2, [r2, #31]
  8000616:	701a      	strb	r2, [r3, #0]
 		  bool fn2 = PRESSED[INDEX_FN2];  // Check if FN2 is pressed
- 8000618:	2345      	movs	r3, #69	; 0x45
+ 8000618:	2341      	movs	r3, #65	; 0x41
  800061a:	18fb      	adds	r3, r7, r3
- 800061c:	1d3a      	adds	r2, r7, #4
+ 800061c:	003a      	movs	r2, r7
  800061e:	2120      	movs	r1, #32
  8000620:	5c52      	ldrb	r2, [r2, r1]
  8000622:	701a      	strb	r2, [r3, #0]
 		  bool fn3 = PRESSED[INDEX_FN3];  // Check if FN3 is pressed
- 8000624:	2344      	movs	r3, #68	; 0x44
+ 8000624:	2340      	movs	r3, #64	; 0x40
  8000626:	18fb      	adds	r3, r7, r3
- 8000628:	1d3a      	adds	r2, r7, #4
+ 8000628:	003a      	movs	r2, r7
  800062a:	212a      	movs	r1, #42	; 0x2a
  800062c:	5c52      	ldrb	r2, [r2, r1]
  800062e:	701a      	strb	r2, [r3, #0]
 		  bool fn4 = PRESSED[INDEX_FN4];  // Check if FN4 is pressed
- 8000630:	2343      	movs	r3, #67	; 0x43
+ 8000630:	233f      	movs	r3, #63	; 0x3f
  8000632:	18fb      	adds	r3, r7, r3
- 8000634:	1d3a      	adds	r2, r7, #4
+ 8000634:	003a      	movs	r2, r7
  8000636:	212b      	movs	r1, #43	; 0x2b
  8000638:	5c52      	ldrb	r2, [r2, r1]
  800063a:	701a      	strb	r2, [r3, #0]
+
 		  keyBoardHIDsub.MODIFIER = KEY_NONE;
- 800063c:	4b3f      	ldr	r3, [pc, #252]	; (800073c <main+0x294>)
+ 800063c:	4b36      	ldr	r3, [pc, #216]	; (8000718 <main+0x270>)
  800063e:	2200      	movs	r2, #0
  8000640:	701a      	strb	r2, [r3, #0]
-		  for (int index=0; index<44; index++) {
- 8000642:	2300      	movs	r3, #0
- 8000644:	64fb      	str	r3, [r7, #76]	; 0x4c
- 8000646:	e018      	b.n	800067a <main+0x1d2>
-			  if (MODIFIER_MASK[index] && PRESSED[index]) {
- 8000648:	4a3d      	ldr	r2, [pc, #244]	; (8000740 <main+0x298>)
- 800064a:	6cfb      	ldr	r3, [r7, #76]	; 0x4c
- 800064c:	18d3      	adds	r3, r2, r3
- 800064e:	781b      	ldrb	r3, [r3, #0]
- 8000650:	2b00      	cmp	r3, #0
- 8000652:	d00f      	beq.n	8000674 <main+0x1cc>
- 8000654:	1d3a      	adds	r2, r7, #4
- 8000656:	6cfb      	ldr	r3, [r7, #76]	; 0x4c
- 8000658:	18d3      	adds	r3, r2, r3
- 800065a:	781b      	ldrb	r3, [r3, #0]
- 800065c:	2b00      	cmp	r3, #0
- 800065e:	d009      	beq.n	8000674 <main+0x1cc>
-				  keyBoardHIDsub.MODIFIER |= (uint8_t)INPUTKEYS[index];
- 8000660:	4b36      	ldr	r3, [pc, #216]	; (800073c <main+0x294>)
- 8000662:	781a      	ldrb	r2, [r3, #0]
- 8000664:	4937      	ldr	r1, [pc, #220]	; (8000744 <main+0x29c>)
- 8000666:	6cfb      	ldr	r3, [r7, #76]	; 0x4c
- 8000668:	18cb      	adds	r3, r1, r3
- 800066a:	781b      	ldrb	r3, [r3, #0]
- 800066c:	4313      	orrs	r3, r2
- 800066e:	b2da      	uxtb	r2, r3
- 8000670:	4b32      	ldr	r3, [pc, #200]	; (800073c <main+0x294>)
- 8000672:	701a      	strb	r2, [r3, #0]
-		  for (int index=0; index<44; index++) {
- 8000674:	6cfb      	ldr	r3, [r7, #76]	; 0x4c
- 8000676:	3301      	adds	r3, #1
- 8000678:	64fb      	str	r3, [r7, #76]	; 0x4c
- 800067a:	6cfb      	ldr	r3, [r7, #76]	; 0x4c
- 800067c:	2b2b      	cmp	r3, #43	; 0x2b
- 800067e:	dde3      	ble.n	8000648 <main+0x1a0>
-			  }
-		  }
+		  keyBoardHIDsub.MODIFIER = KEY_NONE;
+ 8000642:	4b35      	ldr	r3, [pc, #212]	; (8000718 <main+0x270>)
+ 8000644:	2200      	movs	r2, #0
+ 8000646:	701a      	strb	r2, [r3, #0]
+		  keyBoardHIDsub.KEYCODE1 = KEY_NONE;
+ 8000648:	4b33      	ldr	r3, [pc, #204]	; (8000718 <main+0x270>)
+ 800064a:	2200      	movs	r2, #0
+ 800064c:	709a      	strb	r2, [r3, #2]
+		  keyBoardHIDsub.KEYCODE2 = KEY_NONE;
+ 800064e:	4b32      	ldr	r3, [pc, #200]	; (8000718 <main+0x270>)
+ 8000650:	2200      	movs	r2, #0
+ 8000652:	70da      	strb	r2, [r3, #3]
+		  keyBoardHIDsub.KEYCODE3 = KEY_NONE;
+ 8000654:	4b30      	ldr	r3, [pc, #192]	; (8000718 <main+0x270>)
+ 8000656:	2200      	movs	r2, #0
+ 8000658:	711a      	strb	r2, [r3, #4]
+		  keyBoardHIDsub.KEYCODE4 = KEY_NONE;
+ 800065a:	4b2f      	ldr	r3, [pc, #188]	; (8000718 <main+0x270>)
+ 800065c:	2200      	movs	r2, #0
+ 800065e:	715a      	strb	r2, [r3, #5]
+		  keyBoardHIDsub.KEYCODE5 = KEY_NONE;
+ 8000660:	4b2d      	ldr	r3, [pc, #180]	; (8000718 <main+0x270>)
+ 8000662:	2200      	movs	r2, #0
+ 8000664:	719a      	strb	r2, [r3, #6]
+		  keyBoardHIDsub.KEYCODE6 = KEY_NONE;
+ 8000666:	4b2c      	ldr	r3, [pc, #176]	; (8000718 <main+0x270>)
+ 8000668:	2200      	movs	r2, #0
+ 800066a:	71da      	strb	r2, [r3, #7]
+
 		  for (int index=0; index<44; index++) {  // Loop on every physical keys
- 8000680:	2300      	movs	r3, #0
- 8000682:	64bb      	str	r3, [r7, #72]	; 0x48
- 8000684:	e2f3      	b.n	8000c6e <main+0x7c6>
+ 800066c:	2300      	movs	r3, #0
+ 800066e:	647b      	str	r3, [r7, #68]	; 0x44
+ 8000670:	e2ff      	b.n	8000c72 <main+0x7ca>
 			  if (
 				  !PRESSED[index] ||  // Physical key is not pressed
- 8000686:	1d3a      	adds	r2, r7, #4
- 8000688:	6cbb      	ldr	r3, [r7, #72]	; 0x48
- 800068a:	18d3      	adds	r3, r2, r3
- 800068c:	781b      	ldrb	r3, [r3, #0]
- 800068e:	2201      	movs	r2, #1
- 8000690:	4053      	eors	r3, r2
- 8000692:	b2db      	uxtb	r3, r3
+ 8000672:	003a      	movs	r2, r7
+ 8000674:	6c7b      	ldr	r3, [r7, #68]	; 0x44
+ 8000676:	18d3      	adds	r3, r2, r3
+ 8000678:	781b      	ldrb	r3, [r3, #0]
+ 800067a:	2201      	movs	r2, #1
+ 800067c:	4053      	eors	r3, r2
+ 800067e:	b2db      	uxtb	r3, r3
 			  if (
- 8000694:	2b00      	cmp	r3, #0
- 8000696:	d000      	beq.n	800069a <main+0x1f2>
- 8000698:	e2e5      	b.n	8000c66 <main+0x7be>
-				  MODIFIER_MASK[index] ||  // Si touches de modifier pressed
- 800069a:	4a29      	ldr	r2, [pc, #164]	; (8000740 <main+0x298>)
- 800069c:	6cbb      	ldr	r3, [r7, #72]	; 0x48
- 800069e:	18d3      	adds	r3, r2, r3
- 80006a0:	781b      	ldrb	r3, [r3, #0]
+ 8000680:	2b00      	cmp	r3, #0
+ 8000682:	d000      	beq.n	8000686 <main+0x1de>
+ 8000684:	e2f1      	b.n	8000c6a <main+0x7c2>
 				  !PRESSED[index] ||  // Physical key is not pressed
- 80006a2:	2b00      	cmp	r3, #0
- 80006a4:	d000      	beq.n	80006a8 <main+0x200>
- 80006a6:	e2de      	b.n	8000c66 <main+0x7be>
-				  MODIFIER_MASK[index] ||  // Si touches de modifier pressed
- 80006a8:	6cbb      	ldr	r3, [r7, #72]	; 0x48
- 80006aa:	2b1f      	cmp	r3, #31
- 80006ac:	d100      	bne.n	80006b0 <main+0x208>
- 80006ae:	e2da      	b.n	8000c66 <main+0x7be>
+ 8000686:	6c7b      	ldr	r3, [r7, #68]	; 0x44
+ 8000688:	2b1f      	cmp	r3, #31
+ 800068a:	d100      	bne.n	800068e <main+0x1e6>
+ 800068c:	e2ed      	b.n	8000c6a <main+0x7c2>
+				  //MODIFIER_MASK[index] ||  // Si touches de modifier pressed
 				  index == INDEX_FN1 ||  // FN1 is not analyzed
- 80006b0:	6cbb      	ldr	r3, [r7, #72]	; 0x48
- 80006b2:	2b20      	cmp	r3, #32
- 80006b4:	d100      	bne.n	80006b8 <main+0x210>
- 80006b6:	e2d6      	b.n	8000c66 <main+0x7be>
+ 800068e:	6c7b      	ldr	r3, [r7, #68]	; 0x44
+ 8000690:	2b20      	cmp	r3, #32
+ 8000692:	d100      	bne.n	8000696 <main+0x1ee>
+ 8000694:	e2e9      	b.n	8000c6a <main+0x7c2>
 				  index == INDEX_FN2 ||  // FN2 is not analyzed
- 80006b8:	6cbb      	ldr	r3, [r7, #72]	; 0x48
- 80006ba:	2b2a      	cmp	r3, #42	; 0x2a
- 80006bc:	d100      	bne.n	80006c0 <main+0x218>
- 80006be:	e2d2      	b.n	8000c66 <main+0x7be>
+ 8000696:	6c7b      	ldr	r3, [r7, #68]	; 0x44
+ 8000698:	2b2a      	cmp	r3, #42	; 0x2a
+ 800069a:	d100      	bne.n	800069e <main+0x1f6>
+ 800069c:	e2e5      	b.n	8000c6a <main+0x7c2>
 				  index == INDEX_FN3 ||  // FN3 is not analyzed
- 80006c0:	6cbb      	ldr	r3, [r7, #72]	; 0x48
- 80006c2:	2b2b      	cmp	r3, #43	; 0x2b
- 80006c4:	d100      	bne.n	80006c8 <main+0x220>
- 80006c6:	e2ce      	b.n	8000c66 <main+0x7be>
+ 800069e:	6c7b      	ldr	r3, [r7, #68]	; 0x44
+ 80006a0:	2b2b      	cmp	r3, #43	; 0x2b
+ 80006a2:	d100      	bne.n	80006a6 <main+0x1fe>
+ 80006a4:	e2e1      	b.n	8000c6a <main+0x7c2>
 				  index == INDEX_FN4     // FN4 is not analyzed
 			  ) continue;
 
 			  press_fn_bar = true;  // A key that is not FN has been pressed
- 80006c8:	2365      	movs	r3, #101	; 0x65
- 80006ca:	18fb      	adds	r3, r7, r3
- 80006cc:	2201      	movs	r2, #1
- 80006ce:	701a      	strb	r2, [r3, #0]
+ 80006a6:	235d      	movs	r3, #93	; 0x5d
+ 80006a8:	18fb      	adds	r3, r7, r3
+ 80006aa:	2201      	movs	r2, #1
+ 80006ac:	701a      	strb	r2, [r3, #0]
 
 			  uint8_t 		  key = (uint8_t)INPUTKEYS[index];  // Affect standard key
- 80006d0:	2047      	movs	r0, #71	; 0x47
- 80006d2:	183b      	adds	r3, r7, r0
- 80006d4:	491b      	ldr	r1, [pc, #108]	; (8000744 <main+0x29c>)
- 80006d6:	6cba      	ldr	r2, [r7, #72]	; 0x48
- 80006d8:	188a      	adds	r2, r1, r2
- 80006da:	7812      	ldrb	r2, [r2, #0]
- 80006dc:	701a      	strb	r2, [r3, #0]
+ 80006ae:	2043      	movs	r0, #67	; 0x43
+ 80006b0:	183b      	adds	r3, r7, r0
+ 80006b2:	491a      	ldr	r1, [pc, #104]	; (800071c <main+0x274>)
+ 80006b4:	6c7a      	ldr	r2, [r7, #68]	; 0x44
+ 80006b6:	188a      	adds	r2, r1, r2
+ 80006b8:	7812      	ldrb	r2, [r2, #0]
+ 80006ba:	701a      	strb	r2, [r3, #0]
 			  if 		(fn1) key = (uint8_t)FN1KEYS[index];  // Affect FN1 key if is pressed
- 80006de:	2346      	movs	r3, #70	; 0x46
- 80006e0:	18fb      	adds	r3, r7, r3
- 80006e2:	781b      	ldrb	r3, [r3, #0]
- 80006e4:	2b00      	cmp	r3, #0
- 80006e6:	d006      	beq.n	80006f6 <main+0x24e>
- 80006e8:	183b      	adds	r3, r7, r0
- 80006ea:	4917      	ldr	r1, [pc, #92]	; (8000748 <main+0x2a0>)
- 80006ec:	6cba      	ldr	r2, [r7, #72]	; 0x48
- 80006ee:	188a      	adds	r2, r1, r2
- 80006f0:	7812      	ldrb	r2, [r2, #0]
- 80006f2:	701a      	strb	r2, [r3, #0]
- 80006f4:	e03a      	b.n	800076c <main+0x2c4>
+ 80006bc:	2342      	movs	r3, #66	; 0x42
+ 80006be:	18fb      	adds	r3, r7, r3
+ 80006c0:	781b      	ldrb	r3, [r3, #0]
+ 80006c2:	2b00      	cmp	r3, #0
+ 80006c4:	d006      	beq.n	80006d4 <main+0x22c>
+ 80006c6:	183b      	adds	r3, r7, r0
+ 80006c8:	4915      	ldr	r1, [pc, #84]	; (8000720 <main+0x278>)
+ 80006ca:	6c7a      	ldr	r2, [r7, #68]	; 0x44
+ 80006cc:	188a      	adds	r2, r1, r2
+ 80006ce:	7812      	ldrb	r2, [r2, #0]
+ 80006d0:	701a      	strb	r2, [r3, #0]
+ 80006d2:	e037      	b.n	8000744 <main+0x29c>
 			  else if 	(fn2) key = (uint8_t)FN2KEYS[index];  // Affect FN2 key if is pressed€
- 80006f6:	2345      	movs	r3, #69	; 0x45
- 80006f8:	18fb      	adds	r3, r7, r3
- 80006fa:	781b      	ldrb	r3, [r3, #0]
- 80006fc:	2b00      	cmp	r3, #0
- 80006fe:	d007      	beq.n	8000710 <main+0x268>
- 8000700:	2347      	movs	r3, #71	; 0x47
- 8000702:	18fb      	adds	r3, r7, r3
- 8000704:	4911      	ldr	r1, [pc, #68]	; (800074c <main+0x2a4>)
- 8000706:	6cba      	ldr	r2, [r7, #72]	; 0x48
- 8000708:	188a      	adds	r2, r1, r2
- 800070a:	7812      	ldrb	r2, [r2, #0]
- 800070c:	701a      	strb	r2, [r3, #0]
- 800070e:	e02d      	b.n	800076c <main+0x2c4>
+ 80006d4:	2341      	movs	r3, #65	; 0x41
+ 80006d6:	18fb      	adds	r3, r7, r3
+ 80006d8:	781b      	ldrb	r3, [r3, #0]
+ 80006da:	2b00      	cmp	r3, #0
+ 80006dc:	d007      	beq.n	80006ee <main+0x246>
+ 80006de:	2343      	movs	r3, #67	; 0x43
+ 80006e0:	18fb      	adds	r3, r7, r3
+ 80006e2:	4910      	ldr	r1, [pc, #64]	; (8000724 <main+0x27c>)
+ 80006e4:	6c7a      	ldr	r2, [r7, #68]	; 0x44
+ 80006e6:	188a      	adds	r2, r1, r2
+ 80006e8:	7812      	ldrb	r2, [r2, #0]
+ 80006ea:	701a      	strb	r2, [r3, #0]
+ 80006ec:	e02a      	b.n	8000744 <main+0x29c>
 			  else if 	(fn3) key = (uint8_t)FN3KEYS[index];  // Affect FN3 key if is pressed
- 8000710:	2344      	movs	r3, #68	; 0x44
- 8000712:	18fb      	adds	r3, r7, r3
- 8000714:	781b      	ldrb	r3, [r3, #0]
- 8000716:	2b00      	cmp	r3, #0
- 8000718:	d01c      	beq.n	8000754 <main+0x2ac>
- 800071a:	2347      	movs	r3, #71	; 0x47
- 800071c:	18fb      	adds	r3, r7, r3
- 800071e:	490c      	ldr	r1, [pc, #48]	; (8000750 <main+0x2a8>)
- 8000720:	6cba      	ldr	r2, [r7, #72]	; 0x48
- 8000722:	188a      	adds	r2, r1, r2
- 8000724:	7812      	ldrb	r2, [r2, #0]
- 8000726:	701a      	strb	r2, [r3, #0]
- 8000728:	e020      	b.n	800076c <main+0x2c4>
- 800072a:	46c0      	nop			; (mov r8, r8)
- 800072c:	20000160 	.word	0x20000160
- 8000730:	2000018c 	.word	0x2000018c
- 8000734:	200001b8 	.word	0x200001b8
- 8000738:	200001c8 	.word	0x200001c8
- 800073c:	2000034c 	.word	0x2000034c
- 8000740:	200000dc 	.word	0x200000dc
- 8000744:	20000000 	.word	0x20000000
- 8000748:	2000002c 	.word	0x2000002c
- 800074c:	20000058 	.word	0x20000058
- 8000750:	20000084 	.word	0x20000084
+ 80006ee:	2340      	movs	r3, #64	; 0x40
+ 80006f0:	18fb      	adds	r3, r7, r3
+ 80006f2:	781b      	ldrb	r3, [r3, #0]
+ 80006f4:	2b00      	cmp	r3, #0
+ 80006f6:	d019      	beq.n	800072c <main+0x284>
+ 80006f8:	2343      	movs	r3, #67	; 0x43
+ 80006fa:	18fb      	adds	r3, r7, r3
+ 80006fc:	490a      	ldr	r1, [pc, #40]	; (8000728 <main+0x280>)
+ 80006fe:	6c7a      	ldr	r2, [r7, #68]	; 0x44
+ 8000700:	188a      	adds	r2, r1, r2
+ 8000702:	7812      	ldrb	r2, [r2, #0]
+ 8000704:	701a      	strb	r2, [r3, #0]
+ 8000706:	e01d      	b.n	8000744 <main+0x29c>
+ 8000708:	20000160 	.word	0x20000160
+ 800070c:	2000018c 	.word	0x2000018c
+ 8000710:	200001b8 	.word	0x200001b8
+ 8000714:	200001c8 	.word	0x200001c8
+ 8000718:	2000034c 	.word	0x2000034c
+ 800071c:	20000000 	.word	0x20000000
+ 8000720:	2000002c 	.word	0x2000002c
+ 8000724:	20000058 	.word	0x20000058
+ 8000728:	20000084 	.word	0x20000084
 			  else if 	(fn4) key = (uint8_t)FN4KEYS[index];  // Affect FN4 key if is pressed
- 8000754:	2343      	movs	r3, #67	; 0x43
- 8000756:	18fb      	adds	r3, r7, r3
- 8000758:	781b      	ldrb	r3, [r3, #0]
- 800075a:	2b00      	cmp	r3, #0
- 800075c:	d006      	beq.n	800076c <main+0x2c4>
- 800075e:	2347      	movs	r3, #71	; 0x47
- 8000760:	18fb      	adds	r3, r7, r3
- 8000762:	49c0      	ldr	r1, [pc, #768]	; (8000a64 <main+0x5bc>)
- 8000764:	6cba      	ldr	r2, [r7, #72]	; 0x48
- 8000766:	188a      	adds	r2, r1, r2
- 8000768:	7812      	ldrb	r2, [r2, #0]
- 800076a:	701a      	strb	r2, [r3, #0]
+ 800072c:	233f      	movs	r3, #63	; 0x3f
+ 800072e:	18fb      	adds	r3, r7, r3
+ 8000730:	781b      	ldrb	r3, [r3, #0]
+ 8000732:	2b00      	cmp	r3, #0
+ 8000734:	d006      	beq.n	8000744 <main+0x29c>
+ 8000736:	2343      	movs	r3, #67	; 0x43
+ 8000738:	18fb      	adds	r3, r7, r3
+ 800073a:	49c0      	ldr	r1, [pc, #768]	; (8000a3c <main+0x594>)
+ 800073c:	6c7a      	ldr	r2, [r7, #68]	; 0x44
+ 800073e:	188a      	adds	r2, r1, r2
+ 8000740:	7812      	ldrb	r2, [r2, #0]
+ 8000742:	701a      	strb	r2, [r3, #0]
 
 			  uint16_t trigger_modifier = (uint16_t)TRIGGERS_MODIFIER[index];  // Get Modifier value index
- 800076c:	2440      	movs	r4, #64	; 0x40
- 800076e:	193b      	adds	r3, r7, r4
- 8000770:	4abd      	ldr	r2, [pc, #756]	; (8000a68 <main+0x5c0>)
- 8000772:	6cb9      	ldr	r1, [r7, #72]	; 0x48
- 8000774:	0049      	lsls	r1, r1, #1
- 8000776:	5a8a      	ldrh	r2, [r1, r2]
- 8000778:	801a      	strh	r2, [r3, #0]
+ 8000744:	243c      	movs	r4, #60	; 0x3c
+ 8000746:	193b      	adds	r3, r7, r4
+ 8000748:	4abd      	ldr	r2, [pc, #756]	; (8000a40 <main+0x598>)
+ 800074a:	6c79      	ldr	r1, [r7, #68]	; 0x44
+ 800074c:	0049      	lsls	r1, r1, #1
+ 800074e:	5a8a      	ldrh	r2, [r1, r2]
+ 8000750:	801a      	strh	r2, [r3, #0]
 			  // Affect modifier if specified in table TRIGGERS_MODIFIER
 			  bool fn4_ctrl = trigger_modifier >= NUM_FN4_CTRL;
- 800077a:	253f      	movs	r5, #63	; 0x3f
+ 8000752:	253b      	movs	r5, #59	; 0x3b
+ 8000754:	197a      	adds	r2, r7, r5
+ 8000756:	193b      	adds	r3, r7, r4
+ 8000758:	8818      	ldrh	r0, [r3, #0]
+ 800075a:	2380      	movs	r3, #128	; 0x80
+ 800075c:	01d9      	lsls	r1, r3, #7
+ 800075e:	2300      	movs	r3, #0
+ 8000760:	4288      	cmp	r0, r1
+ 8000762:	415b      	adcs	r3, r3
+ 8000764:	7013      	strb	r3, [r2, #0]
+			  trigger_modifier -= NUM_FN4_CTRL * fn4_ctrl;
+ 8000766:	197b      	adds	r3, r7, r5
+ 8000768:	781b      	ldrb	r3, [r3, #0]
+ 800076a:	b29b      	uxth	r3, r3
+ 800076c:	039b      	lsls	r3, r3, #14
+ 800076e:	b29a      	uxth	r2, r3
+ 8000770:	193b      	adds	r3, r7, r4
+ 8000772:	1939      	adds	r1, r7, r4
+ 8000774:	8809      	ldrh	r1, [r1, #0]
+ 8000776:	1a8a      	subs	r2, r1, r2
+ 8000778:	801a      	strh	r2, [r3, #0]
+			  bool fn3_ctrl = trigger_modifier >= NUM_FN3_CTRL;
+ 800077a:	253a      	movs	r5, #58	; 0x3a
  800077c:	197a      	adds	r2, r7, r5
  800077e:	193b      	adds	r3, r7, r4
  8000780:	8818      	ldrh	r0, [r3, #0]
  8000782:	2380      	movs	r3, #128	; 0x80
- 8000784:	01d9      	lsls	r1, r3, #7
+ 8000784:	0199      	lsls	r1, r3, #6
  8000786:	2300      	movs	r3, #0
  8000788:	4288      	cmp	r0, r1
  800078a:	415b      	adcs	r3, r3
  800078c:	7013      	strb	r3, [r2, #0]
-			  trigger_modifier -= NUM_FN4_CTRL * fn4_ctrl;
+			  trigger_modifier -= NUM_FN3_CTRL * fn3_ctrl;
  800078e:	197b      	adds	r3, r7, r5
  8000790:	781b      	ldrb	r3, [r3, #0]
  8000792:	b29b      	uxth	r3, r3
- 8000794:	039b      	lsls	r3, r3, #14
+ 8000794:	035b      	lsls	r3, r3, #13
  8000796:	b29a      	uxth	r2, r3
  8000798:	193b      	adds	r3, r7, r4
  800079a:	1939      	adds	r1, r7, r4
  800079c:	8809      	ldrh	r1, [r1, #0]
  800079e:	1a8a      	subs	r2, r1, r2
  80007a0:	801a      	strh	r2, [r3, #0]
-			  bool fn3_ctrl = trigger_modifier >= NUM_FN3_CTRL;
- 80007a2:	253e      	movs	r5, #62	; 0x3e
+			  bool fn2_ctrl = trigger_modifier >= NUM_FN2_CTRL;
+ 80007a2:	2539      	movs	r5, #57	; 0x39
  80007a4:	197a      	adds	r2, r7, r5
  80007a6:	193b      	adds	r3, r7, r4
  80007a8:	8818      	ldrh	r0, [r3, #0]
  80007aa:	2380      	movs	r3, #128	; 0x80
- 80007ac:	0199      	lsls	r1, r3, #6
+ 80007ac:	0159      	lsls	r1, r3, #5
  80007ae:	2300      	movs	r3, #0
  80007b0:	4288      	cmp	r0, r1
  80007b2:	415b      	adcs	r3, r3
  80007b4:	7013      	strb	r3, [r2, #0]
-			  trigger_modifier -= NUM_FN3_CTRL * fn3_ctrl;
+			  trigger_modifier -= NUM_FN2_CTRL * fn2_ctrl;
  80007b6:	197b      	adds	r3, r7, r5
  80007b8:	781b      	ldrb	r3, [r3, #0]
  80007ba:	b29b      	uxth	r3, r3
- 80007bc:	035b      	lsls	r3, r3, #13
+ 80007bc:	031b      	lsls	r3, r3, #12
  80007be:	b29a      	uxth	r2, r3
  80007c0:	193b      	adds	r3, r7, r4
  80007c2:	1939      	adds	r1, r7, r4
  80007c4:	8809      	ldrh	r1, [r1, #0]
  80007c6:	1a8a      	subs	r2, r1, r2
  80007c8:	801a      	strh	r2, [r3, #0]
-			  bool fn2_ctrl = trigger_modifier >= NUM_FN2_CTRL;
- 80007ca:	253d      	movs	r5, #61	; 0x3d
+			  bool fn1_ctrl = trigger_modifier >= NUM_FN1_CTRL;
+ 80007ca:	2538      	movs	r5, #56	; 0x38
  80007cc:	197a      	adds	r2, r7, r5
  80007ce:	193b      	adds	r3, r7, r4
  80007d0:	8818      	ldrh	r0, [r3, #0]
  80007d2:	2380      	movs	r3, #128	; 0x80
- 80007d4:	0159      	lsls	r1, r3, #5
+ 80007d4:	0119      	lsls	r1, r3, #4
  80007d6:	2300      	movs	r3, #0
  80007d8:	4288      	cmp	r0, r1
  80007da:	415b      	adcs	r3, r3
  80007dc:	7013      	strb	r3, [r2, #0]
-			  trigger_modifier -= NUM_FN2_CTRL * fn2_ctrl;
+			  trigger_modifier -= NUM_FN1_CTRL * fn1_ctrl;
  80007de:	197b      	adds	r3, r7, r5
  80007e0:	781b      	ldrb	r3, [r3, #0]
  80007e2:	b29b      	uxth	r3, r3
- 80007e4:	031b      	lsls	r3, r3, #12
+ 80007e4:	02db      	lsls	r3, r3, #11
  80007e6:	b29a      	uxth	r2, r3
  80007e8:	193b      	adds	r3, r7, r4
  80007ea:	1939      	adds	r1, r7, r4
  80007ec:	8809      	ldrh	r1, [r1, #0]
  80007ee:	1a8a      	subs	r2, r1, r2
  80007f0:	801a      	strh	r2, [r3, #0]
-			  bool fn1_ctrl = trigger_modifier >= NUM_FN1_CTRL;
- 80007f2:	253c      	movs	r5, #60	; 0x3c
+			  bool key_ctrl = trigger_modifier >= NUM_KEY_CTRL;
+ 80007f2:	2537      	movs	r5, #55	; 0x37
  80007f4:	197a      	adds	r2, r7, r5
  80007f6:	193b      	adds	r3, r7, r4
  80007f8:	8818      	ldrh	r0, [r3, #0]
  80007fa:	2380      	movs	r3, #128	; 0x80
- 80007fc:	0119      	lsls	r1, r3, #4
+ 80007fc:	00d9      	lsls	r1, r3, #3
  80007fe:	2300      	movs	r3, #0
  8000800:	4288      	cmp	r0, r1
  8000802:	415b      	adcs	r3, r3
  8000804:	7013      	strb	r3, [r2, #0]
-			  trigger_modifier -= NUM_FN1_CTRL * fn1_ctrl;
+			  trigger_modifier -= NUM_KEY_CTRL * key_ctrl;
  8000806:	197b      	adds	r3, r7, r5
  8000808:	781b      	ldrb	r3, [r3, #0]
  800080a:	b29b      	uxth	r3, r3
- 800080c:	02db      	lsls	r3, r3, #11
+ 800080c:	029b      	lsls	r3, r3, #10
  800080e:	b29a      	uxth	r2, r3
  8000810:	193b      	adds	r3, r7, r4
  8000812:	1939      	adds	r1, r7, r4
  8000814:	8809      	ldrh	r1, [r1, #0]
  8000816:	1a8a      	subs	r2, r1, r2
  8000818:	801a      	strh	r2, [r3, #0]
-			  bool key_ctrl = trigger_modifier >= NUM_KEY_CTRL;
- 800081a:	253b      	movs	r5, #59	; 0x3b
+			  bool key_altgr = trigger_modifier >= NUM_KEY_ALTGR;  // If value in TRIGGERS_MODIFIER is higher than NUM_KEY_ALTGR
+ 800081a:	2536      	movs	r5, #54	; 0x36
  800081c:	197a      	adds	r2, r7, r5
  800081e:	193b      	adds	r3, r7, r4
  8000820:	8818      	ldrh	r0, [r3, #0]
  8000822:	2380      	movs	r3, #128	; 0x80
- 8000824:	00d9      	lsls	r1, r3, #3
+ 8000824:	0099      	lsls	r1, r3, #2
  8000826:	2300      	movs	r3, #0
  8000828:	4288      	cmp	r0, r1
  800082a:	415b      	adcs	r3, r3
  800082c:	7013      	strb	r3, [r2, #0]
-			  trigger_modifier -= NUM_KEY_CTRL * key_ctrl;
+			  trigger_modifier -= NUM_KEY_ALTGR * key_altgr;  // Remove value NUM_KEY€_ALTGR from TRIGGERS_MODIFIER value index of key
  800082e:	197b      	adds	r3, r7, r5
  8000830:	781b      	ldrb	r3, [r3, #0]
  8000832:	b29b      	uxth	r3, r3
- 8000834:	029b      	lsls	r3, r3, #10
+ 8000834:	025b      	lsls	r3, r3, #9
  8000836:	b29a      	uxth	r2, r3
- 8000838:	193b      	adds	r3, r7, r4
- 800083a:	1939      	adds	r1, r7, r4
- 800083c:	8809      	ldrh	r1, [r1, #0]
- 800083e:	1a8a      	subs	r2, r1, r2
- 8000840:	801a      	strh	r2, [r3, #0]
-			  bool key_altgr = trigger_modifier >= NUM_KEY_ALTGR;  // If value in TRIGGERS_MODIFIER is higher than NUM_KEY_ALTGR
- 8000842:	253a      	movs	r5, #58	; 0x3a
- 8000844:	197a      	adds	r2, r7, r5
+ 8000838:	0020      	movs	r0, r4
+ 800083a:	183b      	adds	r3, r7, r0
+ 800083c:	1839      	adds	r1, r7, r0
+ 800083e:	8809      	ldrh	r1, [r1, #0]
+ 8000840:	1a8a      	subs	r2, r1, r2
+ 8000842:	801a      	strh	r2, [r3, #0]
+			  bool key_shift = trigger_modifier >= NUM_KEY_SHIFT;  // Repeat for NUM_KEY_SHIFT
+ 8000844:	2435      	movs	r4, #53	; 0x35
  8000846:	193b      	adds	r3, r7, r4
- 8000848:	8818      	ldrh	r0, [r3, #0]
- 800084a:	2380      	movs	r3, #128	; 0x80
- 800084c:	0099      	lsls	r1, r3, #2
- 800084e:	2300      	movs	r3, #0
- 8000850:	4288      	cmp	r0, r1
- 8000852:	415b      	adcs	r3, r3
- 8000854:	7013      	strb	r3, [r2, #0]
-			  trigger_modifier -= NUM_KEY_ALTGR * key_altgr;  // Remove value NUM_KEY€_ALTGR from TRIGGERS_MODIFIER value index of key
- 8000856:	197b      	adds	r3, r7, r5
+ 8000848:	183a      	adds	r2, r7, r0
+ 800084a:	8812      	ldrh	r2, [r2, #0]
+ 800084c:	21ff      	movs	r1, #255	; 0xff
+ 800084e:	4291      	cmp	r1, r2
+ 8000850:	4192      	sbcs	r2, r2
+ 8000852:	4252      	negs	r2, r2
+ 8000854:	701a      	strb	r2, [r3, #0]
+			  trigger_modifier -= NUM_KEY_SHIFT * key_shift;  // Repeat for NUM_KEY_SHIFT
+ 8000856:	193b      	adds	r3, r7, r4
  8000858:	781b      	ldrb	r3, [r3, #0]
  800085a:	b29b      	uxth	r3, r3
- 800085c:	025b      	lsls	r3, r3, #9
+ 800085c:	021b      	lsls	r3, r3, #8
  800085e:	b29a      	uxth	r2, r3
- 8000860:	0020      	movs	r0, r4
- 8000862:	183b      	adds	r3, r7, r0
- 8000864:	1839      	adds	r1, r7, r0
- 8000866:	8809      	ldrh	r1, [r1, #0]
- 8000868:	1a8a      	subs	r2, r1, r2
- 800086a:	801a      	strh	r2, [r3, #0]
-			  bool key_shift = trigger_modifier >= NUM_KEY_SHIFT;  // Repeat for NUM_KEY_SHIFT
- 800086c:	2439      	movs	r4, #57	; 0x39
- 800086e:	193b      	adds	r3, r7, r4
- 8000870:	183a      	adds	r2, r7, r0
- 8000872:	8812      	ldrh	r2, [r2, #0]
- 8000874:	21ff      	movs	r1, #255	; 0xff
- 8000876:	4291      	cmp	r1, r2
- 8000878:	4192      	sbcs	r2, r2
- 800087a:	4252      	negs	r2, r2
- 800087c:	701a      	strb	r2, [r3, #0]
-			  trigger_modifier -= NUM_KEY_SHIFT * key_shift;  // Repeat for NUM_KEY_SHIFT
- 800087e:	193b      	adds	r3, r7, r4
- 8000880:	781b      	ldrb	r3, [r3, #0]
- 8000882:	b29b      	uxth	r3, r3
- 8000884:	021b      	lsls	r3, r3, #8
- 8000886:	b29a      	uxth	r2, r3
- 8000888:	183b      	adds	r3, r7, r0
- 800088a:	1839      	adds	r1, r7, r0
- 800088c:	8809      	ldrh	r1, [r1, #0]
- 800088e:	1a8a      	subs	r2, r1, r2
- 8000890:	801a      	strh	r2, [r3, #0]
+ 8000860:	183b      	adds	r3, r7, r0
+ 8000862:	1839      	adds	r1, r7, r0
+ 8000864:	8809      	ldrh	r1, [r1, #0]
+ 8000866:	1a8a      	subs	r2, r1, r2
+ 8000868:	801a      	strh	r2, [r3, #0]
 			  bool fn4_altgr = trigger_modifier >= NUM_FN4_ALTGR;
- 8000892:	2438      	movs	r4, #56	; 0x38
- 8000894:	193b      	adds	r3, r7, r4
- 8000896:	183a      	adds	r2, r7, r0
- 8000898:	8812      	ldrh	r2, [r2, #0]
- 800089a:	217f      	movs	r1, #127	; 0x7f
- 800089c:	4291      	cmp	r1, r2
- 800089e:	4192      	sbcs	r2, r2
- 80008a0:	4252      	negs	r2, r2
- 80008a2:	701a      	strb	r2, [r3, #0]
+ 800086a:	2434      	movs	r4, #52	; 0x34
+ 800086c:	193b      	adds	r3, r7, r4
+ 800086e:	183a      	adds	r2, r7, r0
+ 8000870:	8812      	ldrh	r2, [r2, #0]
+ 8000872:	217f      	movs	r1, #127	; 0x7f
+ 8000874:	4291      	cmp	r1, r2
+ 8000876:	4192      	sbcs	r2, r2
+ 8000878:	4252      	negs	r2, r2
+ 800087a:	701a      	strb	r2, [r3, #0]
 			  trigger_modifier -= NUM_FN4_ALTGR * fn4_altgr;
- 80008a4:	193b      	adds	r3, r7, r4
- 80008a6:	781b      	ldrb	r3, [r3, #0]
- 80008a8:	b29b      	uxth	r3, r3
- 80008aa:	01db      	lsls	r3, r3, #7
- 80008ac:	b29a      	uxth	r2, r3
- 80008ae:	183b      	adds	r3, r7, r0
- 80008b0:	1839      	adds	r1, r7, r0
- 80008b2:	8809      	ldrh	r1, [r1, #0]
- 80008b4:	1a8a      	subs	r2, r1, r2
- 80008b6:	801a      	strh	r2, [r3, #0]
+ 800087c:	193b      	adds	r3, r7, r4
+ 800087e:	781b      	ldrb	r3, [r3, #0]
+ 8000880:	b29b      	uxth	r3, r3
+ 8000882:	01db      	lsls	r3, r3, #7
+ 8000884:	b29a      	uxth	r2, r3
+ 8000886:	183b      	adds	r3, r7, r0
+ 8000888:	1839      	adds	r1, r7, r0
+ 800088a:	8809      	ldrh	r1, [r1, #0]
+ 800088c:	1a8a      	subs	r2, r1, r2
+ 800088e:	801a      	strh	r2, [r3, #0]
 			  bool fn4_shift = trigger_modifier >= NUM_FN4_SHIFT;
- 80008b8:	2437      	movs	r4, #55	; 0x37
- 80008ba:	193b      	adds	r3, r7, r4
- 80008bc:	183a      	adds	r2, r7, r0
- 80008be:	8812      	ldrh	r2, [r2, #0]
- 80008c0:	213f      	movs	r1, #63	; 0x3f
- 80008c2:	4291      	cmp	r1, r2
- 80008c4:	4192      	sbcs	r2, r2
- 80008c6:	4252      	negs	r2, r2
- 80008c8:	701a      	strb	r2, [r3, #0]
+ 8000890:	2433      	movs	r4, #51	; 0x33
+ 8000892:	193b      	adds	r3, r7, r4
+ 8000894:	183a      	adds	r2, r7, r0
+ 8000896:	8812      	ldrh	r2, [r2, #0]
+ 8000898:	213f      	movs	r1, #63	; 0x3f
+ 800089a:	4291      	cmp	r1, r2
+ 800089c:	4192      	sbcs	r2, r2
+ 800089e:	4252      	negs	r2, r2
+ 80008a0:	701a      	strb	r2, [r3, #0]
 			  trigger_modifier -= NUM_FN4_SHIFT * fn4_shift;
- 80008ca:	193b      	adds	r3, r7, r4
- 80008cc:	781b      	ldrb	r3, [r3, #0]
- 80008ce:	b29b      	uxth	r3, r3
- 80008d0:	019b      	lsls	r3, r3, #6
- 80008d2:	b29a      	uxth	r2, r3
- 80008d4:	183b      	adds	r3, r7, r0
- 80008d6:	1839      	adds	r1, r7, r0
- 80008d8:	8809      	ldrh	r1, [r1, #0]
- 80008da:	1a8a      	subs	r2, r1, r2
- 80008dc:	801a      	strh	r2, [r3, #0]
+ 80008a2:	193b      	adds	r3, r7, r4
+ 80008a4:	781b      	ldrb	r3, [r3, #0]
+ 80008a6:	b29b      	uxth	r3, r3
+ 80008a8:	019b      	lsls	r3, r3, #6
+ 80008aa:	b29a      	uxth	r2, r3
+ 80008ac:	183b      	adds	r3, r7, r0
+ 80008ae:	1839      	adds	r1, r7, r0
+ 80008b0:	8809      	ldrh	r1, [r1, #0]
+ 80008b2:	1a8a      	subs	r2, r1, r2
+ 80008b4:	801a      	strh	r2, [r3, #0]
 			  bool fn3_altgr = trigger_modifier >= NUM_FN3_ALTGR;
- 80008de:	2436      	movs	r4, #54	; 0x36
- 80008e0:	193b      	adds	r3, r7, r4
- 80008e2:	183a      	adds	r2, r7, r0
- 80008e4:	8812      	ldrh	r2, [r2, #0]
- 80008e6:	211f      	movs	r1, #31
- 80008e8:	4291      	cmp	r1, r2
- 80008ea:	4192      	sbcs	r2, r2
- 80008ec:	4252      	negs	r2, r2
- 80008ee:	701a      	strb	r2, [r3, #0]
+ 80008b6:	2432      	movs	r4, #50	; 0x32
+ 80008b8:	193b      	adds	r3, r7, r4
+ 80008ba:	183a      	adds	r2, r7, r0
+ 80008bc:	8812      	ldrh	r2, [r2, #0]
+ 80008be:	211f      	movs	r1, #31
+ 80008c0:	4291      	cmp	r1, r2
+ 80008c2:	4192      	sbcs	r2, r2
+ 80008c4:	4252      	negs	r2, r2
+ 80008c6:	701a      	strb	r2, [r3, #0]
 			  trigger_modifier -= NUM_FN3_ALTGR * fn3_altgr;
- 80008f0:	193b      	adds	r3, r7, r4
- 80008f2:	781b      	ldrb	r3, [r3, #0]
- 80008f4:	b29b      	uxth	r3, r3
- 80008f6:	015b      	lsls	r3, r3, #5
- 80008f8:	b29a      	uxth	r2, r3
- 80008fa:	183b      	adds	r3, r7, r0
- 80008fc:	1839      	adds	r1, r7, r0
- 80008fe:	8809      	ldrh	r1, [r1, #0]
- 8000900:	1a8a      	subs	r2, r1, r2
- 8000902:	801a      	strh	r2, [r3, #0]
+ 80008c8:	193b      	adds	r3, r7, r4
+ 80008ca:	781b      	ldrb	r3, [r3, #0]
+ 80008cc:	b29b      	uxth	r3, r3
+ 80008ce:	015b      	lsls	r3, r3, #5
+ 80008d0:	b29a      	uxth	r2, r3
+ 80008d2:	183b      	adds	r3, r7, r0
+ 80008d4:	1839      	adds	r1, r7, r0
+ 80008d6:	8809      	ldrh	r1, [r1, #0]
+ 80008d8:	1a8a      	subs	r2, r1, r2
+ 80008da:	801a      	strh	r2, [r3, #0]
 			  bool fn3_shift = trigger_modifier >= NUM_FN3_SHIFT;
- 8000904:	2435      	movs	r4, #53	; 0x35
- 8000906:	193b      	adds	r3, r7, r4
- 8000908:	183a      	adds	r2, r7, r0
- 800090a:	8812      	ldrh	r2, [r2, #0]
- 800090c:	210f      	movs	r1, #15
- 800090e:	4291      	cmp	r1, r2
- 8000910:	4192      	sbcs	r2, r2
- 8000912:	4252      	negs	r2, r2
- 8000914:	701a      	strb	r2, [r3, #0]
+ 80008dc:	2431      	movs	r4, #49	; 0x31
+ 80008de:	193b      	adds	r3, r7, r4
+ 80008e0:	183a      	adds	r2, r7, r0
+ 80008e2:	8812      	ldrh	r2, [r2, #0]
+ 80008e4:	210f      	movs	r1, #15
+ 80008e6:	4291      	cmp	r1, r2
+ 80008e8:	4192      	sbcs	r2, r2
+ 80008ea:	4252      	negs	r2, r2
+ 80008ec:	701a      	strb	r2, [r3, #0]
 			  trigger_modifier -= NUM_FN3_SHIFT * fn3_shift;
- 8000916:	193b      	adds	r3, r7, r4
- 8000918:	781b      	ldrb	r3, [r3, #0]
- 800091a:	b29b      	uxth	r3, r3
- 800091c:	011b      	lsls	r3, r3, #4
- 800091e:	b29a      	uxth	r2, r3
- 8000920:	183b      	adds	r3, r7, r0
- 8000922:	1839      	adds	r1, r7, r0
- 8000924:	8809      	ldrh	r1, [r1, #0]
- 8000926:	1a8a      	subs	r2, r1, r2
- 8000928:	801a      	strh	r2, [r3, #0]
+ 80008ee:	193b      	adds	r3, r7, r4
+ 80008f0:	781b      	ldrb	r3, [r3, #0]
+ 80008f2:	b29b      	uxth	r3, r3
+ 80008f4:	011b      	lsls	r3, r3, #4
+ 80008f6:	b29a      	uxth	r2, r3
+ 80008f8:	183b      	adds	r3, r7, r0
+ 80008fa:	1839      	adds	r1, r7, r0
+ 80008fc:	8809      	ldrh	r1, [r1, #0]
+ 80008fe:	1a8a      	subs	r2, r1, r2
+ 8000900:	801a      	strh	r2, [r3, #0]
 			  bool fn2_altgr = trigger_modifier >= NUM_FN2_ALTGR;
- 800092a:	2434      	movs	r4, #52	; 0x34
- 800092c:	193b      	adds	r3, r7, r4
- 800092e:	183a      	adds	r2, r7, r0
- 8000930:	8812      	ldrh	r2, [r2, #0]
- 8000932:	2107      	movs	r1, #7
- 8000934:	4291      	cmp	r1, r2
- 8000936:	4192      	sbcs	r2, r2
- 8000938:	4252      	negs	r2, r2
- 800093a:	701a      	strb	r2, [r3, #0]
+ 8000902:	2430      	movs	r4, #48	; 0x30
+ 8000904:	193b      	adds	r3, r7, r4
+ 8000906:	183a      	adds	r2, r7, r0
+ 8000908:	8812      	ldrh	r2, [r2, #0]
+ 800090a:	2107      	movs	r1, #7
+ 800090c:	4291      	cmp	r1, r2
+ 800090e:	4192      	sbcs	r2, r2
+ 8000910:	4252      	negs	r2, r2
+ 8000912:	701a      	strb	r2, [r3, #0]
 			  trigger_modifier -= NUM_FN2_ALTGR * fn2_altgr;
- 800093c:	193b      	adds	r3, r7, r4
- 800093e:	781b      	ldrb	r3, [r3, #0]
- 8000940:	b29b      	uxth	r3, r3
- 8000942:	00db      	lsls	r3, r3, #3
- 8000944:	b29a      	uxth	r2, r3
- 8000946:	183b      	adds	r3, r7, r0
- 8000948:	1839      	adds	r1, r7, r0
- 800094a:	8809      	ldrh	r1, [r1, #0]
- 800094c:	1a8a      	subs	r2, r1, r2
- 800094e:	801a      	strh	r2, [r3, #0]
+ 8000914:	193b      	adds	r3, r7, r4
+ 8000916:	781b      	ldrb	r3, [r3, #0]
+ 8000918:	b29b      	uxth	r3, r3
+ 800091a:	00db      	lsls	r3, r3, #3
+ 800091c:	b29a      	uxth	r2, r3
+ 800091e:	183b      	adds	r3, r7, r0
+ 8000920:	1839      	adds	r1, r7, r0
+ 8000922:	8809      	ldrh	r1, [r1, #0]
+ 8000924:	1a8a      	subs	r2, r1, r2
+ 8000926:	801a      	strh	r2, [r3, #0]
 			  bool fn2_shift = trigger_modifier >= NUM_FN2_SHIFT;
- 8000950:	2433      	movs	r4, #51	; 0x33
- 8000952:	193b      	adds	r3, r7, r4
- 8000954:	183a      	adds	r2, r7, r0
- 8000956:	8812      	ldrh	r2, [r2, #0]
- 8000958:	2103      	movs	r1, #3
- 800095a:	4291      	cmp	r1, r2
- 800095c:	4192      	sbcs	r2, r2
- 800095e:	4252      	negs	r2, r2
- 8000960:	701a      	strb	r2, [r3, #0]
+ 8000928:	242f      	movs	r4, #47	; 0x2f
+ 800092a:	193b      	adds	r3, r7, r4
+ 800092c:	183a      	adds	r2, r7, r0
+ 800092e:	8812      	ldrh	r2, [r2, #0]
+ 8000930:	2103      	movs	r1, #3
+ 8000932:	4291      	cmp	r1, r2
+ 8000934:	4192      	sbcs	r2, r2
+ 8000936:	4252      	negs	r2, r2
+ 8000938:	701a      	strb	r2, [r3, #0]
 			  trigger_modifier -= NUM_FN2_SHIFT * fn2_shift;
- 8000962:	193b      	adds	r3, r7, r4
- 8000964:	781b      	ldrb	r3, [r3, #0]
- 8000966:	b29b      	uxth	r3, r3
- 8000968:	009b      	lsls	r3, r3, #2
- 800096a:	b29a      	uxth	r2, r3
- 800096c:	183b      	adds	r3, r7, r0
- 800096e:	1839      	adds	r1, r7, r0
- 8000970:	8809      	ldrh	r1, [r1, #0]
- 8000972:	1a8a      	subs	r2, r1, r2
- 8000974:	801a      	strh	r2, [r3, #0]
+ 800093a:	193b      	adds	r3, r7, r4
+ 800093c:	781b      	ldrb	r3, [r3, #0]
+ 800093e:	b29b      	uxth	r3, r3
+ 8000940:	009b      	lsls	r3, r3, #2
+ 8000942:	b29a      	uxth	r2, r3
+ 8000944:	183b      	adds	r3, r7, r0
+ 8000946:	1839      	adds	r1, r7, r0
+ 8000948:	8809      	ldrh	r1, [r1, #0]
+ 800094a:	1a8a      	subs	r2, r1, r2
+ 800094c:	801a      	strh	r2, [r3, #0]
 			  bool fn1_altgr = trigger_modifier >= NUM_FN1_ALTGR;
- 8000976:	2432      	movs	r4, #50	; 0x32
- 8000978:	193b      	adds	r3, r7, r4
- 800097a:	183a      	adds	r2, r7, r0
- 800097c:	8812      	ldrh	r2, [r2, #0]
- 800097e:	2101      	movs	r1, #1
- 8000980:	4291      	cmp	r1, r2
- 8000982:	4192      	sbcs	r2, r2
- 8000984:	4252      	negs	r2, r2
- 8000986:	701a      	strb	r2, [r3, #0]
+ 800094e:	242e      	movs	r4, #46	; 0x2e
+ 8000950:	193b      	adds	r3, r7, r4
+ 8000952:	183a      	adds	r2, r7, r0
+ 8000954:	8812      	ldrh	r2, [r2, #0]
+ 8000956:	2101      	movs	r1, #1
+ 8000958:	4291      	cmp	r1, r2
+ 800095a:	4192      	sbcs	r2, r2
+ 800095c:	4252      	negs	r2, r2
+ 800095e:	701a      	strb	r2, [r3, #0]
 			  trigger_modifier -= NUM_FN1_ALTGR * fn1_altgr;
- 8000988:	193b      	adds	r3, r7, r4
- 800098a:	781b      	ldrb	r3, [r3, #0]
- 800098c:	b29b      	uxth	r3, r3
- 800098e:	18db      	adds	r3, r3, r3
- 8000990:	b29a      	uxth	r2, r3
- 8000992:	183b      	adds	r3, r7, r0
- 8000994:	1839      	adds	r1, r7, r0
- 8000996:	8809      	ldrh	r1, [r1, #0]
- 8000998:	1a8a      	subs	r2, r1, r2
- 800099a:	801a      	strh	r2, [r3, #0]
+ 8000960:	193b      	adds	r3, r7, r4
+ 8000962:	781b      	ldrb	r3, [r3, #0]
+ 8000964:	b29b      	uxth	r3, r3
+ 8000966:	18db      	adds	r3, r3, r3
+ 8000968:	b29a      	uxth	r2, r3
+ 800096a:	183b      	adds	r3, r7, r0
+ 800096c:	1839      	adds	r1, r7, r0
+ 800096e:	8809      	ldrh	r1, [r1, #0]
+ 8000970:	1a8a      	subs	r2, r1, r2
+ 8000972:	801a      	strh	r2, [r3, #0]
 			  bool fn1_shift = trigger_modifier >= NUM_FN1_SHIFT;
- 800099c:	2431      	movs	r4, #49	; 0x31
- 800099e:	193b      	adds	r3, r7, r4
- 80009a0:	183a      	adds	r2, r7, r0
- 80009a2:	8812      	ldrh	r2, [r2, #0]
- 80009a4:	1e51      	subs	r1, r2, #1
- 80009a6:	418a      	sbcs	r2, r1
- 80009a8:	701a      	strb	r2, [r3, #0]
+ 8000974:	242d      	movs	r4, #45	; 0x2d
+ 8000976:	193b      	adds	r3, r7, r4
+ 8000978:	183a      	adds	r2, r7, r0
+ 800097a:	8812      	ldrh	r2, [r2, #0]
+ 800097c:	1e51      	subs	r1, r2, #1
+ 800097e:	418a      	sbcs	r2, r1
+ 8000980:	701a      	strb	r2, [r3, #0]
 			  trigger_modifier -= NUM_FN1_SHIFT * fn1_shift;
- 80009aa:	193b      	adds	r3, r7, r4
- 80009ac:	781b      	ldrb	r3, [r3, #0]
- 80009ae:	b29a      	uxth	r2, r3
- 80009b0:	183b      	adds	r3, r7, r0
- 80009b2:	1839      	adds	r1, r7, r0
- 80009b4:	8809      	ldrh	r1, [r1, #0]
- 80009b6:	1a8a      	subs	r2, r1, r2
- 80009b8:	801a      	strh	r2, [r3, #0]
+ 8000982:	193b      	adds	r3, r7, r4
+ 8000984:	781b      	ldrb	r3, [r3, #0]
+ 8000986:	b29a      	uxth	r2, r3
+ 8000988:	183b      	adds	r3, r7, r0
+ 800098a:	1839      	adds	r1, r7, r0
+ 800098c:	8809      	ldrh	r1, [r1, #0]
+ 800098e:	1a8a      	subs	r2, r1, r2
+ 8000990:	801a      	strh	r2, [r3, #0]
 
 			  if (
- 80009ba:	197b      	adds	r3, r7, r5
- 80009bc:	781b      	ldrb	r3, [r3, #0]
- 80009be:	2b00      	cmp	r3, #0
- 80009c0:	d01f      	beq.n	8000a02 <main+0x55a>
+ 8000992:	197b      	adds	r3, r7, r5
+ 8000994:	781b      	ldrb	r3, [r3, #0]
+ 8000996:	2b00      	cmp	r3, #0
+ 8000998:	d01f      	beq.n	80009da <main+0x532>
 				  (key_altgr && !(fn1 || fn2 || fn3 || fn4)) ||
- 80009c2:	2346      	movs	r3, #70	; 0x46
- 80009c4:	18fb      	adds	r3, r7, r3
- 80009c6:	781b      	ldrb	r3, [r3, #0]
- 80009c8:	2201      	movs	r2, #1
- 80009ca:	4053      	eors	r3, r2
- 80009cc:	b2db      	uxtb	r3, r3
- 80009ce:	2b00      	cmp	r3, #0
- 80009d0:	d017      	beq.n	8000a02 <main+0x55a>
- 80009d2:	2345      	movs	r3, #69	; 0x45
- 80009d4:	18fb      	adds	r3, r7, r3
- 80009d6:	781b      	ldrb	r3, [r3, #0]
- 80009d8:	2201      	movs	r2, #1
- 80009da:	4053      	eors	r3, r2
- 80009dc:	b2db      	uxtb	r3, r3
- 80009de:	2b00      	cmp	r3, #0
- 80009e0:	d00f      	beq.n	8000a02 <main+0x55a>
- 80009e2:	2344      	movs	r3, #68	; 0x44
- 80009e4:	18fb      	adds	r3, r7, r3
- 80009e6:	781b      	ldrb	r3, [r3, #0]
- 80009e8:	2201      	movs	r2, #1
- 80009ea:	4053      	eors	r3, r2
- 80009ec:	b2db      	uxtb	r3, r3
- 80009ee:	2b00      	cmp	r3, #0
- 80009f0:	d007      	beq.n	8000a02 <main+0x55a>
- 80009f2:	2343      	movs	r3, #67	; 0x43
- 80009f4:	18fb      	adds	r3, r7, r3
- 80009f6:	781b      	ldrb	r3, [r3, #0]
- 80009f8:	2201      	movs	r2, #1
- 80009fa:	4053      	eors	r3, r2
- 80009fc:	b2db      	uxtb	r3, r3
+ 800099a:	2342      	movs	r3, #66	; 0x42
+ 800099c:	18fb      	adds	r3, r7, r3
+ 800099e:	781b      	ldrb	r3, [r3, #0]
+ 80009a0:	2201      	movs	r2, #1
+ 80009a2:	4053      	eors	r3, r2
+ 80009a4:	b2db      	uxtb	r3, r3
+ 80009a6:	2b00      	cmp	r3, #0
+ 80009a8:	d017      	beq.n	80009da <main+0x532>
+ 80009aa:	2341      	movs	r3, #65	; 0x41
+ 80009ac:	18fb      	adds	r3, r7, r3
+ 80009ae:	781b      	ldrb	r3, [r3, #0]
+ 80009b0:	2201      	movs	r2, #1
+ 80009b2:	4053      	eors	r3, r2
+ 80009b4:	b2db      	uxtb	r3, r3
+ 80009b6:	2b00      	cmp	r3, #0
+ 80009b8:	d00f      	beq.n	80009da <main+0x532>
+ 80009ba:	2340      	movs	r3, #64	; 0x40
+ 80009bc:	18fb      	adds	r3, r7, r3
+ 80009be:	781b      	ldrb	r3, [r3, #0]
+ 80009c0:	2201      	movs	r2, #1
+ 80009c2:	4053      	eors	r3, r2
+ 80009c4:	b2db      	uxtb	r3, r3
+ 80009c6:	2b00      	cmp	r3, #0
+ 80009c8:	d007      	beq.n	80009da <main+0x532>
+ 80009ca:	233f      	movs	r3, #63	; 0x3f
+ 80009cc:	18fb      	adds	r3, r7, r3
+ 80009ce:	781b      	ldrb	r3, [r3, #0]
+ 80009d0:	2201      	movs	r2, #1
+ 80009d2:	4053      	eors	r3, r2
+ 80009d4:	b2db      	uxtb	r3, r3
+ 80009d6:	2b00      	cmp	r3, #0
+ 80009d8:	d127      	bne.n	8000a2a <main+0x582>
+ 80009da:	2334      	movs	r3, #52	; 0x34
+ 80009dc:	18fb      	adds	r3, r7, r3
+ 80009de:	781b      	ldrb	r3, [r3, #0]
+ 80009e0:	2b00      	cmp	r3, #0
+ 80009e2:	d004      	beq.n	80009ee <main+0x546>
+				  (fn4_altgr && fn4) ||
+ 80009e4:	233f      	movs	r3, #63	; 0x3f
+ 80009e6:	18fb      	adds	r3, r7, r3
+ 80009e8:	781b      	ldrb	r3, [r3, #0]
+ 80009ea:	2b00      	cmp	r3, #0
+ 80009ec:	d11d      	bne.n	8000a2a <main+0x582>
+ 80009ee:	2332      	movs	r3, #50	; 0x32
+ 80009f0:	18fb      	adds	r3, r7, r3
+ 80009f2:	781b      	ldrb	r3, [r3, #0]
+ 80009f4:	2b00      	cmp	r3, #0
+ 80009f6:	d004      	beq.n	8000a02 <main+0x55a>
+				  (fn3_altgr && fn3) ||
+ 80009f8:	2340      	movs	r3, #64	; 0x40
+ 80009fa:	18fb      	adds	r3, r7, r3
+ 80009fc:	781b      	ldrb	r3, [r3, #0]
  80009fe:	2b00      	cmp	r3, #0
- 8000a00:	d127      	bne.n	8000a52 <main+0x5aa>
- 8000a02:	2338      	movs	r3, #56	; 0x38
+ 8000a00:	d113      	bne.n	8000a2a <main+0x582>
+ 8000a02:	2330      	movs	r3, #48	; 0x30
  8000a04:	18fb      	adds	r3, r7, r3
  8000a06:	781b      	ldrb	r3, [r3, #0]
  8000a08:	2b00      	cmp	r3, #0
  8000a0a:	d004      	beq.n	8000a16 <main+0x56e>
-				  (fn4_altgr && fn4) ||
- 8000a0c:	2343      	movs	r3, #67	; 0x43
+				  (fn2_altgr && fn2) ||
+ 8000a0c:	2341      	movs	r3, #65	; 0x41
  8000a0e:	18fb      	adds	r3, r7, r3
  8000a10:	781b      	ldrb	r3, [r3, #0]
  8000a12:	2b00      	cmp	r3, #0
- 8000a14:	d11d      	bne.n	8000a52 <main+0x5aa>
- 8000a16:	2336      	movs	r3, #54	; 0x36
+ 8000a14:	d109      	bne.n	8000a2a <main+0x582>
+ 8000a16:	232e      	movs	r3, #46	; 0x2e
  8000a18:	18fb      	adds	r3, r7, r3
  8000a1a:	781b      	ldrb	r3, [r3, #0]
  8000a1c:	2b00      	cmp	r3, #0
- 8000a1e:	d004      	beq.n	8000a2a <main+0x582>
-				  (fn3_altgr && fn3) ||
- 8000a20:	2344      	movs	r3, #68	; 0x44
+ 8000a1e:	d013      	beq.n	8000a48 <main+0x5a0>
+				  (fn1_altgr && fn1)
+ 8000a20:	2342      	movs	r3, #66	; 0x42
  8000a22:	18fb      	adds	r3, r7, r3
  8000a24:	781b      	ldrb	r3, [r3, #0]
  8000a26:	2b00      	cmp	r3, #0
- 8000a28:	d113      	bne.n	8000a52 <main+0x5aa>
- 8000a2a:	2334      	movs	r3, #52	; 0x34
- 8000a2c:	18fb      	adds	r3, r7, r3
- 8000a2e:	781b      	ldrb	r3, [r3, #0]
- 8000a30:	2b00      	cmp	r3, #0
- 8000a32:	d004      	beq.n	8000a3e <main+0x596>
-				  (fn2_altgr && fn2) ||
- 8000a34:	2345      	movs	r3, #69	; 0x45
- 8000a36:	18fb      	adds	r3, r7, r3
- 8000a38:	781b      	ldrb	r3, [r3, #0]
- 8000a3a:	2b00      	cmp	r3, #0
- 8000a3c:	d109      	bne.n	8000a52 <main+0x5aa>
- 8000a3e:	2332      	movs	r3, #50	; 0x32
- 8000a40:	18fb      	adds	r3, r7, r3
- 8000a42:	781b      	ldrb	r3, [r3, #0]
- 8000a44:	2b00      	cmp	r3, #0
- 8000a46:	d013      	beq.n	8000a70 <main+0x5c8>
-				  (fn1_altgr && fn1)
- 8000a48:	2346      	movs	r3, #70	; 0x46
+ 8000a28:	d00e      	beq.n	8000a48 <main+0x5a0>
+			  ) keyBoardHIDsub.MODIFIER |= KEY_MOD_RALT;
+ 8000a2a:	4b06      	ldr	r3, [pc, #24]	; (8000a44 <main+0x59c>)
+ 8000a2c:	781b      	ldrb	r3, [r3, #0]
+ 8000a2e:	2240      	movs	r2, #64	; 0x40
+ 8000a30:	4313      	orrs	r3, r2
+ 8000a32:	b2da      	uxtb	r2, r3
+ 8000a34:	4b03      	ldr	r3, [pc, #12]	; (8000a44 <main+0x59c>)
+ 8000a36:	701a      	strb	r2, [r3, #0]
+ 8000a38:	e0af      	b.n	8000b9a <main+0x6f2>
+ 8000a3a:	46c0      	nop			; (mov r8, r8)
+ 8000a3c:	200000b0 	.word	0x200000b0
+ 8000a40:	20000108 	.word	0x20000108
+ 8000a44:	2000034c 	.word	0x2000034c
+
+			  else if (
+ 8000a48:	2335      	movs	r3, #53	; 0x35
  8000a4a:	18fb      	adds	r3, r7, r3
  8000a4c:	781b      	ldrb	r3, [r3, #0]
  8000a4e:	2b00      	cmp	r3, #0
- 8000a50:	d00e      	beq.n	8000a70 <main+0x5c8>
-			  ) keyBoardHIDsub.MODIFIER |= KEY_MOD_RALT;
- 8000a52:	4b06      	ldr	r3, [pc, #24]	; (8000a6c <main+0x5c4>)
- 8000a54:	781b      	ldrb	r3, [r3, #0]
- 8000a56:	2240      	movs	r2, #64	; 0x40
- 8000a58:	4313      	orrs	r3, r2
- 8000a5a:	b2da      	uxtb	r2, r3
- 8000a5c:	4b03      	ldr	r3, [pc, #12]	; (8000a6c <main+0x5c4>)
- 8000a5e:	701a      	strb	r2, [r3, #0]
- 8000a60:	e0af      	b.n	8000bc2 <main+0x71a>
- 8000a62:	46c0      	nop			; (mov r8, r8)
- 8000a64:	200000b0 	.word	0x200000b0
- 8000a68:	20000108 	.word	0x20000108
- 8000a6c:	2000034c 	.word	0x2000034c
-
-			  else if (
- 8000a70:	2339      	movs	r3, #57	; 0x39
- 8000a72:	18fb      	adds	r3, r7, r3
- 8000a74:	781b      	ldrb	r3, [r3, #0]
- 8000a76:	2b00      	cmp	r3, #0
- 8000a78:	d01f      	beq.n	8000aba <main+0x612>
+ 8000a50:	d01f      	beq.n	8000a92 <main+0x5ea>
 				  (key_shift && !(fn1 || fn2 || fn3 || fn4)) ||
- 8000a7a:	2346      	movs	r3, #70	; 0x46
- 8000a7c:	18fb      	adds	r3, r7, r3
- 8000a7e:	781b      	ldrb	r3, [r3, #0]
- 8000a80:	2201      	movs	r2, #1
- 8000a82:	4053      	eors	r3, r2
- 8000a84:	b2db      	uxtb	r3, r3
- 8000a86:	2b00      	cmp	r3, #0
- 8000a88:	d017      	beq.n	8000aba <main+0x612>
- 8000a8a:	2345      	movs	r3, #69	; 0x45
- 8000a8c:	18fb      	adds	r3, r7, r3
- 8000a8e:	781b      	ldrb	r3, [r3, #0]
- 8000a90:	2201      	movs	r2, #1
- 8000a92:	4053      	eors	r3, r2
- 8000a94:	b2db      	uxtb	r3, r3
- 8000a96:	2b00      	cmp	r3, #0
- 8000a98:	d00f      	beq.n	8000aba <main+0x612>
- 8000a9a:	2344      	movs	r3, #68	; 0x44
- 8000a9c:	18fb      	adds	r3, r7, r3
- 8000a9e:	781b      	ldrb	r3, [r3, #0]
- 8000aa0:	2201      	movs	r2, #1
- 8000aa2:	4053      	eors	r3, r2
- 8000aa4:	b2db      	uxtb	r3, r3
- 8000aa6:	2b00      	cmp	r3, #0
- 8000aa8:	d007      	beq.n	8000aba <main+0x612>
- 8000aaa:	2343      	movs	r3, #67	; 0x43
- 8000aac:	18fb      	adds	r3, r7, r3
- 8000aae:	781b      	ldrb	r3, [r3, #0]
- 8000ab0:	2201      	movs	r2, #1
- 8000ab2:	4053      	eors	r3, r2
- 8000ab4:	b2db      	uxtb	r3, r3
+ 8000a52:	2342      	movs	r3, #66	; 0x42
+ 8000a54:	18fb      	adds	r3, r7, r3
+ 8000a56:	781b      	ldrb	r3, [r3, #0]
+ 8000a58:	2201      	movs	r2, #1
+ 8000a5a:	4053      	eors	r3, r2
+ 8000a5c:	b2db      	uxtb	r3, r3
+ 8000a5e:	2b00      	cmp	r3, #0
+ 8000a60:	d017      	beq.n	8000a92 <main+0x5ea>
+ 8000a62:	2341      	movs	r3, #65	; 0x41
+ 8000a64:	18fb      	adds	r3, r7, r3
+ 8000a66:	781b      	ldrb	r3, [r3, #0]
+ 8000a68:	2201      	movs	r2, #1
+ 8000a6a:	4053      	eors	r3, r2
+ 8000a6c:	b2db      	uxtb	r3, r3
+ 8000a6e:	2b00      	cmp	r3, #0
+ 8000a70:	d00f      	beq.n	8000a92 <main+0x5ea>
+ 8000a72:	2340      	movs	r3, #64	; 0x40
+ 8000a74:	18fb      	adds	r3, r7, r3
+ 8000a76:	781b      	ldrb	r3, [r3, #0]
+ 8000a78:	2201      	movs	r2, #1
+ 8000a7a:	4053      	eors	r3, r2
+ 8000a7c:	b2db      	uxtb	r3, r3
+ 8000a7e:	2b00      	cmp	r3, #0
+ 8000a80:	d007      	beq.n	8000a92 <main+0x5ea>
+ 8000a82:	233f      	movs	r3, #63	; 0x3f
+ 8000a84:	18fb      	adds	r3, r7, r3
+ 8000a86:	781b      	ldrb	r3, [r3, #0]
+ 8000a88:	2201      	movs	r2, #1
+ 8000a8a:	4053      	eors	r3, r2
+ 8000a8c:	b2db      	uxtb	r3, r3
+ 8000a8e:	2b00      	cmp	r3, #0
+ 8000a90:	d127      	bne.n	8000ae2 <main+0x63a>
+ 8000a92:	2333      	movs	r3, #51	; 0x33
+ 8000a94:	18fb      	adds	r3, r7, r3
+ 8000a96:	781b      	ldrb	r3, [r3, #0]
+ 8000a98:	2b00      	cmp	r3, #0
+ 8000a9a:	d004      	beq.n	8000aa6 <main+0x5fe>
+				  (fn4_shift && fn4)  ||
+ 8000a9c:	233f      	movs	r3, #63	; 0x3f
+ 8000a9e:	18fb      	adds	r3, r7, r3
+ 8000aa0:	781b      	ldrb	r3, [r3, #0]
+ 8000aa2:	2b00      	cmp	r3, #0
+ 8000aa4:	d11d      	bne.n	8000ae2 <main+0x63a>
+ 8000aa6:	2331      	movs	r3, #49	; 0x31
+ 8000aa8:	18fb      	adds	r3, r7, r3
+ 8000aaa:	781b      	ldrb	r3, [r3, #0]
+ 8000aac:	2b00      	cmp	r3, #0
+ 8000aae:	d004      	beq.n	8000aba <main+0x612>
+				  (fn3_shift && fn3)  ||
+ 8000ab0:	2340      	movs	r3, #64	; 0x40
+ 8000ab2:	18fb      	adds	r3, r7, r3
+ 8000ab4:	781b      	ldrb	r3, [r3, #0]
  8000ab6:	2b00      	cmp	r3, #0
- 8000ab8:	d127      	bne.n	8000b0a <main+0x662>
- 8000aba:	2337      	movs	r3, #55	; 0x37
+ 8000ab8:	d113      	bne.n	8000ae2 <main+0x63a>
+ 8000aba:	232f      	movs	r3, #47	; 0x2f
  8000abc:	18fb      	adds	r3, r7, r3
  8000abe:	781b      	ldrb	r3, [r3, #0]
  8000ac0:	2b00      	cmp	r3, #0
  8000ac2:	d004      	beq.n	8000ace <main+0x626>
-				  (fn4_shift && fn4)  ||
- 8000ac4:	2343      	movs	r3, #67	; 0x43
+				  (fn2_shift && fn2)  ||
+ 8000ac4:	2341      	movs	r3, #65	; 0x41
  8000ac6:	18fb      	adds	r3, r7, r3
  8000ac8:	781b      	ldrb	r3, [r3, #0]
  8000aca:	2b00      	cmp	r3, #0
- 8000acc:	d11d      	bne.n	8000b0a <main+0x662>
- 8000ace:	2335      	movs	r3, #53	; 0x35
+ 8000acc:	d109      	bne.n	8000ae2 <main+0x63a>
+ 8000ace:	232d      	movs	r3, #45	; 0x2d
  8000ad0:	18fb      	adds	r3, r7, r3
  8000ad2:	781b      	ldrb	r3, [r3, #0]
  8000ad4:	2b00      	cmp	r3, #0
- 8000ad6:	d004      	beq.n	8000ae2 <main+0x63a>
-				  (fn3_shift && fn3)  ||
- 8000ad8:	2344      	movs	r3, #68	; 0x44
+ 8000ad6:	d00c      	beq.n	8000af2 <main+0x64a>
+				  (fn1_shift && fn1)
+ 8000ad8:	2342      	movs	r3, #66	; 0x42
  8000ada:	18fb      	adds	r3, r7, r3
  8000adc:	781b      	ldrb	r3, [r3, #0]
  8000ade:	2b00      	cmp	r3, #0
- 8000ae0:	d113      	bne.n	8000b0a <main+0x662>
- 8000ae2:	2333      	movs	r3, #51	; 0x33
- 8000ae4:	18fb      	adds	r3, r7, r3
- 8000ae6:	781b      	ldrb	r3, [r3, #0]
- 8000ae8:	2b00      	cmp	r3, #0
- 8000aea:	d004      	beq.n	8000af6 <main+0x64e>
-				  (fn2_shift && fn2)  ||
- 8000aec:	2345      	movs	r3, #69	; 0x45
- 8000aee:	18fb      	adds	r3, r7, r3
- 8000af0:	781b      	ldrb	r3, [r3, #0]
- 8000af2:	2b00      	cmp	r3, #0
- 8000af4:	d109      	bne.n	8000b0a <main+0x662>
- 8000af6:	2331      	movs	r3, #49	; 0x31
- 8000af8:	18fb      	adds	r3, r7, r3
- 8000afa:	781b      	ldrb	r3, [r3, #0]
- 8000afc:	2b00      	cmp	r3, #0
- 8000afe:	d00c      	beq.n	8000b1a <main+0x672>
-				  (fn1_shift && fn1)
- 8000b00:	2346      	movs	r3, #70	; 0x46
- 8000b02:	18fb      	adds	r3, r7, r3
- 8000b04:	781b      	ldrb	r3, [r3, #0]
- 8000b06:	2b00      	cmp	r3, #0
- 8000b08:	d007      	beq.n	8000b1a <main+0x672>
+ 8000ae0:	d007      	beq.n	8000af2 <main+0x64a>
 			  ) keyBoardHIDsub.MODIFIER |= KEY_MOD_RSHIFT;
- 8000b0a:	4b7c      	ldr	r3, [pc, #496]	; (8000cfc <main+0x854>)
- 8000b0c:	781b      	ldrb	r3, [r3, #0]
- 8000b0e:	2220      	movs	r2, #32
- 8000b10:	4313      	orrs	r3, r2
- 8000b12:	b2da      	uxtb	r2, r3
- 8000b14:	4b79      	ldr	r3, [pc, #484]	; (8000cfc <main+0x854>)
- 8000b16:	701a      	strb	r2, [r3, #0]
- 8000b18:	e053      	b.n	8000bc2 <main+0x71a>
+ 8000ae2:	4b85      	ldr	r3, [pc, #532]	; (8000cf8 <main+0x850>)
+ 8000ae4:	781b      	ldrb	r3, [r3, #0]
+ 8000ae6:	2220      	movs	r2, #32
+ 8000ae8:	4313      	orrs	r3, r2
+ 8000aea:	b2da      	uxtb	r2, r3
+ 8000aec:	4b82      	ldr	r3, [pc, #520]	; (8000cf8 <main+0x850>)
+ 8000aee:	701a      	strb	r2, [r3, #0]
+ 8000af0:	e053      	b.n	8000b9a <main+0x6f2>
 
 			  else if (
- 8000b1a:	233b      	movs	r3, #59	; 0x3b
- 8000b1c:	18fb      	adds	r3, r7, r3
- 8000b1e:	781b      	ldrb	r3, [r3, #0]
- 8000b20:	2b00      	cmp	r3, #0
- 8000b22:	d01f      	beq.n	8000b64 <main+0x6bc>
+ 8000af2:	2337      	movs	r3, #55	; 0x37
+ 8000af4:	18fb      	adds	r3, r7, r3
+ 8000af6:	781b      	ldrb	r3, [r3, #0]
+ 8000af8:	2b00      	cmp	r3, #0
+ 8000afa:	d01f      	beq.n	8000b3c <main+0x694>
 				  (key_ctrl && !(fn1 || fn2 || fn3 || fn4)) ||
- 8000b24:	2346      	movs	r3, #70	; 0x46
- 8000b26:	18fb      	adds	r3, r7, r3
- 8000b28:	781b      	ldrb	r3, [r3, #0]
- 8000b2a:	2201      	movs	r2, #1
- 8000b2c:	4053      	eors	r3, r2
- 8000b2e:	b2db      	uxtb	r3, r3
- 8000b30:	2b00      	cmp	r3, #0
- 8000b32:	d017      	beq.n	8000b64 <main+0x6bc>
- 8000b34:	2345      	movs	r3, #69	; 0x45
- 8000b36:	18fb      	adds	r3, r7, r3
- 8000b38:	781b      	ldrb	r3, [r3, #0]
- 8000b3a:	2201      	movs	r2, #1
- 8000b3c:	4053      	eors	r3, r2
- 8000b3e:	b2db      	uxtb	r3, r3
- 8000b40:	2b00      	cmp	r3, #0
- 8000b42:	d00f      	beq.n	8000b64 <main+0x6bc>
- 8000b44:	2344      	movs	r3, #68	; 0x44
- 8000b46:	18fb      	adds	r3, r7, r3
- 8000b48:	781b      	ldrb	r3, [r3, #0]
- 8000b4a:	2201      	movs	r2, #1
- 8000b4c:	4053      	eors	r3, r2
- 8000b4e:	b2db      	uxtb	r3, r3
- 8000b50:	2b00      	cmp	r3, #0
- 8000b52:	d007      	beq.n	8000b64 <main+0x6bc>
- 8000b54:	2343      	movs	r3, #67	; 0x43
- 8000b56:	18fb      	adds	r3, r7, r3
- 8000b58:	781b      	ldrb	r3, [r3, #0]
- 8000b5a:	2201      	movs	r2, #1
- 8000b5c:	4053      	eors	r3, r2
- 8000b5e:	b2db      	uxtb	r3, r3
+ 8000afc:	2342      	movs	r3, #66	; 0x42
+ 8000afe:	18fb      	adds	r3, r7, r3
+ 8000b00:	781b      	ldrb	r3, [r3, #0]
+ 8000b02:	2201      	movs	r2, #1
+ 8000b04:	4053      	eors	r3, r2
+ 8000b06:	b2db      	uxtb	r3, r3
+ 8000b08:	2b00      	cmp	r3, #0
+ 8000b0a:	d017      	beq.n	8000b3c <main+0x694>
+ 8000b0c:	2341      	movs	r3, #65	; 0x41
+ 8000b0e:	18fb      	adds	r3, r7, r3
+ 8000b10:	781b      	ldrb	r3, [r3, #0]
+ 8000b12:	2201      	movs	r2, #1
+ 8000b14:	4053      	eors	r3, r2
+ 8000b16:	b2db      	uxtb	r3, r3
+ 8000b18:	2b00      	cmp	r3, #0
+ 8000b1a:	d00f      	beq.n	8000b3c <main+0x694>
+ 8000b1c:	2340      	movs	r3, #64	; 0x40
+ 8000b1e:	18fb      	adds	r3, r7, r3
+ 8000b20:	781b      	ldrb	r3, [r3, #0]
+ 8000b22:	2201      	movs	r2, #1
+ 8000b24:	4053      	eors	r3, r2
+ 8000b26:	b2db      	uxtb	r3, r3
+ 8000b28:	2b00      	cmp	r3, #0
+ 8000b2a:	d007      	beq.n	8000b3c <main+0x694>
+ 8000b2c:	233f      	movs	r3, #63	; 0x3f
+ 8000b2e:	18fb      	adds	r3, r7, r3
+ 8000b30:	781b      	ldrb	r3, [r3, #0]
+ 8000b32:	2201      	movs	r2, #1
+ 8000b34:	4053      	eors	r3, r2
+ 8000b36:	b2db      	uxtb	r3, r3
+ 8000b38:	2b00      	cmp	r3, #0
+ 8000b3a:	d127      	bne.n	8000b8c <main+0x6e4>
+ 8000b3c:	233b      	movs	r3, #59	; 0x3b
+ 8000b3e:	18fb      	adds	r3, r7, r3
+ 8000b40:	781b      	ldrb	r3, [r3, #0]
+ 8000b42:	2b00      	cmp	r3, #0
+ 8000b44:	d004      	beq.n	8000b50 <main+0x6a8>
+				  (fn4_ctrl && fn4)  ||
+ 8000b46:	233f      	movs	r3, #63	; 0x3f
+ 8000b48:	18fb      	adds	r3, r7, r3
+ 8000b4a:	781b      	ldrb	r3, [r3, #0]
+ 8000b4c:	2b00      	cmp	r3, #0
+ 8000b4e:	d11d      	bne.n	8000b8c <main+0x6e4>
+ 8000b50:	233a      	movs	r3, #58	; 0x3a
+ 8000b52:	18fb      	adds	r3, r7, r3
+ 8000b54:	781b      	ldrb	r3, [r3, #0]
+ 8000b56:	2b00      	cmp	r3, #0
+ 8000b58:	d004      	beq.n	8000b64 <main+0x6bc>
+				  (fn3_ctrl && fn3)  ||
+ 8000b5a:	2340      	movs	r3, #64	; 0x40
+ 8000b5c:	18fb      	adds	r3, r7, r3
+ 8000b5e:	781b      	ldrb	r3, [r3, #0]
  8000b60:	2b00      	cmp	r3, #0
- 8000b62:	d127      	bne.n	8000bb4 <main+0x70c>
- 8000b64:	233f      	movs	r3, #63	; 0x3f
+ 8000b62:	d113      	bne.n	8000b8c <main+0x6e4>
+ 8000b64:	2339      	movs	r3, #57	; 0x39
  8000b66:	18fb      	adds	r3, r7, r3
  8000b68:	781b      	ldrb	r3, [r3, #0]
  8000b6a:	2b00      	cmp	r3, #0
  8000b6c:	d004      	beq.n	8000b78 <main+0x6d0>
-				  (fn4_ctrl && fn4)  ||
- 8000b6e:	2343      	movs	r3, #67	; 0x43
+				  (fn2_ctrl && fn2)  ||
+ 8000b6e:	2341      	movs	r3, #65	; 0x41
  8000b70:	18fb      	adds	r3, r7, r3
  8000b72:	781b      	ldrb	r3, [r3, #0]
  8000b74:	2b00      	cmp	r3, #0
- 8000b76:	d11d      	bne.n	8000bb4 <main+0x70c>
- 8000b78:	233e      	movs	r3, #62	; 0x3e
+ 8000b76:	d109      	bne.n	8000b8c <main+0x6e4>
+ 8000b78:	2338      	movs	r3, #56	; 0x38
  8000b7a:	18fb      	adds	r3, r7, r3
  8000b7c:	781b      	ldrb	r3, [r3, #0]
  8000b7e:	2b00      	cmp	r3, #0
- 8000b80:	d004      	beq.n	8000b8c <main+0x6e4>
-				  (fn3_ctrl && fn3)  ||
- 8000b82:	2344      	movs	r3, #68	; 0x44
+ 8000b80:	d00b      	beq.n	8000b9a <main+0x6f2>
+				  (fn1_ctrl && fn1)
+ 8000b82:	2342      	movs	r3, #66	; 0x42
  8000b84:	18fb      	adds	r3, r7, r3
  8000b86:	781b      	ldrb	r3, [r3, #0]
  8000b88:	2b00      	cmp	r3, #0
- 8000b8a:	d113      	bne.n	8000bb4 <main+0x70c>
- 8000b8c:	233d      	movs	r3, #61	; 0x3d
- 8000b8e:	18fb      	adds	r3, r7, r3
- 8000b90:	781b      	ldrb	r3, [r3, #0]
- 8000b92:	2b00      	cmp	r3, #0
- 8000b94:	d004      	beq.n	8000ba0 <main+0x6f8>
-				  (fn2_ctrl && fn2)  ||
- 8000b96:	2345      	movs	r3, #69	; 0x45
- 8000b98:	18fb      	adds	r3, r7, r3
- 8000b9a:	781b      	ldrb	r3, [r3, #0]
- 8000b9c:	2b00      	cmp	r3, #0
- 8000b9e:	d109      	bne.n	8000bb4 <main+0x70c>
- 8000ba0:	233c      	movs	r3, #60	; 0x3c
- 8000ba2:	18fb      	adds	r3, r7, r3
- 8000ba4:	781b      	ldrb	r3, [r3, #0]
- 8000ba6:	2b00      	cmp	r3, #0
- 8000ba8:	d00b      	beq.n	8000bc2 <main+0x71a>
-				  (fn1_ctrl && fn1)
- 8000baa:	2346      	movs	r3, #70	; 0x46
- 8000bac:	18fb      	adds	r3, r7, r3
- 8000bae:	781b      	ldrb	r3, [r3, #0]
- 8000bb0:	2b00      	cmp	r3, #0
- 8000bb2:	d006      	beq.n	8000bc2 <main+0x71a>
+ 8000b8a:	d006      	beq.n	8000b9a <main+0x6f2>
 			  ) keyBoardHIDsub.MODIFIER |= KEY_MOD_RCTRL;
- 8000bb4:	4b51      	ldr	r3, [pc, #324]	; (8000cfc <main+0x854>)
- 8000bb6:	781b      	ldrb	r3, [r3, #0]
- 8000bb8:	2210      	movs	r2, #16
- 8000bba:	4313      	orrs	r3, r2
- 8000bbc:	b2da      	uxtb	r2, r3
- 8000bbe:	4b4f      	ldr	r3, [pc, #316]	; (8000cfc <main+0x854>)
- 8000bc0:	701a      	strb	r2, [r3, #0]
+ 8000b8c:	4b5a      	ldr	r3, [pc, #360]	; (8000cf8 <main+0x850>)
+ 8000b8e:	781b      	ldrb	r3, [r3, #0]
+ 8000b90:	2210      	movs	r2, #16
+ 8000b92:	4313      	orrs	r3, r2
+ 8000b94:	b2da      	uxtb	r2, r3
+ 8000b96:	4b58      	ldr	r3, [pc, #352]	; (8000cf8 <main+0x850>)
+ 8000b98:	701a      	strb	r2, [r3, #0]
 
-
-			  if 		(keyBoardHIDsub.KEYCODE1 == 0x00) 	keyBoardHIDsub.KEYCODE1 = 	key;
- 8000bc2:	4b4e      	ldr	r3, [pc, #312]	; (8000cfc <main+0x854>)
- 8000bc4:	789b      	ldrb	r3, [r3, #2]
- 8000bc6:	2b00      	cmp	r3, #0
- 8000bc8:	d105      	bne.n	8000bd6 <main+0x72e>
- 8000bca:	4b4c      	ldr	r3, [pc, #304]	; (8000cfc <main+0x854>)
- 8000bcc:	2247      	movs	r2, #71	; 0x47
- 8000bce:	18ba      	adds	r2, r7, r2
- 8000bd0:	7812      	ldrb	r2, [r2, #0]
- 8000bd2:	709a      	strb	r2, [r3, #2]
- 8000bd4:	e048      	b.n	8000c68 <main+0x7c0>
+			  if (MODIFIER_MASK[index] && PRESSED[index]) 	keyBoardHIDsub.MODIFIER |= 	key;
+ 8000b9a:	4a58      	ldr	r2, [pc, #352]	; (8000cfc <main+0x854>)
+ 8000b9c:	6c7b      	ldr	r3, [r7, #68]	; 0x44
+ 8000b9e:	18d3      	adds	r3, r2, r3
+ 8000ba0:	781b      	ldrb	r3, [r3, #0]
+ 8000ba2:	2b00      	cmp	r3, #0
+ 8000ba4:	d00f      	beq.n	8000bc6 <main+0x71e>
+ 8000ba6:	003a      	movs	r2, r7
+ 8000ba8:	6c7b      	ldr	r3, [r7, #68]	; 0x44
+ 8000baa:	18d3      	adds	r3, r2, r3
+ 8000bac:	781b      	ldrb	r3, [r3, #0]
+ 8000bae:	2b00      	cmp	r3, #0
+ 8000bb0:	d009      	beq.n	8000bc6 <main+0x71e>
+ 8000bb2:	4b51      	ldr	r3, [pc, #324]	; (8000cf8 <main+0x850>)
+ 8000bb4:	781a      	ldrb	r2, [r3, #0]
+ 8000bb6:	2343      	movs	r3, #67	; 0x43
+ 8000bb8:	18fb      	adds	r3, r7, r3
+ 8000bba:	781b      	ldrb	r3, [r3, #0]
+ 8000bbc:	4313      	orrs	r3, r2
+ 8000bbe:	b2da      	uxtb	r2, r3
+ 8000bc0:	4b4d      	ldr	r3, [pc, #308]	; (8000cf8 <main+0x850>)
+ 8000bc2:	701a      	strb	r2, [r3, #0]
+ 8000bc4:	e052      	b.n	8000c6c <main+0x7c4>
+			  else if 	(keyBoardHIDsub.KEYCODE1 == 0x00) 	keyBoardHIDsub.KEYCODE1 = 	key;
+ 8000bc6:	4b4c      	ldr	r3, [pc, #304]	; (8000cf8 <main+0x850>)
+ 8000bc8:	789b      	ldrb	r3, [r3, #2]
+ 8000bca:	2b00      	cmp	r3, #0
+ 8000bcc:	d105      	bne.n	8000bda <main+0x732>
+ 8000bce:	4b4a      	ldr	r3, [pc, #296]	; (8000cf8 <main+0x850>)
+ 8000bd0:	2243      	movs	r2, #67	; 0x43
+ 8000bd2:	18ba      	adds	r2, r7, r2
+ 8000bd4:	7812      	ldrb	r2, [r2, #0]
+ 8000bd6:	709a      	strb	r2, [r3, #2]
+ 8000bd8:	e048      	b.n	8000c6c <main+0x7c4>
 			  else if 	(keyBoardHIDsub.KEYCODE2 == 0x00) 	keyBoardHIDsub.KEYCODE2 = 	key;
- 8000bd6:	4b49      	ldr	r3, [pc, #292]	; (8000cfc <main+0x854>)
- 8000bd8:	78db      	ldrb	r3, [r3, #3]
- 8000bda:	2b00      	cmp	r3, #0
- 8000bdc:	d105      	bne.n	8000bea <main+0x742>
- 8000bde:	4b47      	ldr	r3, [pc, #284]	; (8000cfc <main+0x854>)
- 8000be0:	2247      	movs	r2, #71	; 0x47
- 8000be2:	18ba      	adds	r2, r7, r2
- 8000be4:	7812      	ldrb	r2, [r2, #0]
- 8000be6:	70da      	strb	r2, [r3, #3]
- 8000be8:	e03e      	b.n	8000c68 <main+0x7c0>
+ 8000bda:	4b47      	ldr	r3, [pc, #284]	; (8000cf8 <main+0x850>)
+ 8000bdc:	78db      	ldrb	r3, [r3, #3]
+ 8000bde:	2b00      	cmp	r3, #0
+ 8000be0:	d105      	bne.n	8000bee <main+0x746>
+ 8000be2:	4b45      	ldr	r3, [pc, #276]	; (8000cf8 <main+0x850>)
+ 8000be4:	2243      	movs	r2, #67	; 0x43
+ 8000be6:	18ba      	adds	r2, r7, r2
+ 8000be8:	7812      	ldrb	r2, [r2, #0]
+ 8000bea:	70da      	strb	r2, [r3, #3]
+ 8000bec:	e03e      	b.n	8000c6c <main+0x7c4>
 			  else if 	(keyBoardHIDsub.KEYCODE3 == 0x00) 	keyBoardHIDsub.KEYCODE3 = 	key;
- 8000bea:	4b44      	ldr	r3, [pc, #272]	; (8000cfc <main+0x854>)
- 8000bec:	791b      	ldrb	r3, [r3, #4]
- 8000bee:	2b00      	cmp	r3, #0
- 8000bf0:	d105      	bne.n	8000bfe <main+0x756>
- 8000bf2:	4b42      	ldr	r3, [pc, #264]	; (8000cfc <main+0x854>)
- 8000bf4:	2247      	movs	r2, #71	; 0x47
- 8000bf6:	18ba      	adds	r2, r7, r2
- 8000bf8:	7812      	ldrb	r2, [r2, #0]
- 8000bfa:	711a      	strb	r2, [r3, #4]
- 8000bfc:	e034      	b.n	8000c68 <main+0x7c0>
+ 8000bee:	4b42      	ldr	r3, [pc, #264]	; (8000cf8 <main+0x850>)
+ 8000bf0:	791b      	ldrb	r3, [r3, #4]
+ 8000bf2:	2b00      	cmp	r3, #0
+ 8000bf4:	d105      	bne.n	8000c02 <main+0x75a>
+ 8000bf6:	4b40      	ldr	r3, [pc, #256]	; (8000cf8 <main+0x850>)
+ 8000bf8:	2243      	movs	r2, #67	; 0x43
+ 8000bfa:	18ba      	adds	r2, r7, r2
+ 8000bfc:	7812      	ldrb	r2, [r2, #0]
+ 8000bfe:	711a      	strb	r2, [r3, #4]
+ 8000c00:	e034      	b.n	8000c6c <main+0x7c4>
 			  else if 	(keyBoardHIDsub.KEYCODE4 == 0x00) 	keyBoardHIDsub.KEYCODE4 = 	key;
- 8000bfe:	4b3f      	ldr	r3, [pc, #252]	; (8000cfc <main+0x854>)
- 8000c00:	795b      	ldrb	r3, [r3, #5]
- 8000c02:	2b00      	cmp	r3, #0
- 8000c04:	d105      	bne.n	8000c12 <main+0x76a>
- 8000c06:	4b3d      	ldr	r3, [pc, #244]	; (8000cfc <main+0x854>)
- 8000c08:	2247      	movs	r2, #71	; 0x47
- 8000c0a:	18ba      	adds	r2, r7, r2
- 8000c0c:	7812      	ldrb	r2, [r2, #0]
- 8000c0e:	715a      	strb	r2, [r3, #5]
- 8000c10:	e02a      	b.n	8000c68 <main+0x7c0>
+ 8000c02:	4b3d      	ldr	r3, [pc, #244]	; (8000cf8 <main+0x850>)
+ 8000c04:	795b      	ldrb	r3, [r3, #5]
+ 8000c06:	2b00      	cmp	r3, #0
+ 8000c08:	d105      	bne.n	8000c16 <main+0x76e>
+ 8000c0a:	4b3b      	ldr	r3, [pc, #236]	; (8000cf8 <main+0x850>)
+ 8000c0c:	2243      	movs	r2, #67	; 0x43
+ 8000c0e:	18ba      	adds	r2, r7, r2
+ 8000c10:	7812      	ldrb	r2, [r2, #0]
+ 8000c12:	715a      	strb	r2, [r3, #5]
+ 8000c14:	e02a      	b.n	8000c6c <main+0x7c4>
 			  else if 	(keyBoardHIDsub.KEYCODE5 == 0x00) 	keyBoardHIDsub.KEYCODE5 = 	key;
- 8000c12:	4b3a      	ldr	r3, [pc, #232]	; (8000cfc <main+0x854>)
- 8000c14:	799b      	ldrb	r3, [r3, #6]
- 8000c16:	2b00      	cmp	r3, #0
- 8000c18:	d105      	bne.n	8000c26 <main+0x77e>
- 8000c1a:	4b38      	ldr	r3, [pc, #224]	; (8000cfc <main+0x854>)
- 8000c1c:	2247      	movs	r2, #71	; 0x47
- 8000c1e:	18ba      	adds	r2, r7, r2
- 8000c20:	7812      	ldrb	r2, [r2, #0]
- 8000c22:	719a      	strb	r2, [r3, #6]
- 8000c24:	e020      	b.n	8000c68 <main+0x7c0>
+ 8000c16:	4b38      	ldr	r3, [pc, #224]	; (8000cf8 <main+0x850>)
+ 8000c18:	799b      	ldrb	r3, [r3, #6]
+ 8000c1a:	2b00      	cmp	r3, #0
+ 8000c1c:	d105      	bne.n	8000c2a <main+0x782>
+ 8000c1e:	4b36      	ldr	r3, [pc, #216]	; (8000cf8 <main+0x850>)
+ 8000c20:	2243      	movs	r2, #67	; 0x43
+ 8000c22:	18ba      	adds	r2, r7, r2
+ 8000c24:	7812      	ldrb	r2, [r2, #0]
+ 8000c26:	719a      	strb	r2, [r3, #6]
+ 8000c28:	e020      	b.n	8000c6c <main+0x7c4>
 			  else if 	(keyBoardHIDsub.KEYCODE6 == 0x00) 	keyBoardHIDsub.KEYCODE6 = 	key;
- 8000c26:	4b35      	ldr	r3, [pc, #212]	; (8000cfc <main+0x854>)
- 8000c28:	79db      	ldrb	r3, [r3, #7]
- 8000c2a:	2b00      	cmp	r3, #0
- 8000c2c:	d105      	bne.n	8000c3a <main+0x792>
- 8000c2e:	4b33      	ldr	r3, [pc, #204]	; (8000cfc <main+0x854>)
- 8000c30:	2247      	movs	r2, #71	; 0x47
- 8000c32:	18ba      	adds	r2, r7, r2
- 8000c34:	7812      	ldrb	r2, [r2, #0]
- 8000c36:	71da      	strb	r2, [r3, #7]
- 8000c38:	e016      	b.n	8000c68 <main+0x7c0>
-
+ 8000c2a:	4b33      	ldr	r3, [pc, #204]	; (8000cf8 <main+0x850>)
+ 8000c2c:	79db      	ldrb	r3, [r3, #7]
+ 8000c2e:	2b00      	cmp	r3, #0
+ 8000c30:	d105      	bne.n	8000c3e <main+0x796>
+ 8000c32:	4b31      	ldr	r3, [pc, #196]	; (8000cf8 <main+0x850>)
+ 8000c34:	2243      	movs	r2, #67	; 0x43
+ 8000c36:	18ba      	adds	r2, r7, r2
+ 8000c38:	7812      	ldrb	r2, [r2, #0]
+ 8000c3a:	71da      	strb	r2, [r3, #7]
+ 8000c3c:	e016      	b.n	8000c6c <main+0x7c4>
 			  else {  // Too much key pressed
 				  keyBoardHIDsub.MODIFIER = KEY_ERR_OVF;
- 8000c3a:	4b30      	ldr	r3, [pc, #192]	; (8000cfc <main+0x854>)
- 8000c3c:	2201      	movs	r2, #1
- 8000c3e:	701a      	strb	r2, [r3, #0]
+ 8000c3e:	4b2e      	ldr	r3, [pc, #184]	; (8000cf8 <main+0x850>)
+ 8000c40:	2201      	movs	r2, #1
+ 8000c42:	701a      	strb	r2, [r3, #0]
 				  keyBoardHIDsub.KEYCODE1 = KEY_ERR_OVF;
- 8000c40:	4b2e      	ldr	r3, [pc, #184]	; (8000cfc <main+0x854>)
- 8000c42:	2201      	movs	r2, #1
- 8000c44:	709a      	strb	r2, [r3, #2]
+ 8000c44:	4b2c      	ldr	r3, [pc, #176]	; (8000cf8 <main+0x850>)
+ 8000c46:	2201      	movs	r2, #1
+ 8000c48:	709a      	strb	r2, [r3, #2]
 				  keyBoardHIDsub.KEYCODE2 = KEY_ERR_OVF;
- 8000c46:	4b2d      	ldr	r3, [pc, #180]	; (8000cfc <main+0x854>)
- 8000c48:	2201      	movs	r2, #1
- 8000c4a:	70da      	strb	r2, [r3, #3]
+ 8000c4a:	4b2b      	ldr	r3, [pc, #172]	; (8000cf8 <main+0x850>)
+ 8000c4c:	2201      	movs	r2, #1
+ 8000c4e:	70da      	strb	r2, [r3, #3]
 				  keyBoardHIDsub.KEYCODE3 = KEY_ERR_OVF;
- 8000c4c:	4b2b      	ldr	r3, [pc, #172]	; (8000cfc <main+0x854>)
- 8000c4e:	2201      	movs	r2, #1
- 8000c50:	711a      	strb	r2, [r3, #4]
+ 8000c50:	4b29      	ldr	r3, [pc, #164]	; (8000cf8 <main+0x850>)
+ 8000c52:	2201      	movs	r2, #1
+ 8000c54:	711a      	strb	r2, [r3, #4]
 				  keyBoardHIDsub.KEYCODE4 = KEY_ERR_OVF;
- 8000c52:	4b2a      	ldr	r3, [pc, #168]	; (8000cfc <main+0x854>)
- 8000c54:	2201      	movs	r2, #1
- 8000c56:	715a      	strb	r2, [r3, #5]
+ 8000c56:	4b28      	ldr	r3, [pc, #160]	; (8000cf8 <main+0x850>)
+ 8000c58:	2201      	movs	r2, #1
+ 8000c5a:	715a      	strb	r2, [r3, #5]
 				  keyBoardHIDsub.KEYCODE5 = KEY_ERR_OVF;
- 8000c58:	4b28      	ldr	r3, [pc, #160]	; (8000cfc <main+0x854>)
- 8000c5a:	2201      	movs	r2, #1
- 8000c5c:	719a      	strb	r2, [r3, #6]
+ 8000c5c:	4b26      	ldr	r3, [pc, #152]	; (8000cf8 <main+0x850>)
+ 8000c5e:	2201      	movs	r2, #1
+ 8000c60:	719a      	strb	r2, [r3, #6]
 				  keyBoardHIDsub.KEYCODE6 = KEY_ERR_OVF;
- 8000c5e:	4b27      	ldr	r3, [pc, #156]	; (8000cfc <main+0x854>)
- 8000c60:	2201      	movs	r2, #1
- 8000c62:	71da      	strb	r2, [r3, #7]
- 8000c64:	e000      	b.n	8000c68 <main+0x7c0>
+ 8000c62:	4b25      	ldr	r3, [pc, #148]	; (8000cf8 <main+0x850>)
+ 8000c64:	2201      	movs	r2, #1
+ 8000c66:	71da      	strb	r2, [r3, #7]
+ 8000c68:	e000      	b.n	8000c6c <main+0x7c4>
 			  ) continue;
- 8000c66:	46c0      	nop			; (mov r8, r8)
+ 8000c6a:	46c0      	nop			; (mov r8, r8)
 		  for (int index=0; index<44; index++) {  // Loop on every physical keys
- 8000c68:	6cbb      	ldr	r3, [r7, #72]	; 0x48
- 8000c6a:	3301      	adds	r3, #1
- 8000c6c:	64bb      	str	r3, [r7, #72]	; 0x48
- 8000c6e:	6cbb      	ldr	r3, [r7, #72]	; 0x48
- 8000c70:	2b2b      	cmp	r3, #43	; 0x2b
- 8000c72:	dc00      	bgt.n	8000c76 <main+0x7ce>
- 8000c74:	e507      	b.n	8000686 <main+0x1de>
+ 8000c6c:	6c7b      	ldr	r3, [r7, #68]	; 0x44
+ 8000c6e:	3301      	adds	r3, #1
+ 8000c70:	647b      	str	r3, [r7, #68]	; 0x44
+ 8000c72:	6c7b      	ldr	r3, [r7, #68]	; 0x44
+ 8000c74:	2b2b      	cmp	r3, #43	; 0x2b
+ 8000c76:	dc00      	bgt.n	8000c7a <main+0x7d2>
+ 8000c78:	e4fb      	b.n	8000672 <main+0x1ca>
 			  }
 		  };
 		  if (press_fn_bar){
- 8000c76:	2365      	movs	r3, #101	; 0x65
- 8000c78:	18fb      	adds	r3, r7, r3
- 8000c7a:	781b      	ldrb	r3, [r3, #0]
- 8000c7c:	2b00      	cmp	r3, #0
- 8000c7e:	d005      	beq.n	8000c8c <main+0x7e4>
+ 8000c7a:	235d      	movs	r3, #93	; 0x5d
+ 8000c7c:	18fb      	adds	r3, r7, r3
+ 8000c7e:	781b      	ldrb	r3, [r3, #0]
+ 8000c80:	2b00      	cmp	r3, #0
+ 8000c82:	d005      	beq.n	8000c90 <main+0x7e8>
 			  USBD_HID_SendReport(&hUsbDeviceFS, &keyBoardHIDsub, sizeof(keyBoardHIDsub));  // Send keys report thought USB
- 8000c80:	491e      	ldr	r1, [pc, #120]	; (8000cfc <main+0x854>)
- 8000c82:	4b1f      	ldr	r3, [pc, #124]	; (8000d00 <main+0x858>)
- 8000c84:	2208      	movs	r2, #8
- 8000c86:	0018      	movs	r0, r3
- 8000c88:	f005 fc0c 	bl	80064a4 <USBD_HID_SendReport>
+ 8000c84:	491c      	ldr	r1, [pc, #112]	; (8000cf8 <main+0x850>)
+ 8000c86:	4b1e      	ldr	r3, [pc, #120]	; (8000d00 <main+0x858>)
+ 8000c88:	2208      	movs	r2, #8
+ 8000c8a:	0018      	movs	r0, r3
+ 8000c8c:	f005 fc0a 	bl	80064a4 <USBD_HID_SendReport>
 		  }
-		  HAL_Delay(50);  // Wait of loop iteration in ms
- 8000c8c:	2032      	movs	r0, #50	; 0x32
- 8000c8e:	f000 f9fd 	bl	800108c <HAL_Delay>
- 8000c92:	e002      	b.n	8000c9a <main+0x7f2>
-	  } else {
-		  HAL_Delay(100);  // Wait of loop iteration in ms
- 8000c94:	2064      	movs	r0, #100	; 0x64
- 8000c96:	f000 f9f9 	bl	800108c <HAL_Delay>
 	  }
 
 	  if (!press_fn_bar && last_pressed) {
- 8000c9a:	2365      	movs	r3, #101	; 0x65
- 8000c9c:	18fb      	adds	r3, r7, r3
- 8000c9e:	781b      	ldrb	r3, [r3, #0]
- 8000ca0:	2201      	movs	r2, #1
- 8000ca2:	4053      	eors	r3, r2
- 8000ca4:	b2db      	uxtb	r3, r3
+ 8000c90:	235d      	movs	r3, #93	; 0x5d
+ 8000c92:	18fb      	adds	r3, r7, r3
+ 8000c94:	781b      	ldrb	r3, [r3, #0]
+ 8000c96:	2201      	movs	r2, #1
+ 8000c98:	4053      	eors	r3, r2
+ 8000c9a:	b2db      	uxtb	r3, r3
+ 8000c9c:	2b00      	cmp	r3, #0
+ 8000c9e:	d01f      	beq.n	8000ce0 <main+0x838>
+ 8000ca0:	235f      	movs	r3, #95	; 0x5f
+ 8000ca2:	18fb      	adds	r3, r7, r3
+ 8000ca4:	781b      	ldrb	r3, [r3, #0]
  8000ca6:	2b00      	cmp	r3, #0
- 8000ca8:	d01f      	beq.n	8000cea <main+0x842>
- 8000caa:	2367      	movs	r3, #103	; 0x67
- 8000cac:	18fb      	adds	r3, r7, r3
- 8000cae:	781b      	ldrb	r3, [r3, #0]
- 8000cb0:	2b00      	cmp	r3, #0
- 8000cb2:	d01a      	beq.n	8000cea <main+0x842>
+ 8000ca8:	d01a      	beq.n	8000ce0 <main+0x838>
 		  keyBoardHIDsub.MODIFIER = KEY_NONE;
- 8000cb4:	4b11      	ldr	r3, [pc, #68]	; (8000cfc <main+0x854>)
- 8000cb6:	2200      	movs	r2, #0
- 8000cb8:	701a      	strb	r2, [r3, #0]
+ 8000caa:	4b13      	ldr	r3, [pc, #76]	; (8000cf8 <main+0x850>)
+ 8000cac:	2200      	movs	r2, #0
+ 8000cae:	701a      	strb	r2, [r3, #0]
 		  keyBoardHIDsub.KEYCODE1 = KEY_NONE;
- 8000cba:	4b10      	ldr	r3, [pc, #64]	; (8000cfc <main+0x854>)
- 8000cbc:	2200      	movs	r2, #0
- 8000cbe:	709a      	strb	r2, [r3, #2]
+ 8000cb0:	4b11      	ldr	r3, [pc, #68]	; (8000cf8 <main+0x850>)
+ 8000cb2:	2200      	movs	r2, #0
+ 8000cb4:	709a      	strb	r2, [r3, #2]
 		  keyBoardHIDsub.KEYCODE2 = KEY_NONE;
- 8000cc0:	4b0e      	ldr	r3, [pc, #56]	; (8000cfc <main+0x854>)
- 8000cc2:	2200      	movs	r2, #0
- 8000cc4:	70da      	strb	r2, [r3, #3]
+ 8000cb6:	4b10      	ldr	r3, [pc, #64]	; (8000cf8 <main+0x850>)
+ 8000cb8:	2200      	movs	r2, #0
+ 8000cba:	70da      	strb	r2, [r3, #3]
 		  keyBoardHIDsub.KEYCODE3 = KEY_NONE;
- 8000cc6:	4b0d      	ldr	r3, [pc, #52]	; (8000cfc <main+0x854>)
- 8000cc8:	2200      	movs	r2, #0
- 8000cca:	711a      	strb	r2, [r3, #4]
+ 8000cbc:	4b0e      	ldr	r3, [pc, #56]	; (8000cf8 <main+0x850>)
+ 8000cbe:	2200      	movs	r2, #0
+ 8000cc0:	711a      	strb	r2, [r3, #4]
 		  keyBoardHIDsub.KEYCODE4 = KEY_NONE;
- 8000ccc:	4b0b      	ldr	r3, [pc, #44]	; (8000cfc <main+0x854>)
- 8000cce:	2200      	movs	r2, #0
- 8000cd0:	715a      	strb	r2, [r3, #5]
+ 8000cc2:	4b0d      	ldr	r3, [pc, #52]	; (8000cf8 <main+0x850>)
+ 8000cc4:	2200      	movs	r2, #0
+ 8000cc6:	715a      	strb	r2, [r3, #5]
 		  keyBoardHIDsub.KEYCODE5 = KEY_NONE;
- 8000cd2:	4b0a      	ldr	r3, [pc, #40]	; (8000cfc <main+0x854>)
- 8000cd4:	2200      	movs	r2, #0
- 8000cd6:	719a      	strb	r2, [r3, #6]
+ 8000cc8:	4b0b      	ldr	r3, [pc, #44]	; (8000cf8 <main+0x850>)
+ 8000cca:	2200      	movs	r2, #0
+ 8000ccc:	719a      	strb	r2, [r3, #6]
 		  keyBoardHIDsub.KEYCODE6 = KEY_NONE;
- 8000cd8:	4b08      	ldr	r3, [pc, #32]	; (8000cfc <main+0x854>)
- 8000cda:	2200      	movs	r2, #0
- 8000cdc:	71da      	strb	r2, [r3, #7]
+ 8000cce:	4b0a      	ldr	r3, [pc, #40]	; (8000cf8 <main+0x850>)
+ 8000cd0:	2200      	movs	r2, #0
+ 8000cd2:	71da      	strb	r2, [r3, #7]
 		  USBD_HID_SendReport(&hUsbDeviceFS, &keyBoardHIDsub, sizeof(keyBoardHIDsub));
- 8000cde:	4907      	ldr	r1, [pc, #28]	; (8000cfc <main+0x854>)
- 8000ce0:	4b07      	ldr	r3, [pc, #28]	; (8000d00 <main+0x858>)
- 8000ce2:	2208      	movs	r2, #8
- 8000ce4:	0018      	movs	r0, r3
- 8000ce6:	f005 fbdd 	bl	80064a4 <USBD_HID_SendReport>
+ 8000cd4:	4908      	ldr	r1, [pc, #32]	; (8000cf8 <main+0x850>)
+ 8000cd6:	4b0a      	ldr	r3, [pc, #40]	; (8000d00 <main+0x858>)
+ 8000cd8:	2208      	movs	r2, #8
+ 8000cda:	0018      	movs	r0, r3
+ 8000cdc:	f005 fbe2 	bl	80064a4 <USBD_HID_SendReport>
 	  }
 	  last_pressed = press_fn_bar;
- 8000cea:	2367      	movs	r3, #103	; 0x67
- 8000cec:	18fb      	adds	r3, r7, r3
- 8000cee:	2265      	movs	r2, #101	; 0x65
- 8000cf0:	18ba      	adds	r2, r7, r2
- 8000cf2:	7812      	ldrb	r2, [r2, #0]
- 8000cf4:	701a      	strb	r2, [r3, #0]
+ 8000ce0:	235f      	movs	r3, #95	; 0x5f
+ 8000ce2:	18fb      	adds	r3, r7, r3
+ 8000ce4:	225d      	movs	r2, #93	; 0x5d
+ 8000ce6:	18ba      	adds	r2, r7, r2
+ 8000ce8:	7812      	ldrb	r2, [r2, #0]
+ 8000cea:	701a      	strb	r2, [r3, #0]
+	  HAL_Delay(50);  // Wait of loop iteration in ms
+ 8000cec:	2032      	movs	r0, #50	; 0x32
+ 8000cee:	f000 f9cd 	bl	800108c <HAL_Delay>
   while (1){
- 8000cf6:	f7ff fbe6 	bl	80004c6 <main+0x1e>
- 8000cfa:	46c0      	nop			; (mov r8, r8)
- 8000cfc:	2000034c 	.word	0x2000034c
+ 8000cf2:	f7ff fbe8 	bl	80004c6 <main+0x1e>
+ 8000cf6:	46c0      	nop			; (mov r8, r8)
+ 8000cf8:	2000034c 	.word	0x2000034c
+ 8000cfc:	200000dc 	.word	0x200000dc
  8000d00:	2000035c 	.word	0x2000035c
 
 08000d04 <SystemClock_Config>:
